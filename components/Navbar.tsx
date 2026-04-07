@@ -4,17 +4,19 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Shield } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Academics", href: "#academics" },
-  { name: "Fee Structure", href: "#fees" },
-  { name: "Admissions", href: "#admissions" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Academics", href: "/academics" },
+  { name: "Fee Structure", href: "/fee-structure" },
+  { name: "Admissions", href: "/admissions" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -38,14 +40,14 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-navy-dark/70 backdrop-blur-xl border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.3)] py-2"
+        scrolled || pathname !== "/"
+          ? "bg-navy-dark/95 backdrop-blur-xl border-b border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.3)] py-2"
           : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href="#home" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 border-2 border-gold flex items-center justify-center group-hover:bg-gold/30 transition-all duration-300">
             <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
           </div>
@@ -75,7 +77,7 @@ export default function Navbar() {
 
         {/* Apply Now Button (Desktop) */}
         <Link
-          href="#admissions"
+          href="/admissions"
           className="hidden lg:block font-[family-name:var(--font-heading)] btn-primary font-bold text-sm px-6 py-2.5 rounded tracking-wider"
         >
           APPLY NOW
@@ -125,7 +127,7 @@ export default function Navbar() {
                 className="mt-4"
               >
                 <Link
-                  href="#admissions"
+                  href="/admissions"
                   onClick={() => setMobileOpen(false)}
                   className="font-[family-name:var(--font-heading)] btn-primary font-bold text-center text-sm px-6 py-3 rounded block tracking-wider"
                 >
