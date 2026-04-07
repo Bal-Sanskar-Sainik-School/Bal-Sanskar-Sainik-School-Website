@@ -19,7 +19,7 @@ const testimonials = [
     childClass: "Class 6",
     rating: 5,
     quote:
-      "We chose this school for its military discipline and we are not disappointed. My daughter has become more confident, disciplined and focused. The fee structure is very reasonable for the quality they provide.",
+      "We chose this school for its excellent discipline and we are not disappointed. My daughter has become more confident, disciplined and focused. The fee structure is very reasonable for the quality they provide.",
   },
   {
     name: "Amit Bisht",
@@ -35,7 +35,7 @@ const testimonials = [
     childClass: "Class 2",
     rating: 5,
     quote:
-      "As a parent, safety was my top concern. The school provides a very secure and nurturing environment. The morning assembly and PT drills instill amazing discipline in children from a young age.",
+      "As a parent, safety was my top concern. The school provides a very secure and nurturing environment. The morning assembly and daily activities instill amazing discipline in children from a young age.",
   },
 ];
 

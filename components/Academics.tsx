@@ -18,11 +18,11 @@ const tabs = [
       "Moral Science & Value Education",
     ],
     schedule: [
-      "Morning PT & Drill — 6:30 AM",
+      "Morning Exercise & Assembly — 6:30 AM",
       "Academic Classes — 8:00 AM to 2:30 PM",
       "Lunch & Rest — 2:30 PM to 3:15 PM",
       "Activity / Lab Period — 3:15 PM to 4:30 PM",
-      "Sports & Military Drills — 4:30 PM to 6:00 PM",
+      "Sports & Physical Activities — 4:30 PM to 6:00 PM",
     ],
     activities: [
       "Art & Craft",
@@ -47,11 +47,11 @@ const tabs = [
       "Moral Science & Value Education",
     ],
     schedule: [
-      "Morning PT & Drill — 6:30 AM",
+      "Morning Exercise & Assembly — 6:30 AM",
       "Academic Classes — 8:00 AM to 2:30 PM",
       "Lunch & Rest — 2:30 PM to 3:15 PM",
       "Activity / Lab Period — 3:15 PM to 4:30 PM",
-      "Sports & Military Drills — 4:30 PM to 6:00 PM",
+      "Sports & Physical Activities — 4:30 PM to 6:00 PM",
     ],
     activities: [
       "Science Experiments & Lab Work",

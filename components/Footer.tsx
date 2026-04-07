@@ -34,8 +34,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-[family-name:var(--font-body)] text-ivory/80 text-base leading-relaxed mb-4">
-              A premier military-style school in the heart of the Himalayas, nurturing 
-              disciplined leaders of tomorrow through academic excellence and Sainik values.
+              A premier educational institution in the heart of the Himalayas, nurturing 
+              disciplined leaders of tomorrow through academic excellence and core values.
             </p>
             <p className="font-[family-name:var(--font-heading)] text-gold/50 text-xs tracking-[0.15em] italic">
               &ldquo;Discipline. Excellence. Nation.&rdquo;

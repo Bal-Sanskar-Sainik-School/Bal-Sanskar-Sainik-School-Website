@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 const galleryItems = [
   { label: "Morning Assembly & Flag Parade", height: "h-64" },
   { label: "Classroom Learning", height: "h-48" },
-  { label: "Physical Training Drills", height: "h-72" },
+  { label: "Physical Training", height: "h-72" },
   { label: "Science Laboratory", height: "h-56" },
   { label: "Himalayan Campus View", height: "h-64" },
   { label: "Annual Sports Day", height: "h-48" },

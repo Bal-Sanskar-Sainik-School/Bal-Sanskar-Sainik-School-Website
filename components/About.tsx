@@ -44,12 +44,12 @@ export default function About() {
             <p className="font-[family-name:var(--font-body)] text-navy/80 text-lg sm:text-xl leading-relaxed">
               Nestled in the serene hills of Jeolikot, Nainital, Bal Sanskar Sainik School 
               stands as a beacon of excellence in education and character building. Our institution 
-              combines the discipline and values of India&apos;s finest Sainik schools with a 
+              combines outstanding discipline and values with a 
               nurturing environment that allows every child to flourish.
             </p>
             <p className="font-[family-name:var(--font-body)] text-navy/80 text-lg sm:text-xl leading-relaxed">
               We believe that true education goes beyond textbooks. Our CBSE-aligned curriculum 
-              for Classes 1 through 8 is enriched with military discipline, physical fitness, 
+              for Classes 1 through 8 is enriched with strong discipline, physical fitness, 
               moral education, and leadership training — preparing students not just for exams, 
               but for life.
             </p>
@@ -71,7 +71,7 @@ export default function About() {
                 </h4>
                 <p className="font-[family-name:var(--font-body)] text-navy/70 text-base leading-relaxed">
                   To provide holistic education blending academic rigour with 
-                  military discipline, sports, and values in a Himalayan setting.
+                  excellent discipline, sports, and values in a Himalayan setting.
                 </p>
               </div>
             </div>

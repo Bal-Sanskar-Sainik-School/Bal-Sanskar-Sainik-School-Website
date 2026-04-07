@@ -15,9 +15,9 @@ import {
 const features = [
   {
     icon: <Shield className="w-8 h-8" />,
-    title: "Military Discipline & Values",
+    title: "Strong Discipline & Values",
     description:
-      "Instilling discipline, punctuality, and patriotic values through a structured military-style routine that builds character from a young age.",
+      "Instilling discipline, punctuality, and strong values through a structured daily routine that builds character from a young age.",
   },
   {
     icon: <GraduationCap className="w-8 h-8" />,
