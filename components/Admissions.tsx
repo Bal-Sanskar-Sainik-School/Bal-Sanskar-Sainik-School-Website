@@ -66,13 +66,13 @@ export default function Admissions() {
 
         {/* Timeline - Desktop Horizontal */}
         <div className="hidden lg:block mb-16">
-          <div className="relative">
+          <div className="relative mt-8">
             {/* Connecting Line */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={inView ? { scaleX: 1 } : {}}
               transition={{ duration: 1.2, delay: 0.3 }}
-              className="absolute top-12 left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-gold/30 via-gold to-gold/30 origin-left"
+              className="absolute top-12 left-[12.5%] right-[12.5%] h-[2px] bg-gradient-to-r from-gold/20 via-gold to-gold/20 origin-left"
             />
 
             <div className="grid grid-cols-4 gap-8">
@@ -82,21 +82,30 @@ export default function Admissions() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + i * 0.2 }}
-                  className="flex flex-col items-center text-center"
+                  className="flex flex-col items-center text-center group"
                 >
                   {/* Circle */}
-                  <div className="relative z-10 w-24 h-24 rounded-full bg-navy-light border-2 border-gold/40 flex flex-col items-center justify-center mb-6 group hover:border-gold transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.2)]">
-                    <div className="text-gold mb-1">{step.icon}</div>
-                    <span className="font-[family-name:var(--font-heading)] text-gold/60 text-xs font-bold">
+                  <div className="relative z-10 w-24 h-24 rounded-full bg-navy border-2 border-gold/30 flex flex-col items-center justify-center mb-6 group-hover:border-gold group-hover:bg-navy-light transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(201,168,76,0.25)]">
+                    <div className="text-gold mb-1 group-hover:scale-110 transition-transform duration-500">
+                      {step.icon}
+                    </div>
+                    <span className="font-[family-name:var(--font-heading)] text-gold/60 text-xs font-bold group-hover:text-gold transition-colors duration-300">
                       STEP {step.step}
                     </span>
                   </div>
-                  <h3 className="font-[family-name:var(--font-heading)] text-ivory text-lg font-bold mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="font-[family-name:var(--font-body)] text-ivory/50 text-base leading-relaxed">
-                    {step.description}
-                  </p>
+
+                  {/* Text Card Component */}
+                  <div className="bg-navy-light/30 border border-gold/10 p-6 rounded-2xl flex-1 group-hover:bg-navy-light/60 group-hover:border-gold/30 transition-all duration-500 w-full relative shadow-lg group-hover:shadow-[0_10px_40px_-10px_rgba(201,168,76,0.15)] group-hover:-translate-y-1">
+                    {/* Floating tooltip arrow */}
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-navy-light/30 border-t border-l border-gold/10 rotate-45 group-hover:bg-navy-light/60 group-hover:border-gold/30 transition-all duration-500" />
+                    
+                    <h3 className="relative z-10 font-[family-name:var(--font-heading)] text-ivory text-lg font-bold mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="relative z-10 font-[family-name:var(--font-body)] text-ivory/60 text-sm xl:text-base leading-relaxed group-hover:text-ivory/80 transition-colors duration-300">
+                      {step.description}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -105,9 +114,9 @@ export default function Admissions() {
 
         {/* Timeline - Mobile Vertical */}
         <div className="lg:hidden mb-16">
-          <div className="relative pl-8">
+          <div className="relative pl-8 mt-6">
             {/* Vertical Line */}
-            <div className="absolute top-0 bottom-0 left-4 w-[2px] bg-gradient-to-b from-gold/30 via-gold to-gold/30" />
+            <div className="absolute top-0 bottom-0 left-4 w-[2px] bg-gradient-to-b from-gold/20 via-gold to-gold/20" />
 
             <div className="space-y-10">
               {steps.map((step, i) => (
@@ -116,21 +125,27 @@ export default function Admissions() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: i * 0.15 }}
-                  className="relative flex gap-5"
+                  className="relative flex gap-5 group"
                 >
-                  {/* Dot */}
-                  <div className="absolute -left-8 top-1 w-8 h-8 rounded-full bg-navy-light border-2 border-gold/50 flex items-center justify-center z-10">
-                    <div className="w-2 h-2 bg-gold rounded-full" />
+                  {/* Dot Tracker */}
+                  <div className="absolute -left-8 top-5 w-8 h-8 rounded-full bg-navy border-2 border-gold/30 flex items-center justify-center z-10 group-hover:border-gold group-hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] transition-all duration-500">
+                    <div className="w-2.5 h-2.5 bg-gold/50 rounded-full group-hover:bg-gold transition-colors duration-300" />
                   </div>
 
-                  <div className="bg-navy-light/50 rounded-xl p-5 border border-gold/10 flex-1 ml-4">
-                    <span className="font-[family-name:var(--font-heading)] text-gold/50 text-xs font-bold tracking-widest">
-                      STEP {step.step}
-                    </span>
-                    <h3 className="font-[family-name:var(--font-heading)] text-ivory text-lg font-bold mt-1 mb-2">
+                  {/* Glass Card */}
+                  <div className="glass-card-navy rounded-2xl p-6 sm:p-8 flex-1 ml-2 border border-gold/10 group-hover:border-gold/40 group-hover:-translate-y-1 transition-all duration-500">
+                    <div className="flex items-center gap-3.5 mb-4">
+                      <div className="text-gold/80 p-2.5 bg-gold/10 rounded-xl group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-500">
+                        {step.icon}
+                      </div>
+                      <span className="font-[family-name:var(--font-heading)] text-gold text-xs sm:text-sm font-bold tracking-[0.2em] uppercase">
+                        STEP {step.step}
+                      </span>
+                    </div>
+                    <h3 className="font-[family-name:var(--font-heading)] text-ivory text-xl font-bold mb-2.5">
                       {step.title}
                     </h3>
-                    <p className="font-[family-name:var(--font-body)] text-ivory/50 text-base leading-relaxed">
+                    <p className="font-[family-name:var(--font-body)] text-ivory/60 group-hover:text-ivory/80 text-sm sm:text-base leading-relaxed transition-colors duration-300">
                       {step.description}
                     </p>
                   </div>

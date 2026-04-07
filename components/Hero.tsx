@@ -11,8 +11,10 @@ export default function Hero() {
       className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background with parallax-like gradient overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
+      <motion.div
+        animate={{ scale: [1.05, 1.1, 1.05] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url('/images/hero-bg.png')`,
           backgroundAttachment: "fixed",
@@ -20,28 +22,28 @@ export default function Hero() {
       />
 
       {/* Layered overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/30 to-navy-dark/90 border-b border-gold/10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/40 via-transparent to-navy/40 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/30 to-navy-dark/95 border-b border-gold/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/50 via-transparent to-navy/50 mix-blend-multiply" />
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-70" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
 
       {/* Floating decorative particles */}
       <motion.div
-        animate={{ y: [-20, 20, -20], opacity: [0.3, 0.6, 0.3] }}
+        animate={{ y: [-20, 20, -20], opacity: [0.3, 0.7, 0.3], scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold/30 rounded-full blur-sm"
+        className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold/50 rounded-full blur-[2px]"
       />
       <motion.div
-        animate={{ y: [20, -20, 20], opacity: [0.2, 0.5, 0.2] }}
+        animate={{ y: [20, -20, 20], opacity: [0.2, 0.6, 0.2], scale: [1, 1.5, 1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/3 right-1/3 w-3 h-3 bg-gold/20 rounded-full blur-sm"
+        className="absolute top-1/3 right-1/4 w-3 h-3 bg-gold/30 rounded-full blur-[2px]"
       />
       <motion.div
-        animate={{ y: [-15, 25, -15], opacity: [0.4, 0.7, 0.4] }}
+        animate={{ y: [-15, 25, -15], opacity: [0.4, 0.8, 0.4], scale: [1, 1.2, 1] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-gold/40 rounded-full blur-sm"
+        className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-gold/60 rounded-full blur-[1px]"
       />
 
       {/* Content */}
@@ -51,9 +53,15 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto mb-6 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-gold/50 bg-gold/10 flex items-center justify-center"
+          className="mx-auto mb-8 w-20 h-20 sm:w-28 sm:h-28 rounded-full border-2 border-gold/50 bg-navy/40 backdrop-blur-md flex items-center justify-center relative group shadow-[0_0_40px_rgba(201,168,76,0.3)]"
         >
-          <span className="text-gold text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)]">
+          {/* Rotating halo ring */}
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute -inset-2 rounded-full border border-dashed border-gold/30 mix-blend-screen"
+          />
+          <span className="text-gold text-3xl sm:text-4xl font-bold font-[family-name:var(--font-heading)] group-hover:scale-110 transition-transform duration-500">
             BS
           </span>
         </motion.div>

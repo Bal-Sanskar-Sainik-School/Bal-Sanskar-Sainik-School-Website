@@ -124,10 +124,10 @@ export default function Academics() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid md:grid-cols-3 gap-6 lg:gap-8"
+            className="grid lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {/* Subjects */}
-            <div className="card-ivory rounded-xl p-6 sm:p-8">
+            <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <BookOpen className="w-5 h-5 text-navy" />
@@ -136,21 +136,20 @@ export default function Academics() {
                   Subjects
                 </h3>
               </div>
-              <ul className="space-y-3">
+              <div className="flex flex-wrap gap-2.5">
                 {currentTab.subjects.map((subject) => (
-                  <li
+                  <span
                     key={subject}
-                    className="font-[family-name:var(--font-body)] text-navy/75 text-base sm:text-lg flex items-start gap-3"
+                    className="font-[family-name:var(--font-body)] bg-white/80 border border-navy/10 px-3.5 py-1.5 rounded-full text-navy/80 text-sm sm:text-base font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0" />
                     {subject}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Schedule */}
-            <div className="card-ivory rounded-xl p-6 sm:p-8">
+            <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-navy" />
@@ -159,21 +158,28 @@ export default function Academics() {
                   Daily Schedule
                 </h3>
               </div>
-              <ul className="space-y-3">
-                {currentTab.schedule.map((item) => (
-                  <li
-                    key={item}
-                    className="font-[family-name:var(--font-body)] text-navy/75 text-base sm:text-lg flex items-start gap-3"
-                  >
-                    <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
+              <ul className="space-y-4 flex-1">
+                {currentTab.schedule.map((item) => {
+                  const [task, time] = item.split(" — ");
+                  return (
+                    <li
+                      key={item}
+                      className="flex justify-between items-center gap-4 border-b border-navy/5 pb-3 last:border-b-0 last:pb-0"
+                    >
+                      <span className="font-[family-name:var(--font-body)] text-navy/80 text-sm sm:text-base font-semibold">
+                        {task}
+                      </span>
+                      <span className="font-[family-name:var(--font-heading)] text-gold-dark text-xs sm:text-sm font-bold whitespace-nowrap bg-gold/15 px-3 py-1 rounded-md">
+                        {time || ""}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
             {/* Activities */}
-            <div className="card-ivory rounded-xl p-6 sm:p-8">
+            <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <Palette className="w-5 h-5 text-navy" />
@@ -182,17 +188,16 @@ export default function Academics() {
                   Activities
                 </h3>
               </div>
-              <ul className="space-y-3">
+              <div className="flex flex-wrap gap-2.5">
                 {currentTab.activities.map((activity) => (
-                  <li
+                  <span
                     key={activity}
-                    className="font-[family-name:var(--font-body)] text-navy/75 text-base sm:text-lg flex items-start gap-3"
+                    className="font-[family-name:var(--font-body)] bg-navy/5 border border-navy/10 px-3.5 py-1.5 rounded-lg text-navy/80 text-sm sm:text-base hover:bg-navy hover:text-ivory transition-colors duration-300 cursor-default font-medium"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold rounded-full mt-2.5 flex-shrink-0" />
                     {activity}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>

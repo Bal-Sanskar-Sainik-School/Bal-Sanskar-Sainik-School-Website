@@ -105,35 +105,40 @@ export default function Testimonials() {
           {/* Card */}
           <div className="overflow-hidden px-2">
             <AnimatePresence mode="wait">
-              <motion.div
+                <motion.div
                 key={current}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card-navy rounded-3xl p-8 sm:p-10 md:p-12 text-center relative z-10"
+                className="glass-card-navy rounded-3xl p-8 sm:p-10 md:p-12 text-center relative z-10 group shadow-[0_20px_50px_rgba(4,8,20,0.5)]"
               >
-                {/* Quote Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className="w-14 h-14 rounded-full bg-gold/15 flex items-center justify-center">
-                    <Quote className="w-6 h-6 text-gold" />
+                {/* Decorative floating background quotes */}
+                <Quote className="absolute top-8 left-8 w-32 h-32 text-gold/5 -z-10 rotate-12 transition-transform duration-700 group-hover:-translate-y-2 group-hover:-rotate-12" />
+                <Quote className="absolute bottom-8 right-8 w-32 h-32 text-gold/5 -z-10 rotate-0 transition-transform duration-700 group-hover:translate-y-2 group-hover:rotate-12" />
+
+                {/* Main Quote Icon */}
+                <div className="flex justify-center mb-8 relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center group-hover:bg-gold/20 group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(201,168,76,0.15)]">
+                    <Quote className="w-7 h-7 text-gold fill-gold/50" />
                   </div>
                 </div>
 
                 {/* Stars */}
-                <div className="flex justify-center gap-1 mb-6">
+                <div className="flex justify-center gap-1.5 mb-8 relative z-10">
                   {Array.from({ length: testimonials[current].rating }).map(
                     (_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-gold fill-gold"
+                        className="w-5 h-5 text-gold fill-gold group-hover:scale-110 transition-transform duration-300"
+                        style={{ transitionDelay: `${i * 50}ms` }}
                       />
                     )
                   )}
                 </div>
 
                 {/* Quote Text */}
-                <p className="font-[family-name:var(--font-body)] text-ivory/80 text-lg sm:text-xl md:text-2xl leading-relaxed italic mb-8 max-w-3xl mx-auto">
+                <p className="relative z-10 font-[family-name:var(--font-body)] text-ivory/80 text-lg sm:text-xl md:text-2xl pt-2 leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-ivory transition-colors duration-500">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </p>
 

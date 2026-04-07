@@ -100,11 +100,16 @@ export default function StatsBar() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="flex flex-col items-center text-center gap-3 py-4"
+              className="glass-card-navy rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-2 group relative overflow-hidden"
             >
-              <div className="text-gold">{stat.icon}</div>
-              <div>
-                <p className="font-[family-name:var(--font-heading)] text-ivory text-xl sm:text-2xl font-bold">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-3 group-hover:scale-110 group-hover:bg-gold/20 group-hover:border-gold/40 transition-all duration-500 shadow-[0_0_15px_rgba(201,168,76,0.1)]">
+                {stat.icon}
+              </div>
+              
+              <div className="relative z-10 w-full">
+                <p className="font-[family-name:var(--font-heading)] text-ivory text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold mb-1 whitespace-nowrap tracking-tight">
                   {stat.isNumber ? (
                     <CountUpNumber
                       target={stat.numValue!}
@@ -116,7 +121,8 @@ export default function StatsBar() {
                     stat.value
                   )}
                 </p>
-                <p className="font-[family-name:var(--font-body)] text-ivory/50 text-sm sm:text-base mt-1 tracking-wide">
+                <span className="w-8 h-1 bg-gold/50 rounded-full mx-auto block mb-3 group-hover:w-16 group-hover:bg-gold transition-all duration-500"></span>
+                <p className="font-[family-name:var(--font-body)] text-ivory/60 text-sm sm:text-base tracking-[0.05em] uppercase font-medium">
                   {stat.label}
                 </p>
               </div>
