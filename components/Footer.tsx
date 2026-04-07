@@ -1,8 +1,8 @@
 "use client";
 
+import { MapPin, Phone, Shield } from "lucide-react";
 import Link from "next/link";
-import { Shield, Phone, MapPin } from "lucide-react";
-import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -16,35 +16,33 @@ const quickLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy border-t border-gold/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
-          {/* Column 1 - School Info */}
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-full bg-gold/15 border-2 border-gold/30 flex items-center justify-center">
-                <Shield className="w-6 h-6 text-gold" />
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-gold/30 bg-gold/15">
+                <Shield className="h-6 w-6 text-gold" />
               </div>
               <div>
-                <h3 className="font-[family-name:var(--font-heading)] text-gold text-lg font-bold">
+                <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-gold">
                   Bal Sanskar
                 </h3>
-                <p className="font-[family-name:var(--font-heading)] text-ivory/80 text-xs tracking-[0.2em] uppercase">
+                <p className="font-[family-name:var(--font-heading)] text-xs uppercase tracking-[0.2em] text-ivory/80">
                   Sainik School
                 </p>
               </div>
             </div>
-            <p className="font-[family-name:var(--font-body)] text-ivory/80 text-base leading-relaxed mb-4">
-              A premier educational institution in the heart of the Himalayas, nurturing 
+            <p className="mb-4 text-base leading-relaxed text-ivory/80">
+              A premier educational institution in the heart of the Himalayas, nurturing
               disciplined leaders of tomorrow through academic excellence and core values.
             </p>
-            <p className="font-[family-name:var(--font-heading)] text-gold/50 text-xs tracking-[0.15em] italic">
+            <p className="font-[family-name:var(--font-heading)] text-xs italic tracking-[0.15em] text-gold/50">
               &ldquo;Discipline. Excellence. Nation.&rdquo;
             </p>
           </div>
 
-          {/* Column 2 - Quick Links */}
           <div>
-            <h3 className="font-[family-name:var(--font-heading)] text-ivory text-lg font-bold mb-5">
+            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-5">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -52,9 +50,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold text-base transition-colors duration-300 flex items-center gap-2 group"
+                    className="group flex items-center gap-2 text-base text-ivory/80 transition-colors duration-300 hover:text-gold"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold/30 rounded-full group-hover:bg-gold transition-colors" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-gold/30 transition-colors group-hover:bg-gold" />
                     {link.name}
                   </Link>
                 </li>
@@ -62,38 +60,36 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 - Social & Contact */}
           <div>
-            <h3 className="font-[family-name:var(--font-heading)] text-ivory text-lg font-bold mb-5">
+            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-5">
               Connect With Us
             </h3>
-            <div className="space-y-4 mb-6">
+            <div className="mb-6 space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                <p className="font-[family-name:var(--font-body)] text-ivory/80 text-base">
+                <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
+                <p className="text-base text-ivory/80">
                   Jeolikot, Nainital,
                   <br />
                   Uttarakhand, India
                 </p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
+                <Phone className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="tel:+919927289673"
-                  className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold text-base transition-colors"
+                  className="text-base text-ivory/80 transition-colors hover:text-gold"
                 >
                   +91 99272 89673
                 </a>
               </div>
             </div>
 
-            {/* Social Icons */}
             <div className="flex gap-3">
               <a
                 href="https://www.instagram.com/bal.sansar.sainik.school"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold hover:text-navy"
                 aria-label="Follow us on Instagram"
               >
                 <FaInstagram size={18} />
@@ -102,7 +98,7 @@ export default function Footer() {
                 href="https://www.facebook.com/share/1CAbyUUs2R/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-11 h-11 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-300"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold hover:text-navy"
                 aria-label="Follow us on Facebook"
               >
                 <FaFacebookF size={16} />
@@ -112,15 +108,12 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gold/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-[family-name:var(--font-body)] text-ivory/30 text-sm text-center sm:text-left">
-            © 2025 Bal Sanskar Sainik School, Jeolikot Nainital. All Rights Reserved.
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-sm sm:flex-row sm:px-6 lg:px-8">
+          <p className="text-center text-ivory/30 sm:text-left">
+            Copyright 2026 Bal Sanskar Sainik School, Jeolikot Nainital. All rights reserved.
           </p>
-          <p className="font-[family-name:var(--font-body)] text-ivory/20 text-sm">
-            Discipline. Excellence. Nation.
-          </p>
+          <p className="text-ivory/20">Discipline. Excellence. Nation.</p>
         </div>
       </div>
     </footer>
