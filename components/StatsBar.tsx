@@ -88,7 +88,7 @@ export default function StatsBar() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="stats" ref={ref} className="relative bg-navy-dark">
+    <section id="stats" ref={ref} className="relative bg-ivory">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
 
@@ -100,7 +100,7 @@ export default function StatsBar() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="glass-card-navy rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-2 group relative overflow-hidden"
+              className="glass-panel rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-2 group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
@@ -109,7 +109,7 @@ export default function StatsBar() {
               </div>
               
               <div className="relative z-10 w-full">
-                <p className="font-[family-name:var(--font-heading)] text-ivory text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold mb-1 whitespace-nowrap tracking-tight">
+                <p className="font-[family-name:var(--font-heading)] text-navy-dark text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold mb-1 whitespace-nowrap tracking-tight">
                   {stat.isNumber ? (
                     <CountUpNumber
                       target={stat.numValue!}
@@ -122,7 +122,7 @@ export default function StatsBar() {
                   )}
                 </p>
                 <span className="w-8 h-1 bg-gold/50 rounded-full mx-auto block mb-3 group-hover:w-16 group-hover:bg-gold transition-all duration-500"></span>
-                <p className="font-[family-name:var(--font-body)] text-ivory/60 text-sm sm:text-base tracking-[0.05em] uppercase font-medium">
+                <p className="font-[family-name:var(--font-body)] text-navy-dark/60 text-sm sm:text-base tracking-[0.05em] uppercase font-medium">
                   {stat.label}
                 </p>
               </div>

@@ -99,7 +99,7 @@ export default function Academics() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center mb-12"
         >
-          <div className="inline-flex bg-navy/10 rounded-lg p-1.5">
+          <div className="inline-flex bg-ivory-dark/10 rounded-lg p-1.5">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -129,7 +129,7 @@ export default function Academics() {
             {/* Subjects */}
             <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-ivory-dark/10 flex items-center justify-center">
                   <BookOpen className="w-5 h-5 text-navy" />
                 </div>
                 <h3 className="font-[family-name:var(--font-heading)] text-navy text-xl font-bold">
@@ -151,7 +151,7 @@ export default function Academics() {
             {/* Schedule */}
             <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-ivory-dark/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-navy" />
                 </div>
                 <h3 className="font-[family-name:var(--font-heading)] text-navy text-xl font-bold">
@@ -181,7 +181,7 @@ export default function Academics() {
             {/* Activities */}
             <div className="card-ivory rounded-2xl p-6 sm:p-8 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-ivory-dark/10 flex items-center justify-center">
                   <Palette className="w-5 h-5 text-navy" />
                 </div>
                 <h3 className="font-[family-name:var(--font-heading)] text-navy text-xl font-bold">
@@ -192,7 +192,7 @@ export default function Academics() {
                 {currentTab.activities.map((activity) => (
                   <span
                     key={activity}
-                    className="font-[family-name:var(--font-body)] bg-navy/5 border border-navy/10 px-3.5 py-1.5 rounded-lg text-navy/80 text-sm sm:text-base hover:bg-navy hover:text-ivory transition-colors duration-300 cursor-default font-medium"
+                    className="font-[family-name:var(--font-body)] bg-ivory-dark/5 border border-navy/10 px-3.5 py-1.5 rounded-lg text-navy/80 text-sm sm:text-base hover:bg-ivory-dark hover:text-navy-dark transition-colors duration-300 cursor-default font-medium"
                   >
                     {activity}
                   </span>

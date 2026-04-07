@@ -89,14 +89,14 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={() => goTo(current - 1)}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-navy/10 hover:bg-navy/20 flex items-center justify-center text-navy/60 hover:text-navy transition-all duration-300"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-ivory-dark/10 hover:bg-ivory-dark/20 flex items-center justify-center text-navy/60 hover:text-navy transition-all duration-300"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={() => goTo(current + 1)}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-navy/10 hover:bg-navy/20 flex items-center justify-center text-navy/60 hover:text-navy transition-all duration-300"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-ivory-dark/10 hover:bg-ivory-dark/20 flex items-center justify-center text-navy/60 hover:text-navy transition-all duration-300"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -111,7 +111,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card-navy rounded-3xl p-8 sm:p-10 md:p-12 text-center relative z-10 group shadow-[0_20px_50px_rgba(4,8,20,0.5)]"
+                className="glass-panel rounded-3xl p-8 sm:p-10 md:p-12 text-center relative z-10 group shadow-[0_20px_50px_rgba(4,8,20,0.5)]"
               >
                 {/* Decorative floating background quotes */}
                 <Quote className="absolute top-8 left-8 w-32 h-32 text-gold/5 -z-10 rotate-12 transition-transform duration-700 group-hover:-translate-y-2 group-hover:-rotate-12" />
@@ -138,7 +138,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Quote Text */}
-                <p className="relative z-10 font-[family-name:var(--font-body)] text-ivory/80 text-lg sm:text-xl md:text-2xl pt-2 leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-ivory transition-colors duration-500">
+                <p className="relative z-10 font-[family-name:var(--font-body)] text-navy-dark/80 text-lg sm:text-xl md:text-2xl pt-2 leading-relaxed italic mb-10 max-w-3xl mx-auto group-hover:text-navy-dark transition-colors duration-500">
                   &ldquo;{testimonials[current].quote}&rdquo;
                 </p>
 
@@ -150,7 +150,7 @@ export default function Testimonials() {
                     </span>
                   </div>
                   <div>
-                    <p className="font-[family-name:var(--font-heading)] text-ivory text-lg font-bold">
+                    <p className="font-[family-name:var(--font-heading)] text-navy-dark text-lg font-bold">
                       {testimonials[current].name}
                     </p>
                     <p className="font-[family-name:var(--font-body)] text-gold/60 text-base">
@@ -171,7 +171,7 @@ export default function Testimonials() {
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   i === current
                     ? "bg-gold w-8"
-                    : "bg-navy/20 hover:bg-navy/40"
+                    : "bg-ivory-dark/20 hover:bg-ivory-dark/40"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />

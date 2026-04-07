@@ -79,7 +79,7 @@ export default function Gallery() {
                 {/* Center icon placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full border border-ivory/20 flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-heading)] text-ivory/30 text-xl font-bold">
+                    <span className="font-[family-name:var(--font-heading)] text-navy-dark/30 text-xl font-bold">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>

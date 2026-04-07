@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto mb-8 w-20 h-20 sm:w-28 sm:h-28 rounded-full border-2 border-gold/50 bg-navy/40 backdrop-blur-md flex items-center justify-center relative group shadow-[0_0_40px_rgba(201,168,76,0.3)]"
+          className="mx-auto mb-8 w-20 h-20 sm:w-28 sm:h-28 rounded-full border-2 border-gold/50 bg-ivory-dark/40 backdrop-blur-md flex items-center justify-center relative group shadow-[0_0_40px_rgba(201,168,76,0.3)]"
         >
           {/* Rotating halo ring */}
           <motion.div 
@@ -81,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-[family-name:var(--font-heading)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-ivory leading-tight mb-4 drop-shadow-2xl"
+          className="font-[family-name:var(--font-heading)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-4 drop-shadow-2xl"
         >
           Bal Sanskar
           <br />
@@ -101,7 +101,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="font-[family-name:var(--font-body)] text-ivory/60 text-base sm:text-lg tracking-[0.15em] uppercase mb-6"
+          className="font-[family-name:var(--font-body)] text-navy-dark/60 text-base sm:text-lg tracking-[0.15em] uppercase mb-6"
         >
           Jeolikot, Nainital &bull; Uttarakhand
         </motion.p>
@@ -111,7 +111,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          className="font-[family-name:var(--font-heading)] text-xl sm:text-2xl md:text-3xl text-ivory/90 tracking-[0.2em] font-medium mb-10"
+          className="font-[family-name:var(--font-heading)] text-xl sm:text-2xl md:text-3xl text-gold tracking-[0.2em] font-medium mb-10"
         >
           Discipline. Excellence. Nation.
         </motion.p>
@@ -145,7 +145,7 @@ export default function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <Link href="#stats" className="flex flex-col items-center gap-2 group">
-          <span className="font-[family-name:var(--font-body)] text-ivory/40 text-sm tracking-widest uppercase group-hover:text-gold/60 transition-colors">
+          <span className="font-[family-name:var(--font-body)] text-navy-dark/40 text-sm tracking-widest uppercase group-hover:text-gold/60 transition-colors">
             Scroll
           </span>
           <ChevronDown className="w-6 h-6 text-gold/50 group-hover:text-gold transition-colors" />

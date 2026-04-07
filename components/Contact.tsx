@@ -32,7 +32,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="section-padding relative overflow-hidden bg-navy-dark" ref={ref}>
+    <section id="contact" className="section-padding relative overflow-hidden bg-ivory" ref={ref}>
       <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
       <div className="absolute right-0 top-1/4 h-80 w-80 rounded-full bg-gold/5 blur-3xl" />
       <div className="absolute bottom-1/4 left-0 h-60 w-60 rounded-full bg-gold/5 blur-3xl" />
@@ -47,7 +47,7 @@ export default function Contact() {
           <p className="font-[family-name:var(--font-body)] text-gold-light text-lg tracking-[0.3em] uppercase mb-3">
             Get in Touch
           </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-ivory text-3xl sm:text-4xl md:text-5xl font-bold gold-underline">
+          <h2 className="font-[family-name:var(--font-heading)] text-navy-dark text-3xl sm:text-4xl md:text-5xl font-bold gold-underline">
             Contact Us
           </h2>
           <div className="star-divider mt-8">
@@ -62,12 +62,12 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="glass-card-navy rounded-[1.75rem] p-6 text-center"
+              className="glass-panel rounded-[1.75rem] p-6 text-center"
             >
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-gold/20 bg-gold/15 text-gold">
                 {info.icon}
               </div>
-              <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-2">
+              <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-navy-dark mb-2">
                 {info.title}
               </h3>
               {"href" in info ? (
@@ -78,9 +78,9 @@ export default function Contact() {
                   {info.detail}
                 </a>
               ) : (
-                <p className="text-lg font-semibold text-ivory/80">{info.detail}</p>
+                <p className="text-lg font-semibold text-navy-dark/80">{info.detail}</p>
               )}
-              <p className="mt-1 text-sm text-ivory/40">{info.sub}</p>
+              <p className="mt-1 text-sm text-navy-dark/40">{info.sub}</p>
 
               {info.title === "Follow Us" && (
                 <div className="mt-4 flex justify-center gap-3">

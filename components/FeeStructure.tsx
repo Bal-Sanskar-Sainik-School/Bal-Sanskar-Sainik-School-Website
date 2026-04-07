@@ -68,7 +68,7 @@ export default function FeeStructure() {
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
                   className={`border-b border-navy/5 transition-colors duration-200 hover:bg-gold/5 ${
-                    i % 2 === 0 ? "bg-transparent" : "bg-navy/[0.02]"
+                    i % 2 === 0 ? "bg-transparent" : "bg-ivory-dark/[0.02]"
                   }`}
                 >
                   <td className="px-6 py-4 text-base font-semibold text-navy/80 sm:px-8 sm:text-lg">
@@ -87,16 +87,16 @@ export default function FeeStructure() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-8 glass-card-navy flex flex-col items-start gap-4 rounded-[1.75rem] p-6 sm:flex-row sm:items-center sm:gap-6 sm:p-8"
+          className="mt-8 glass-panel flex flex-col items-start gap-4 rounded-[1.75rem] p-6 sm:flex-row sm:items-center sm:gap-6 sm:p-8"
         >
           <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-gold/20 bg-gold/15 flex-shrink-0">
             <Bus className="h-6 w-6 text-gold" />
           </div>
           <div className="flex-1">
-            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-1">
+            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-navy-dark mb-1">
               Transportation Fee
             </h3>
-            <p className="text-base text-ivory/60 sm:text-lg">
+            <p className="text-base text-navy-dark/60 sm:text-lg">
               Rs 500 - Rs 1,500 per month depending on distance from school.
             </p>
           </div>

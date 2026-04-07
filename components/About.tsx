@@ -115,11 +115,11 @@ export default function About() {
                   <h3 className="font-[family-name:var(--font-heading)] text-gold text-2xl font-bold mb-2">
                     Bal Sanskar
                   </h3>
-                  <p className="font-[family-name:var(--font-heading)] text-ivory/60 text-sm tracking-[0.3em] uppercase mb-6">
+                  <p className="font-[family-name:var(--font-heading)] text-navy-dark/60 text-sm tracking-[0.3em] uppercase mb-6">
                     Sainik School
                   </p>
                   <div className="h-px w-20 bg-gold/40 mb-6" />
-                  <p className="font-[family-name:var(--font-body)] text-ivory/50 text-lg italic">
+                  <p className="font-[family-name:var(--font-body)] text-navy-dark/50 text-lg italic">
                     &ldquo;Where discipline meets excellence in the lap of the Himalayas&rdquo;
                   </p>
                 </div>

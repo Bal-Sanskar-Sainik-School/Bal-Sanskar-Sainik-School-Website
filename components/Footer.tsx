@@ -15,7 +15,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-navy border-t border-gold/10">
+    <footer className="bg-ivory-dark border-t border-gold/10">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           <div>
@@ -27,22 +27,22 @@ export default function Footer() {
                 <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-gold">
                   Bal Sanskar
                 </h3>
-                <p className="font-[family-name:var(--font-heading)] text-xs uppercase tracking-[0.2em] text-ivory/80">
+                <p className="font-[family-name:var(--font-heading)] text-xs uppercase tracking-[0.2em] text-navy-dark/80">
                   Sainik School
                 </p>
               </div>
             </div>
-            <p className="mb-4 text-base leading-relaxed text-ivory/80">
+            <p className="mb-4 text-base leading-relaxed text-navy-dark/80">
               A premier educational institution in the heart of the Himalayas, nurturing
               disciplined leaders of tomorrow through academic excellence and core values.
             </p>
-            <p className="font-[family-name:var(--font-heading)] text-xs italic tracking-[0.15em] text-gold/50">
+            <p className="font-[family-name:var(--font-heading)] text-xs italic tracking-[0.15em] text-gold">
               &ldquo;Discipline. Excellence. Nation.&rdquo;
             </p>
           </div>
 
           <div>
-            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-5">
+            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-navy-dark mb-5">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -50,7 +50,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-base text-ivory/80 transition-colors duration-300 hover:text-gold"
+                    className="group flex items-center gap-2 text-base text-navy-dark/80 transition-colors duration-300 hover:text-gold"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-gold/30 transition-colors group-hover:bg-gold" />
                     {link.name}
@@ -61,13 +61,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-ivory mb-5">
+            <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold text-navy-dark mb-5">
               Connect With Us
             </h3>
             <div className="mb-6 space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
-                <p className="text-base text-ivory/80">
+                <p className="text-base text-navy-dark/80">
                   Jeolikot, Nainital,
                   <br />
                   Uttarakhand, India
@@ -77,7 +77,7 @@ export default function Footer() {
                 <Phone className="h-5 w-5 flex-shrink-0 text-gold" />
                 <a
                   href="tel:+919927289673"
-                  className="text-base text-ivory/80 transition-colors hover:text-gold"
+                  className="text-base text-navy-dark/80 transition-colors hover:text-gold"
                 >
                   +91 99272 89673
                 </a>
@@ -110,10 +110,10 @@ export default function Footer() {
 
       <div className="border-t border-gold/10">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-sm sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-center text-ivory/30 sm:text-left">
+          <p className="text-center text-navy-dark/70 sm:text-left">
             Copyright 2026 Bal Sanskar Sainik School, Jeolikot Nainital. All rights reserved.
           </p>
-          <p className="text-ivory/20">Discipline. Excellence. Nation.</p>
+          <p className="text-gold font-semibold text-xs tracking-wider uppercase">Discipline. Excellence. Nation.</p>
         </div>
       </div>
     </footer>
