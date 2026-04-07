@@ -67,7 +67,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold px-4 py-2 text-lg font-medium tracking-wide transition-colors duration-300 relative group"
+              className="font-[family-name:var(--font-body)] text-ivory hover:text-gold px-4 py-2 text-lg font-medium tracking-wide transition-colors duration-300 relative group"
             >
               {link.name}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gold transition-all duration-300 group-hover:w-3/4" />
@@ -114,7 +114,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold text-xl font-medium py-3 block border-b border-ivory/10 transition-colors duration-300"
+                    className="font-[family-name:var(--font-body)] text-ivory hover:text-gold text-xl font-medium py-3 block border-b border-ivory/10 transition-colors duration-300"
                   >
                     {link.name}
                   </Link>

@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
               </h3>
 
               {/* Description */}
-              <p className="font-[family-name:var(--font-body)] text-ivory/60 text-base sm:text-lg leading-relaxed">
+              <p className="font-[family-name:var(--font-body)] text-ivory/70 text-base sm:text-lg leading-relaxed font-light tracking-wide">
                 {feature.description}
               </p>
             </motion.div>

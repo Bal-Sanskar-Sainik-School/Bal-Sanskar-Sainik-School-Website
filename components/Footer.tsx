@@ -28,12 +28,12 @@ export default function Footer() {
                 <h3 className="font-[family-name:var(--font-heading)] text-gold text-lg font-bold">
                   Bal Sanskar
                 </h3>
-                <p className="font-[family-name:var(--font-heading)] text-ivory/50 text-xs tracking-[0.2em] uppercase">
+                <p className="font-[family-name:var(--font-heading)] text-ivory/80 text-xs tracking-[0.2em] uppercase">
                   Sainik School
                 </p>
               </div>
             </div>
-            <p className="font-[family-name:var(--font-body)] text-ivory/50 text-base leading-relaxed mb-4">
+            <p className="font-[family-name:var(--font-body)] text-ivory/80 text-base leading-relaxed mb-4">
               A premier military-style school in the heart of the Himalayas, nurturing 
               disciplined leaders of tomorrow through academic excellence and Sainik values.
             </p>
@@ -52,7 +52,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="font-[family-name:var(--font-body)] text-ivory/50 hover:text-gold text-base transition-colors duration-300 flex items-center gap-2 group"
+                    className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold text-base transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 bg-gold/30 rounded-full group-hover:bg-gold transition-colors" />
                     {link.name}
@@ -70,7 +70,7 @@ export default function Footer() {
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
-                <p className="font-[family-name:var(--font-body)] text-ivory/50 text-base">
+                <p className="font-[family-name:var(--font-body)] text-ivory/80 text-base">
                   Jeolikot, Nainital,
                   <br />
                   Uttarakhand, India
@@ -80,7 +80,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <a
                   href="tel:+919927289673"
-                  className="font-[family-name:var(--font-body)] text-ivory/50 hover:text-gold text-base transition-colors"
+                  className="font-[family-name:var(--font-body)] text-ivory/80 hover:text-gold text-base transition-colors"
                 >
                   +91 99272 89673
                 </a>
