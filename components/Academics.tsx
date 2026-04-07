@@ -127,7 +127,7 @@ export default function Academics() {
             className="grid md:grid-cols-3 gap-6 lg:gap-8"
           >
             {/* Subjects */}
-            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gold/10">
+            <div className="card-ivory rounded-xl p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <BookOpen className="w-5 h-5 text-navy" />
@@ -150,7 +150,7 @@ export default function Academics() {
             </div>
 
             {/* Schedule */}
-            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gold/10">
+            <div className="card-ivory rounded-xl p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-navy" />
@@ -173,7 +173,7 @@ export default function Academics() {
             </div>
 
             {/* Activities */}
-            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-sm border border-gold/10">
+            <div className="card-ivory rounded-xl p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg bg-navy/10 flex items-center justify-center">
                   <Palette className="w-5 h-5 text-navy" />

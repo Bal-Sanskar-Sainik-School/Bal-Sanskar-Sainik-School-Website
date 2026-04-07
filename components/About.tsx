@@ -56,7 +56,7 @@ export default function About() {
 
             {/* Vision & Mission */}
             <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              <div className="bg-navy/5 rounded-lg p-5 border-l-4 border-gold">
+              <div className="card-ivory rounded-lg p-5 border-l-4 border-gold">
                 <h4 className="font-[family-name:var(--font-heading)] text-navy text-lg font-bold mb-2">
                   Our Vision
                 </h4>
@@ -65,7 +65,7 @@ export default function About() {
                   serve the nation with pride and integrity.
                 </p>
               </div>
-              <div className="bg-navy/5 rounded-lg p-5 border-l-4 border-gold">
+              <div className="card-ivory rounded-lg p-5 border-l-4 border-gold">
                 <h4 className="font-[family-name:var(--font-heading)] text-navy text-lg font-bold mb-2">
                   Our Mission
                 </h4>

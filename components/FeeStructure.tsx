@@ -49,7 +49,7 @@ export default function FeeStructure() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="bg-white rounded-xl shadow-lg overflow-hidden border border-gold/10"
+          className="card-ivory rounded-2xl overflow-hidden"
         >
           <table className="w-full">
             <thead>
@@ -70,7 +70,7 @@ export default function FeeStructure() {
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.05 }}
                   className={`border-b border-navy/5 ${
-                    i % 2 === 0 ? "bg-white" : "bg-navy/[0.02]"
+                    i % 2 === 0 ? "bg-transparent" : "bg-navy/[0.02]"
                   } hover:bg-gold/5 transition-colors duration-200`}
                 >
                   <td className="font-[family-name:var(--font-body)] text-navy/80 px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold">
