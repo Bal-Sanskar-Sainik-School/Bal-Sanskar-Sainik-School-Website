@@ -51,29 +51,25 @@ export default function StatsBar() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="stats" ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-ivory">
-      <div className="max-w-7xl mx-auto">
-        <ScrollReveal direction="up">
-          <div className="bg-navy rounded-2xl p-10 sm:p-14 shadow-lg border border-navy-light/20 relative overflow-hidden">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative z-10 text-center">
-              {stats.map((stat, i) => (
-                <ScrollReveal key={stat.label} direction="up" delay={i * 0.12}>
-                  <div className="flex flex-col items-center group">
-                    <div className="w-16 h-16 rounded-full bg-navy-light/30 border border-gold/30 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300 shadow-md">
-                      {stat.icon}
-                    </div>
-                    <h4 className="font-[family-name:var(--font-heading)] text-white text-4xl sm:text-5xl font-bold mb-2 tracking-tight group-hover:text-gold transition-colors duration-300">
-                      <CountUpNumber target={stat.numValue} suffix={stat.suffix} inView={inView} />
-                    </h4>
-                    <p className="font-[family-name:var(--font-body)] text-white/70 text-sm tracking-wider uppercase font-semibold">
-                      {stat.label}
-                    </p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
+    <section id="stats" ref={ref} className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-navy border-y border-gold/10">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16 relative z-10 text-center">
+          {stats.map((stat, i) => (
+            <ScrollReveal key={stat.label} direction="up" delay={i * 0.12}>
+              <div className="flex flex-col items-center group">
+                <div className="mb-6 text-gold group-hover:-translate-y-2 transition-transform duration-500 will-change-transform">
+                  {stat.icon}
+                </div>
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-5xl sm:text-6xl font-bold mb-3 tracking-tight">
+                  <CountUpNumber target={stat.numValue} suffix={stat.suffix} inView={inView} />
+                </h4>
+                <p className="font-[family-name:var(--font-body)] text-white/70 text-[13px] tracking-[0.15em] uppercase font-semibold">
+                  {stat.label}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );

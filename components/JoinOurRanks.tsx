@@ -1,50 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function JoinOurRanks() {
   return (
-    <section className="py-24 sm:py-32 bg-navy-dark text-center">
-      <div className="max-w-4xl mx-auto px-6 sm:px-8">
+    <section className="relative py-28 bg-gold overflow-hidden text-center z-10">
+      {/* Subtle Diagonal Stripe Texture Overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
+        style={{
+          backgroundImage: `repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 10px)`
+        }}
+      />
+      
+      {/* Top/Bottom Border Accents */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-navy/20 z-0" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-navy/20 z-0" />
 
-        <ScrollReveal direction="fade" duration={0.5}>
-          <div className="mx-auto w-16 h-16 bg-navy-light/30 border border-gold/30 rounded-full flex items-center justify-center mb-8">
-            <ShieldCheck className="w-8 h-8 text-gold" />
-          </div>
-        </ScrollReveal>
-
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 relative z-10">
         <ScrollReveal direction="up" delay={0.1}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white font-[family-name:var(--font-heading)] mb-6 leading-tight">
-            Shape Your Child&apos;s Future
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white font-[family-name:var(--font-heading)] mb-6 leading-tight drop-shadow-sm">
+            Admissions Open for 2025–26
           </h2>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.2}>
-          <p className="text-lg sm:text-xl text-white/80 font-[family-name:var(--font-body)] mb-12 max-w-2xl mx-auto leading-relaxed">
-            Admissions are now open. Give them the gift of discipline, rigorous education, and impeccable character at Bal Sanskar Sainik School.
+          <p className="text-lg sm:text-xl text-white/95 font-[family-name:var(--font-body)] mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-shadow-sm">
+            Shape your child's future with military discipline, rigorous academics, and a world-class environment in the Himalayas. limited seats available.
           </p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.3}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link
               href="/admissions"
-              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold px-8 py-4 rounded-full transition-all duration-300 w-full sm:w-auto hover:-translate-y-0.5 shadow-lg"
+              className="group flex items-center justify-center gap-2 bg-navy hover:bg-navy-light text-white font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-10 py-5 rounded-sm transition-all duration-300 w-full sm:w-auto hover:-translate-y-1 shadow-2xl shadow-navy/30"
             >
-              Apply for Admission
+              Apply Online
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/contact"
-              className="flex items-center justify-center text-white bg-transparent border border-white/20 hover:border-white/50 hover:bg-white/5 font-[family-name:var(--font-body)] font-medium px-8 py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
+              className="group flex items-center justify-center gap-2 bg-white/20 hover:bg-white text-navy-dark font-[family-name:var(--font-body)] border border-transparent hover:border-white font-bold uppercase tracking-[0.1em] px-10 py-5 rounded-sm transition-all duration-300 w-full sm:w-auto shadow-lg backdrop-blur-md"
             >
-              Contact Information
+              <MessageSquare className="w-5 h-5" />
+              Contact Us
             </Link>
           </div>
         </ScrollReveal>
-
       </div>
     </section>
   );

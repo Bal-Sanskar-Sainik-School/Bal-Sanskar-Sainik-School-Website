@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X, Shield, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,7 +21,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,97 +34,110 @@ export default function Navbar() {
     }
   }, [mobileOpen]);
 
+  const isHome = pathname === "/";
+  // Text colors change based on scroll and page
+  const textClass = !scrolled && isHome ? "text-white" : "text-navy-dark";
+  const logoTextClassPrimary = !scrolled && isHome ? "text-white" : "text-navy-dark";
+  const logoTextClassSecondary = !scrolled && isHome ? "text-white/80" : "text-navy-light";
+
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled || pathname !== "/"
-          ? "bg-ivory/95 backdrop-blur-xl border-b border-gold/10 shadow-[0_4px_20px_rgba(0,0,0,0.08)] py-2"
-          : "bg-transparent py-4"
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
+        scrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-gray-100 py-3" 
+          : "bg-transparent border-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 border-2 border-gold flex items-center justify-center group-hover:bg-gold/30 transition-all duration-300">
-            <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
+        
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center gap-3 group relative z-50">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+            <Shield className={`w-8 h-8 sm:w-10 sm:h-10 ${!scrolled && isHome ? "text-gold" : "text-navy-dark"}`} />
           </div>
-          <div className="hidden sm:block">
-            <h1 className="font-[family-name:var(--font-heading)] text-sm sm:text-base font-bold leading-tight tracking-wide text-gold">
+          <div className="hidden sm:flex flex-col justify-center translate-y-0.5">
+            <h1 className={`font-[family-name:var(--font-heading)] text-lg sm:text-[22px] font-black leading-none tracking-wide transition-colors ${logoTextClassPrimary}`}>
               Bal Sanskar
             </h1>
-            <p className={`font-[family-name:var(--font-heading)] text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase ${scrolled || pathname !== "/" ? "text-navy-dark" : "text-white/90"}`}>
+            <p className={`font-[family-name:var(--font-body)] text-[10px] sm:text-[11px] uppercase tracking-[0.12em] font-medium transition-colors mt-1 ${logoTextClassSecondary}`}>
               Sainik School
             </p>
           </div>
         </Link>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`font-[family-name:var(--font-body)] px-4 py-2 text-lg font-medium tracking-wide transition-colors duration-300 relative group hover:text-gold ${scrolled || pathname !== "/" ? "text-navy-dark" : "text-white"}`}
+              className={`font-[family-name:var(--font-body)] text-[15px] font-medium tracking-wide transition-all duration-300 relative group hover:text-gold ${textClass}`}
             >
               {link.name}
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gold transition-all duration-300 group-hover:w-3/4" />
+              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gold transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100" />
             </Link>
           ))}
         </div>
 
-        {/* Apply Now Button (Desktop) */}
-        <Link
-          href="/admissions"
-          className="hidden lg:block font-[family-name:var(--font-heading)] btn-primary font-bold text-sm px-6 py-2.5 rounded tracking-wider"
-        >
-          APPLY NOW
-        </Link>
+        {/* Right Side CTA */}
+        <div className="hidden lg:flex items-center">
+          <Link
+            href="/admissions"
+            className={`group flex items-center gap-2 font-[family-name:var(--font-body)] text-[14px] font-bold uppercase tracking-[0.1em] px-7 py-3 rounded-sm transition-all duration-300 ${
+              !scrolled && isHome 
+                ? "bg-gold text-navy-dark hover:bg-gold-light" 
+                : "bg-gold text-white hover:bg-navy hover:-translate-y-0.5 hover:shadow-lg"
+            }`}
+          >
+            Apply Now
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 hover:text-gold transition-colors ${scrolled || pathname !== "/" ? "text-navy-dark" : "text-white"}`}
+          className={`lg:hidden p-2 transition-colors relative z-50 ${mobileOpen ? "text-navy-dark" : textClass}`}
           aria-label="Toggle menu"
         >
-          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileOpen ? <X size={30} strokeWidth={1.5} /> : <Menu size={30} strokeWidth={1.5} />}
         </button>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Full-Screen Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-ivory/80 backdrop-blur-2xl border-t border-white/5 overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, y: "-100%" }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: "-100%" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-40 bg-white flex flex-col justify-center items-center px-6"
           >
-            <div className="px-6 py-6 flex flex-col gap-1">
+            <div className="flex flex-col items-center gap-6 w-full max-w-sm">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
+                  className="w-full text-center"
                 >
                   <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-[family-name:var(--font-body)] text-navy-dark hover:text-gold text-xl font-medium py-3 block border-b border-ivory/10 transition-colors duration-300"
+                    className="font-[family-name:var(--font-heading)] text-navy-dark hover:text-gold text-4xl sm:text-5xl font-medium block py-2 transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
                 </motion.div>
               ))}
+              
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-4"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.7, duration: 0.5 }}
+                className="w-full mt-8"
               >
                 <Link
                   href="/admissions"
@@ -138,6 +151,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }

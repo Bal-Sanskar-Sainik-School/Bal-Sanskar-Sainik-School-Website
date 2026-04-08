@@ -1,125 +1,137 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
-const bgImages = [
-  "/images/Assembly_Image/Assembly_Image_1.jpeg",
-  "/images/Students_Studying/Students_Studying_2.jpeg",
-  "/images/School_Bus_Images/Students_In_School_Bus_1.jpeg",
+const stats = [
+  { value: "500+", label: "Students" },
+  { value: "20+", label: "Faculty" },
+  { value: "15 Acres", label: "Campus" },
+  { value: "100%", label: "Results" },
 ];
 
 export default function Hero() {
-  const [currentBg, setCurrentBg] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentBg((prev) => (prev + 1) % bgImages.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <section
-      id="home"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* Dynamic Background Carousel */}
-      <AnimatePresence mode="popLayout">
-        <motion.div
-          key={currentBg}
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2.5, ease: "easeInOut" }}
-          className="absolute inset-0 will-change-transform"
-        >
-          <Image
-            src={bgImages[currentBg]}
-            alt="School background"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            priority={currentBg === 0}
-            loading={currentBg === 0 ? "eager" : "lazy"}
-          />
-        </motion.div>
-      </AnimatePresence>
+    <section className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/Assembly_Image/Assembly_Image_1.jpeg"
+          alt="School Assembly"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </div>
 
-      {/* Unified dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/80 via-navy-dark/60 to-navy-dark/90 z-[1]" />
+      {/* Hero Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-navy-dark/40 mix-blend-multiply z-[1]" />
 
-      {/* Subtle gold accent line at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent z-[2]" />
-
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+      {/* Main Content */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col justify-center h-full pt-16">
+        <div className="max-w-4xl text-left">
           {/* Badge */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-10 h-[2px] bg-gold" />
-            <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.3em] uppercase text-xs sm:text-sm">
-              Jeolikot, Nainital
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex items-center gap-3 mb-6"
+          >
+            <span className="w-12 h-[1px] bg-gold" />
+            <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.15em] uppercase text-xs sm:text-[13px]">
+              EST. 2024 · JEOLIKOT, NAINITAL
             </span>
-            <span className="w-10 h-[2px] bg-gold" />
-          </div>
+          </motion.div>
 
-          {/* Main Heading */}
-          <h1 className="font-[family-name:var(--font-heading)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
-            Bal Sanskar <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
-              Sainik School
-            </span>
-          </h1>
+          {/* Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="font-[family-name:var(--font-heading)] text-5xl sm:text-6xl lg:text-[80px] font-bold text-white leading-[1.1] mb-8"
+          >
+            Nurturing India's <br />
+            <span className="text-gold">Future Leaders</span>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="font-[family-name:var(--font-body)] text-white/80 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
-            Nurturing disciplined leaders of tomorrow through academic excellence,
-            character building, and the timeless values of courage and integrity —
-            in the heart of the Himalayas.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="font-[family-name:var(--font-body)] text-white/90 text-lg sm:text-xl font-light leading-[1.7] mb-12 max-w-2xl"
+          >
+            A premier Sainik school in the heart of the Himalayas — where discipline meets excellence.
+          </motion.p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          {/* Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-5"
+          >
             <Link
               href="/admissions"
-              className="group flex items-center gap-2 bg-gold hover:bg-gold-light text-white font-[family-name:var(--font-body)] font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-sm transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5"
             >
               Apply for Admission
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/academics"
-              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-[family-name:var(--font-body)] font-semibold px-8 py-3.5 rounded-full transition-all duration-300"
+              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-sm transition-all duration-300 w-full sm:w-auto"
             >
               Explore Academics
             </Link>
-          </div>
-        </motion.div>
-
-        {/* Slide Indicators */}
-        <div className="flex justify-center gap-3 mt-14">
-          {bgImages.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentBg(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === currentBg
-                  ? "bg-gold w-10"
-                  : "bg-white/30 w-4 hover:bg-white/50"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+          </motion.div>
         </div>
       </div>
+
+      {/* Floating Stats Row */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-navy/80 backdrop-blur-md hidden md:block"
+      >
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between py-6">
+          <div className="flex w-full justify-between items-center">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col text-left">
+                <span className="font-[family-name:var(--font-heading)] text-3xl text-gold font-bold mb-1">
+                  {stat.value}
+                </span>
+                <span className="font-[family-name:var(--font-body)] text-white/70 text-xs tracking-wider uppercase font-semibold">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Scroll Down Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-10 right-10 z-20 hidden md:flex flex-col items-center gap-2"
+      >
+        <span className="font-[family-name:var(--font-body)] text-white/50 text-[10px] tracking-[0.2em] uppercase origin-left rotate-90 translate-x-3 -translate-y-10">
+          Scroll
+        </span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown className="w-5 h-5 text-gold" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

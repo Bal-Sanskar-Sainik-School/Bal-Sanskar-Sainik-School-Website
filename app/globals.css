@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Elegant Wheat & Forest Green Theme */
-  --color-navy: #2f5c4f;       /* Deep Green - Standard Text */
-  --color-navy-light: #528172; /* Muted Green - Secondary Text */
-  --color-navy-dark: #1f3c31;  /* Very Dark Forest Green - Headings */
-  --color-gold: #f0a028;       /* Mustard Yellow/Orange Accent */
-  --color-gold-light: #f4bd61; /* Light Mustard */
-  --color-gold-dark: #d68d20;  /* Dark Mustard */
-  --color-ivory: #ffffff;      /* Pure White Background */
-  --color-ivory-dark: #f8f5eb; /* Warm Wheat / Beige Background */
-  --color-olive: #318671;      /* Teal Green Accent (Buttons) */
-  --color-olive-light: #4ab39b;/* Lighter Teal */
-  --font-heading: 'Lora', 'Georgia', serif;
+  /* Prestige Theme: $1000+ Agency Level */
+  --color-navy: #0A1628;       /* Deep Navy Blue - Standard/Primary */
+  --color-navy-light: #1C1C1E; /* Charcoal - Body Text */
+  --color-navy-dark: #050B14;  /* Ultra Dark Navy */
+  --color-gold: #C9962B;       /* Saffron Gold Accent */
+  --color-gold-light: #DEAF49; /* Lighter Gold */
+  --color-gold-dark: #A5771E;  /* Darker Gold */
+  --color-ivory: #FFFFFF;      /* Pure White */
+  --color-ivory-dark: #F8F6F0; /* Soft Off-white Surface */
+  --color-olive: #0A1628;      
+  --color-olive-light: #1A2A42;
+  --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
@@ -32,13 +32,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-ivory-dark);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-gold);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gold-dark);
 }
@@ -48,6 +51,7 @@ body {
   position: relative;
   display: inline-block;
 }
+
 .gold-underline::after {
   content: '';
   position: absolute;
@@ -68,6 +72,7 @@ body {
   gap: 12px;
   margin: 2rem 0;
 }
+
 .star-divider::before,
 .star-divider::after {
   content: '';
@@ -82,8 +87,10 @@ body {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
   border-radius: 1rem;
 }
+
 .card-glow:hover {
-  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.08); /* Soft orange shadow */
+  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.08);
+  /* Soft orange shadow */
   transform: translateY(-4px);
 }
 
@@ -99,11 +106,13 @@ body {
 .section-padding {
   padding: 6rem 1.5rem;
 }
+
 @media (min-width: 768px) {
   .section-padding {
     padding: 8rem 2rem;
   }
 }
+
 @media (min-width: 1024px) {
   .section-padding {
     padding: 10rem 4rem;
@@ -115,21 +124,25 @@ body {
   columns: 1;
   column-gap: 1.5rem;
 }
+
 @media (min-width: 640px) {
   .masonry-grid {
     columns: 2;
   }
 }
+
 @media (min-width: 1024px) {
   .masonry-grid {
     columns: 3;
   }
 }
+
 @media (min-width: 1280px) {
   .masonry-grid {
     columns: 4;
   }
 }
+
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 1.5rem;
@@ -140,6 +153,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .btn-shine::before {
   content: '';
   position: absolute;
@@ -147,9 +161,10 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s ease;
 }
+
 .btn-shine:hover::before {
   left: 100%;
 }
@@ -173,7 +188,8 @@ body {
 
 .glass-card-navy:hover {
   transform: translateY(-5px);
-  border-color: rgba(34, 197, 94, 0.3); /* Green accent border */
+  border-color: rgba(34, 197, 94, 0.3);
+  /* Green accent border */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
@@ -187,7 +203,8 @@ body {
 
 .card-ivory:hover {
   transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.08); /* Orange soft shadow */
+  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.08);
+  /* Orange soft shadow */
   border-color: rgba(249, 115, 22, 0.2);
 }
 
@@ -206,6 +223,7 @@ body {
   font-weight: 600;
   padding: 0.75rem 2rem;
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
   background: var(--color-gold-dark);
@@ -216,15 +234,17 @@ body {
 .btn-secondary {
   background: transparent;
   color: var(--color-gold);
-  border: 2px solid var(--color-gold); 
+  border: 2px solid var(--color-gold);
   box-shadow: none;
   transition: all 0.3s ease;
   border-radius: 9999px !important;
   font-weight: 600;
   padding: 0.75rem 2rem;
 }
+
 .btn-secondary:hover {
-  background: rgba(249, 115, 22, 0.05); /* very light orange */
+  background: rgba(249, 115, 22, 0.05);
+  /* very light orange */
   color: var(--color-gold-dark);
   transform: translateY(-2px);
   border-color: var(--color-gold-dark);
@@ -232,8 +252,13 @@ body {
 
 /* Marquee Animation */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-marquee {
