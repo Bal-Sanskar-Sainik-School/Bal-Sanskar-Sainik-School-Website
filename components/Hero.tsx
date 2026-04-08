@@ -41,9 +41,11 @@ export default function Hero() {
         />
       </AnimatePresence>
 
-      {/* Layered overlays for depth and readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/60 to-navy-dark/95 border-b border-gold/10 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/80 via-transparent to-navy-dark/80 mix-blend-multiply z-[1]" />
+      {/* Layered vibrant cinematic overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/70 via-navy/30 to-navy-dark/90 border-b border-gold/20 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/40 via-transparent to-navy-dark/40 z-[1]" />
+      {/* Warm cinematic sunset glow to match the brand gold/orange */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 via-transparent to-transparent mix-blend-color-dodge opacity-60 z-[1]" />
 
       {/* Decorative top/bottom glowing lines */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50 z-[2]" />
