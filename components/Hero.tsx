@@ -22,11 +22,28 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[600px] flex items-center bg-ivory-dark overflow-hidden">
-      
-      {/* Decorative Blob pattern based on reference image */}
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gold opacity-10 rounded-full blur-[80px]" />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-olive opacity-10 rounded-full blur-[100px]" />
+    <section
+      id="home"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-navy-dark"
+    >
+      {/* Dynamic Background Carousel */}
+      <AnimatePresence mode="popLayout">
+        <motion.div
+          key={currentBg}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 2.5, ease: "easeInOut" }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
+          style={{
+            backgroundImage: `url('${bgImages[currentBg]}')`,
+          }}
+        />
+      </AnimatePresence>
+
+      {/* Layered overlays for depth and readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/60 to-navy-dark/95 border-b border-gold/10 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/80 via-transparent to-navy-dark/80 mix-blend-multiply z-[1]" />
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-10 flex flex-col md:flex-row items-center gap-12">
