@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Fresh Modern EdTech Theme */
-  --color-navy: #1f2937;       /* Slate 800 - Main text */
-  --color-navy-light: #4b5563; /* Slate 600 - Secondary text */
-  --color-navy-dark: #111827;  /* Slate 900 - Headings */
-  --color-gold: #f97316;       /* Orange 500 - Primary brand */
-  --color-gold-light: #fb923c; /* Orange 400 */
-  --color-gold-dark: #ea580c;  /* Orange 600 */
-  --color-ivory: #ffffff;      /* White background */
-  --color-ivory-dark: #f8fafc; /* Slate 50 - Off-white background */
-  --color-olive: #22c55e;      /* Green 500 - Secondary accent */
-  --color-olive-light: #4ade80;/* Green 400 */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Elegant Wheat & Forest Green Theme */
+  --color-navy: #2f5c4f;       /* Deep Green - Standard Text */
+  --color-navy-light: #528172; /* Muted Green - Secondary Text */
+  --color-navy-dark: #1f3c31;  /* Very Dark Forest Green - Headings */
+  --color-gold: #f0a028;       /* Mustard Yellow/Orange Accent */
+  --color-gold-light: #f4bd61; /* Light Mustard */
+  --color-gold-dark: #d68d20;  /* Dark Mustard */
+  --color-ivory: #ffffff;      /* Pure White Background */
+  --color-ivory-dark: #f8f5eb; /* Warm Wheat / Beige Background */
+  --color-olive: #318671;      /* Teal Green Accent (Buttons) */
+  --color-olive-light: #4ab39b;/* Lighter Teal */
+  --font-heading: 'Lora', 'Georgia', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 }
 
 html {
@@ -230,4 +230,13 @@ body {
   border-color: var(--color-gold-dark);
 }
 
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
 
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: inline-flex;
+}

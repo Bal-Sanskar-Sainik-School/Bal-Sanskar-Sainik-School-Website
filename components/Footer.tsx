@@ -1,8 +1,8 @@
 "use client";
 
-import { MapPin, Phone, Shield } from "lucide-react";
+import { MapPin, Phone, Shield, Mail } from "lucide-react";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -82,9 +82,27 @@ export default function Footer() {
                   +91 99272 89673
                 </a>
               </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 flex-shrink-0 text-gold" />
+                <a
+                  href="mailto:balsansars@gmail.com"
+                  className="text-base text-navy-dark/80 transition-colors hover:text-gold"
+                >
+                  balsansars@gmail.com
+                </a>
+              </div>
             </div>
 
             <div className="flex gap-3">
+              <a
+                href="https://wa.me/919927289673"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold hover:text-navy"
+                aria-label="Chat on WhatsApp"
+              >
+                <FaWhatsapp size={20} />
+              </a>
               <a
                 href="https://www.instagram.com/bal.sansar.sainik.school"
                 target="_blank"
@@ -95,7 +113,7 @@ export default function Footer() {
                 <FaInstagram size={18} />
               </a>
               <a
-                href="https://www.facebook.com/share/1CAbyUUs2R/"
+                href="https://www.facebook.com/deepideeksha110/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:bg-gold hover:text-navy"

@@ -55,7 +55,7 @@ export default function Navbar() {
             <h1 className="font-[family-name:var(--font-heading)] text-sm sm:text-base font-bold leading-tight tracking-wide text-gold">
               Bal Sanskar
             </h1>
-            <p className={`font-[family-name:var(--font-heading)] text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase ${scrolled || pathname !== "/" ? "text-navy-dark" : "text-white"}`}>
+            <p className="font-[family-name:var(--font-heading)] text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-navy-dark">
               Sainik School
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`font-[family-name:var(--font-body)] px-4 py-2 text-lg font-medium tracking-wide transition-colors duration-300 relative group hover:text-gold ${scrolled || pathname !== "/" ? "text-navy-dark" : "text-white"}`}
+              className="font-[family-name:var(--font-body)] px-4 py-2 text-lg font-medium tracking-wide transition-colors duration-300 relative group hover:text-gold text-navy-dark"
             >
               {link.name}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gold transition-all duration-300 group-hover:w-3/4" />
@@ -86,7 +86,7 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden text-navy-dark p-2 hover:text-gold transition-colors"
+          className="lg:hidden p-2 hover:text-gold transition-colors text-navy-dark"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}

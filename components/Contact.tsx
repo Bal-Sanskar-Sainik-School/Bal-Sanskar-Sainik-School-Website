@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { MapPin, Phone, Star } from "lucide-react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { MapPin, Phone, Star, Mail } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useRef } from "react";
 
 export default function Contact() {
@@ -18,10 +18,17 @@ export default function Contact() {
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
+      title: "Call / WhatsApp",
       detail: "+91 99272 89673",
       sub: "Mon - Sat, 8 AM - 6 PM",
       href: "tel:+919927289673",
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Us",
+      detail: "balsansars@gmail.com",
+      sub: "We reply within 24 hours",
+      href: "mailto:balsansars@gmail.com",
     },
     {
       icon: <FaInstagram size={24} />,
@@ -55,7 +62,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <div className="mb-16 grid gap-6 sm:grid-cols-3">
+        <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {contactInfo.map((info, i) => (
             <motion.div
               key={info.title}
@@ -85,6 +92,15 @@ export default function Contact() {
               {info.title === "Follow Us" && (
                 <div className="mt-4 flex justify-center gap-3">
                   <a
+                    href="https://wa.me/919927289673"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:border-gold/40 hover:bg-gold/20"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp size={20} />
+                  </a>
+                  <a
                     href="https://www.instagram.com/bal.sansar.sainik.school"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -94,7 +110,7 @@ export default function Contact() {
                     <FaInstagram size={18} />
                   </a>
                   <a
-                    href="https://www.facebook.com/share/1CAbyUUs2R/"
+                    href="https://www.facebook.com/deepideeksha110/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/20 bg-gold/10 text-gold transition-all duration-300 hover:border-gold/40 hover:bg-gold/20"

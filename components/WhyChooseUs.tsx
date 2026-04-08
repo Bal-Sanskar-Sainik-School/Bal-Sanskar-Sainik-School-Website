@@ -1,124 +1,96 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Shield,
-  GraduationCap,
   BookOpen,
-  Mountain,
-  Heart,
-  Lock,
-  Star,
+  MonitorPlay,
+  HeartPulse,
+  Bus,
+  Library,
 } from "lucide-react";
 
-const features = [
+const facilities = [
   {
-    icon: <Shield className="w-8 h-8" />,
-    title: "Strong Discipline & Values",
-    description:
-      "Instilling discipline, punctuality, and strong values through a structured daily routine that builds character from a young age.",
-    accentColor: "gold",
+    icon: <MonitorPlay className="w-8 h-8" />,
+    title: "Smart Classrooms",
+    description: "Technology-enabled learning spaces for interactive and conceptual education.",
   },
   {
-    icon: <GraduationCap className="w-8 h-8" />,
-    title: "Academic Excellence",
-    description:
-      "Comprehensive education from Class 1 to 8 with experienced faculty, modern teaching methods, and a focus on conceptual understanding.",
-    accentColor: "olive",
+    icon: <Library className="w-8 h-8" />,
+    title: "Resourceful Library",
+    description: "Extensive collection of books, journals, and digital media to encourage reading.",
+  },
+  {
+    icon: <HeartPulse className="w-8 h-8" />,
+    title: "Sports & Fitness",
+    description: "Expansive playgrounds and daily PT sessions to foster physical resilience.",
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: "Secure Campus",
+    description: "24/7 CCTV surveillance and guarded premises for complete peace of mind.",
+  },
+  {
+    icon: <Bus className="w-8 h-8" />,
+    title: "Transport Facility",
+    description: "Safe and widespread transport network covering major routes in the region.",
   },
   {
     icon: <BookOpen className="w-8 h-8" />,
-    title: "CBSE-Aligned Curriculum",
-    description:
-      "Our curriculum follows CBSE standards, ensuring students are well-prepared for future academic pursuits and competitive examinations.",
-    accentColor: "gold",
-  },
-  {
-    icon: <Mountain className="w-8 h-8" />,
-    title: "Himalayan Campus",
-    description:
-      "Located in the pristine hills of Jeolikot, Nainital, our campus offers a pollution-free environment ideal for focused learning and growth.",
-    accentColor: "olive",
-  },
-  {
-    icon: <Heart className="w-8 h-8" />,
-    title: "Holistic Development",
-    description:
-      "Beyond academics — sports, arts, music, yoga, and adventure activities ensure the all-round development of every student.",
-    accentColor: "gold",
-  },
-  {
-    icon: <Lock className="w-8 h-8" />,
-    title: "Safe & Nurturing",
-    description:
-      "A secure campus with caring staff, balanced nutrition, regular health check-ups, and a family-like atmosphere for young learners.",
-    accentColor: "olive",
+    title: "Modern Labs",
+    description: "Fully-equipped science and computer laboratories for practical exposure.",
   },
 ];
 
 export default function WhyChooseUs() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section className="section-padding bg-ivory-dark relative overflow-hidden" ref={ref}>
-      {/* Background decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-olive/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+    <section className="py-24 bg-ivory-dark">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        
+        {/* Header Section */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <span className="w-8 h-1 bg-gold rounded-full" />
+              <span className="text-navy font-bold tracking-widest uppercase text-sm font-[family-name:var(--font-body)]">
+                Our Infrastructure
+              </span>
+              <span className="w-8 h-1 bg-gold rounded-full" />
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
+              World-Class Facilities
+            </h2>
+            <p className="text-navy-light text-lg font-[family-name:var(--font-body)]">
+              We provide a nurturing environment equipped with premium modern amenities 
+              that support both the academic and extracurricular development of your child.
+            </p>
+          </motion.div>
+        </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <p className="font-[family-name:var(--font-body)] text-gold-dark font-bold tracking-[0.2em] uppercase mb-3">
-            Excellence in Every Aspect
-          </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-navy-dark text-4xl sm:text-5xl font-black gold-underline flex flex-col sm:inline-block items-center">
-            Why Choose Us
-          </h2>
-          <div className="star-divider mt-10">
-            <Star className="w-5 h-5 text-gold fill-gold" />
-          </div>
-        </motion.div>
-
-        {/* Feature Cards Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, i) => (
+        {/* Feature Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {facilities.map((feature, idx) => (
             <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group glass-panel rounded-2xl p-8 hover:-translate-y-2 hover:shadow-xl hover:border-gold/30 transition-all duration-300 relative overflow-hidden"
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-white border border-navy/10 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group"
             >
-              {/* Subtle background shape on hover */}
-              <div 
-                className={`absolute -right-8 -top-8 w-32 h-32 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none 
-                ${feature.accentColor === 'gold' ? 'bg-gold' : 'bg-olive'}`} 
-              />
-
-              {/* Icon Container */}
-              <div 
-                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300
-                ${feature.accentColor === 'gold' 
-                  ? 'bg-gold/10 text-gold border border-gold/20' 
-                  : 'bg-olive/10 text-olive border border-olive/20'}`}
-              >
+              <div className="w-16 h-16 bg-ivory-dark rounded-full flex items-center justify-center text-navy group-hover:text-gold group-hover:bg-navy transition-colors duration-300 mb-6">
                 {feature.icon}
               </div>
-
-              {/* Title */}
-              <h3 className="font-[family-name:var(--font-heading)] text-navy-dark text-xl font-bold mb-3">
+              <h3 className="text-xl font-bold text-navy-dark font-[family-name:var(--font-heading)] mb-3">
                 {feature.title}
               </h3>
-
-              {/* Description */}
-              <p className="font-[family-name:var(--font-body)] text-navy-light text-base leading-relaxed tracking-wide">
+              <p className="text-navy-light font-[family-name:var(--font-body)] leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { GraduationCap, Calendar, IndianRupee, Phone } from "lucide-react";
+import { GraduationCap, Calendar, IndianRupee, Phone, Trophy, Users, ShieldCheck, MapPin } from "lucide-react";
 
 interface StatItem {
   icon: React.ReactNode;
@@ -16,28 +16,36 @@ interface StatItem {
 
 const stats: StatItem[] = [
   {
-    icon: <GraduationCap className="w-7 h-7" />,
-    label: "Classes Offered",
-    value: "1–8",
-  },
-  {
-    icon: <Calendar className="w-7 h-7" />,
-    label: "Current Session",
-    value: "2026–27",
-  },
-  {
-    icon: <IndianRupee className="w-7 h-7" />,
-    label: "Tuition From",
-    value: "₹800/mo",
+    icon: <Users className="w-8 h-8" />,
+    label: "Happy Students",
+    value: "500+",
     isNumber: true,
-    prefix: "₹",
-    suffix: "/mo",
-    numValue: 800,
+    numValue: 500,
+    suffix: "+",
   },
   {
-    icon: <Phone className="w-7 h-7" />,
-    label: "Call Us",
-    value: "+91 99272 89673",
+    icon: <Trophy className="w-8 h-8" />,
+    label: "Awards Won",
+    value: "50+",
+    isNumber: true,
+    numValue: 50,
+    suffix: "+",
+  },
+  {
+    icon: <ShieldCheck className="w-8 h-8" />,
+    label: "Years of Excellence",
+    value: "10+",
+    isNumber: true,
+    numValue: 10,
+    suffix: "+",
+  },
+  {
+    icon: <MapPin className="w-8 h-8" />,
+    label: "Campus Size",
+    value: "10 Acres",
+    isNumber: true,
+    numValue: 10,
+    suffix: " Acres",
   },
 ];
 
@@ -58,7 +66,7 @@ function CountUpNumber({
     if (!inView) return;
     let start = 0;
     const end = target;
-    const duration = 2000;
+    const duration = 2500;
     const step = end / (duration / 16);
 
     const timer = setInterval(() => {
@@ -75,7 +83,7 @@ function CountUpNumber({
   }, [inView, target]);
 
   return (
-    <span>
+    <span className="tabular-nums">
       {prefix}
       {count}
       {suffix}
@@ -85,31 +93,39 @@ function CountUpNumber({
 
 export default function StatsBar() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 20 } }
+  };
 
   return (
-    <section id="stats" ref={ref} className="relative bg-ivory">
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="glass-panel rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center gap-2 group relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="w-16 h-16 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-3 group-hover:scale-110 group-hover:bg-gold/20 group-hover:border-gold/40 transition-all duration-500 shadow-[0_0_15px_rgba(201,168,76,0.1)]">
-                {stat.icon}
-              </div>
-              
-              <div className="relative z-10 w-full">
-                <p className="font-[family-name:var(--font-heading)] text-navy-dark text-xl sm:text-2xl lg:text-lg xl:text-2xl font-bold mb-1 whitespace-nowrap tracking-tight">
+    <section id="stats" ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-ivory">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="bg-navy rounded-2xl p-10 sm:p-14 shadow-lg border border-navy-light/20 relative overflow-hidden"
+        >
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 relative z-10 text-center">
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.label}
+                variants={itemVariants}
+                className="flex flex-col items-center group"
+              >
+                <div className="w-16 h-16 rounded-full bg-navy-light/30 border border-gold/30 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-navy-dark transition-all duration-300 shadow-md">
+                  {stat.icon}
+                </div>
+                
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-4xl sm:text-5xl font-bold mb-2 tracking-tight group-hover:text-gold transition-colors duration-300">
                   {stat.isNumber ? (
                     <CountUpNumber
                       target={stat.numValue!}
@@ -120,15 +136,15 @@ export default function StatsBar() {
                   ) : (
                     stat.value
                   )}
-                </p>
-                <span className="w-8 h-1 bg-gold/50 rounded-full mx-auto block mb-3 group-hover:w-16 group-hover:bg-gold transition-all duration-500"></span>
-                <p className="font-[family-name:var(--font-body)] text-navy-dark/60 text-sm sm:text-base tracking-[0.05em] uppercase font-medium">
+                </h4>
+                
+                <p className="font-[family-name:var(--font-body)] text-white/70 text-sm tracking-wider uppercase font-semibold">
                   {stat.label}
                 </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
