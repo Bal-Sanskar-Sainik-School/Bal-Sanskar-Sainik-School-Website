@@ -9,7 +9,9 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="section-padding bg-ivory" ref={ref}>
+    <section id="about" className="section-padding bg-navy relative overflow-hidden" ref={ref}>
+      {/* Ambient background glow */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl pointer-events-none" />
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -21,7 +23,7 @@ export default function About() {
           <p className="font-[family-name:var(--font-body)] text-gold text-lg tracking-[0.3em] uppercase mb-3">
             Discover
           </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-navy text-3xl sm:text-4xl md:text-5xl font-bold gold-underline">
+          <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             About Our School
           </h2>
           <div className="star-divider mt-8">
@@ -38,16 +40,16 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <h3 className="font-[family-name:var(--font-heading)] text-navy text-2xl sm:text-3xl font-semibold">
+            <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl sm:text-3xl font-semibold">
               Shaping Tomorrow&apos;s Leaders in the Heart of the Himalayas
             </h3>
-            <p className="font-[family-name:var(--font-body)] text-navy/80 text-lg sm:text-xl leading-relaxed">
+            <p className="font-[family-name:var(--font-body)] text-white/80 text-lg sm:text-xl leading-relaxed">
               Nestled in the serene hills of Jeolikot, Nainital, Bal Sansar Sainik School 
               stands as a beacon of excellence in education and character building. Our institution 
               combines outstanding discipline and values with a 
               nurturing environment that allows every child to flourish.
             </p>
-            <p className="font-[family-name:var(--font-body)] text-navy/80 text-lg sm:text-xl leading-relaxed">
+            <p className="font-[family-name:var(--font-body)] text-white/80 text-lg sm:text-xl leading-relaxed">
               We believe that true education goes beyond textbooks. Our CBSE-aligned curriculum 
               for Classes 1 through 8 is enriched with strong discipline, physical fitness, 
               moral education, and leadership training — preparing students not just for exams, 
@@ -56,20 +58,20 @@ export default function About() {
 
             {/* Vision & Mission */}
             <div className="grid sm:grid-cols-2 gap-6 pt-4">
-              <div className="card-ivory rounded-lg p-5 border-l-4 border-gold">
-                <h4 className="font-[family-name:var(--font-heading)] text-navy text-lg font-bold mb-2">
+              <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 border-l-4 border-l-gold hover:bg-white/10 transition-colors duration-300">
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold mb-3">
                   Our Vision
                 </h4>
-                <p className="font-[family-name:var(--font-body)] text-navy/70 text-base leading-relaxed">
+                <p className="font-[family-name:var(--font-body)] text-white/70 text-base leading-relaxed">
                   To nurture disciplined, patriotic, and academically excellent citizens who 
                   serve the nation with pride and integrity.
                 </p>
               </div>
-              <div className="card-ivory rounded-lg p-5 border-l-4 border-gold">
-                <h4 className="font-[family-name:var(--font-heading)] text-navy text-lg font-bold mb-2">
+              <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 border-l-4 border-l-gold hover:bg-white/10 transition-colors duration-300">
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold mb-3">
                   Our Mission
                 </h4>
-                <p className="font-[family-name:var(--font-body)] text-navy/70 text-base leading-relaxed">
+                <p className="font-[family-name:var(--font-body)] text-white/70 text-base leading-relaxed">
                   To provide holistic education blending academic rigour with 
                   excellent discipline, sports, and values in a Himalayan setting.
                 </p>

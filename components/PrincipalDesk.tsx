@@ -9,10 +9,10 @@ export default function PrincipalDesk() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="principal" className="section-padding bg-ivory relative overflow-hidden" ref={ref}>
+    <section id="principal" className="section-padding bg-navy-dark relative overflow-hidden" ref={ref}>
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Title */}
@@ -22,10 +22,10 @@ export default function PrincipalDesk() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <p className="font-[family-name:var(--font-body)] text-gold-dark font-bold tracking-[0.2em] uppercase mb-3 text-sm sm:text-base">
+          <p className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.2em] uppercase mb-3 text-sm sm:text-base">
             Message From Our Leadership
           </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-navy-dark text-3xl sm:text-4xl md:text-5xl font-black gold-underline flex flex-col sm:inline-block items-center">
+          <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl sm:text-4xl md:text-5xl font-black flex flex-col sm:inline-block items-center mb-4">
             From the Manager&apos;s Desk
           </h2>
           <div className="star-divider mt-8">
@@ -41,7 +41,7 @@ export default function PrincipalDesk() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <img
                 src="/images/School_Principle_Image/School_Principle.jpeg"
                 alt="School Manager"
@@ -69,13 +69,13 @@ export default function PrincipalDesk() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="lg:col-span-7 relative"
           >
-            <Quote className="absolute -top-10 -left-8 w-24 h-24 text-gold/10 -z-10 rotate-[-10deg]" />
+            <Quote className="absolute -top-10 -left-8 w-24 h-24 text-gold/20 -z-10 rotate-[-10deg]" />
             <div className="space-y-6">
-              <h3 className="font-[family-name:var(--font-heading)] text-navy text-2xl sm:text-3xl font-bold leading-tight">
+              <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl sm:text-3xl font-bold leading-tight relative z-10">
                 &quot;Empowering young minds with discipline, courage, and excellence to lead tomorrow&apos;s world.&quot;
               </h3>
               
-              <div className="space-y-4 text-navy/80 text-base sm:text-lg leading-relaxed font-[family-name:var(--font-body)]">
+              <div className="space-y-4 text-white/70 text-base sm:text-lg leading-relaxed font-[family-name:var(--font-body)] relative z-10">
                 <p>
                   Welcome to Bal Sansar Sainik School. As the Manager, it is my absolute honour to lead an institution where education goes beyond the pages of a textbook. Our mission is deeply rooted in the belief that true excellence requires a foundation of strong moral values, uncompromising discipline, and an active pursuit of knowledge.
                 </p>
@@ -90,9 +90,9 @@ export default function PrincipalDesk() {
                 </p>
               </div>
               
-              <div className="pt-6 border-t border-gold/20 mt-8">
-                <h4 className="font-[family-name:var(--font-heading)] text-navy-dark text-xl font-bold">Manager</h4>
-                <p className="font-[family-name:var(--font-body)] text-gold-dark text-sm tracking-widest uppercase mt-1">Bal Sansar Sainik School</p>
+              <div className="pt-6 border-t border-white/10 mt-8 relative z-10">
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold">Manager</h4>
+                <p className="font-[family-name:var(--font-body)] text-gold tracking-widest uppercase mt-1 text-[13px] font-bold">Bal Sansar Sainik School</p>
               </div>
             </div>
           </motion.div>

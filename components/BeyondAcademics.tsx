@@ -40,7 +40,7 @@ export default function BeyondAcademics() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="beyond-academics" className="section-padding bg-ivory" ref={ref}>
+    <section id="beyond-academics" className="section-padding bg-transparent" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -52,7 +52,7 @@ export default function BeyondAcademics() {
           <p className="font-[family-name:var(--font-body)] text-gold text-lg tracking-[0.3em] uppercase mb-3">
             Holistic Development
           </p>
-          <h2 className="font-[family-name:var(--font-heading)] text-navy text-3xl sm:text-4xl md:text-5xl font-bold gold-underline">
+          <h2 className="font-[family-name:var(--font-heading)] text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Beyond Academics
           </h2>
           <div className="star-divider mt-8">
