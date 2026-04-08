@@ -53,7 +53,7 @@ export default function PrincipalDesk() {
                   The Manager
                 </h3>
                 <p className="font-[family-name:var(--font-body)] text-gold text-sm tracking-[0.1em] uppercase font-semibold">
-                  Bal Sanskar Sainik School
+                  Bal Sansar Sainik School
                 </p>
               </div>
             </div>
@@ -77,13 +77,13 @@ export default function PrincipalDesk() {
               
               <div className="space-y-4 text-navy/80 text-base sm:text-lg leading-relaxed font-[family-name:var(--font-body)]">
                 <p>
-                  Welcome to Bal Sanskar Sainik School. As the Manager, it is my absolute honour to lead an institution where education goes beyond the pages of a textbook. Our mission is deeply rooted in the belief that true excellence requires a foundation of strong moral values, uncompromising discipline, and an active pursuit of knowledge.
+                  Welcome to Bal Sansar Sainik School. As the Manager, it is my absolute honour to lead an institution where education goes beyond the pages of a textbook. Our mission is deeply rooted in the belief that true excellence requires a foundation of strong moral values, uncompromising discipline, and an active pursuit of knowledge.
                 </p>
                 <p>
                   We are situated in the lap of the Himalayas, which provides our students not only with a serene and focused learning environment but also teaches them to be as resolute and steadfast as the mountains surrounding us. 
                 </p>
                 <p>
-                  Here at Bal Sanskar, our dedicated faculty works tirelessly to cultivate an environment that nurtures intellectual curiosity while enforcing the rigour of a Sainik school. We focus on holistic development—ensuring every student is physically fit, mentally alert, and morally upright.
+                  Here at Bal Sansar, our dedicated faculty works tirelessly to cultivate an environment that nurtures intellectual curiosity while enforcing the rigour of a Sainik school. We focus on holistic development—ensuring every student is physically fit, mentally alert, and morally upright.
                 </p>
                 <p>
                   We welcome you to be a part of our extraordinary journey and witness the transformation of young children into confident, capable, and patriotic leaders of the future.
@@ -92,7 +92,7 @@ export default function PrincipalDesk() {
               
               <div className="pt-6 border-t border-gold/20 mt-8">
                 <h4 className="font-[family-name:var(--font-heading)] text-navy-dark text-xl font-bold">Manager</h4>
-                <p className="font-[family-name:var(--font-body)] text-gold-dark text-sm tracking-widest uppercase mt-1">Bal Sanskar Sainik School</p>
+                <p className="font-[family-name:var(--font-body)] text-gold-dark text-sm tracking-widest uppercase mt-1">Bal Sansar Sainik School</p>
               </div>
             </div>
           </motion.div>

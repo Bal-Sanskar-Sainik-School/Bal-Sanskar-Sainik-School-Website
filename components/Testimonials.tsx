@@ -11,7 +11,7 @@ const testimonials = [
     childClass: "Class 3",
     rating: 5,
     quote:
-      "Bal Sanskar Sainik School has transformed my son. The discipline, values, and academic focus here are exceptional. The Himalayan campus is absolutely breathtaking and truly a blessing for developing young minds.",
+      "Bal Sansar Sainik School has transformed my son. The discipline, values, and academic focus here are exceptional. The Himalayan campus is absolutely breathtaking and truly a blessing for developing young minds.",
   },
   {
     name: "Priya Negi",

@@ -45,7 +45,7 @@ export default function AboutPreview() {
 
             <ScrollReveal direction="up" delay={0.3}>
               <p className="text-navy-light text-[17px] leading-[1.7] mb-12 font-[family-name:var(--font-body)]">
-                Nestled in the serene surroundings of Jeolikot, Nainital, Bal Sanskar Sainik School
+                Nestled in the serene surroundings of Jeolikot, Nainital, Bal Sansar Sainik School
                 blends an exceptional academic curriculum with structural discipline, creating an
                 environment where potential meets preparation. We believe in nurturing minds that are ready for future challenges.
               </p>

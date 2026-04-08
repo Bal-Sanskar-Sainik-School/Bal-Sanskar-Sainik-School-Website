@@ -42,7 +42,7 @@ export default function About() {
               Shaping Tomorrow&apos;s Leaders in the Heart of the Himalayas
             </h3>
             <p className="font-[family-name:var(--font-body)] text-navy/80 text-lg sm:text-xl leading-relaxed">
-              Nestled in the serene hills of Jeolikot, Nainital, Bal Sanskar Sainik School 
+              Nestled in the serene hills of Jeolikot, Nainital, Bal Sansar Sainik School 
               stands as a beacon of excellence in education and character building. Our institution 
               combines outstanding discipline and values with a 
               nurturing environment that allows every child to flourish.
@@ -117,7 +117,7 @@ export default function About() {
                 {/* Text on Image */}
                 <div className="absolute bottom-6 left-6 right-6 text-center">
                   <h3 className="font-[family-name:var(--font-heading)] text-gold text-2xl font-bold mb-1 shadow-black drop-shadow-md">
-                    Bal Sanskar
+                    Bal Sansar
                   </h3>
                   <p className="font-[family-name:var(--font-heading)] text-white/90 text-sm tracking-[0.3em] uppercase drop-shadow-md">
                     Sainik School

@@ -19,7 +19,7 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bal Sanskar Sainik School | Jeolikot, Nainital",
+  title: "Bal Sansar Sainik School | Jeolikot, Nainital",
   description:
     "Premier Sainik school in Jeolikot, Nainital offering Classes 1–8 with military discipline, academic excellence, and holistic development in the heart of the Himalayas.",
   keywords: [
@@ -28,20 +28,20 @@ export const metadata: Metadata = {
     "Nainital",
     "Military School",
     "CBSE School",
-    "Bal Sanskar",
+    "Bal Sansar",
     "Uttarakhand School",
     "Best School Nainital",
     "Classes 1 to 8",
     "Boarding School Nainital",
   ],
-  authors: [{ name: "Bal Sanskar Sainik School" }],
+  authors: [{ name: "Bal Sansar Sainik School" }],
   openGraph: {
-    title: "Bal Sanskar Sainik School | Jeolikot, Nainital",
+    title: "Bal Sansar Sainik School | Jeolikot, Nainital",
     description:
       "Premier Sainik school in Jeolikot, Nainital offering Classes 1–8 with military discipline, academic excellence, and holistic development.",
     type: "website",
     locale: "en_IN",
-    siteName: "Bal Sanskar Sainik School",
+    siteName: "Bal Sansar Sainik School",
   },
   robots: {
     index: true,

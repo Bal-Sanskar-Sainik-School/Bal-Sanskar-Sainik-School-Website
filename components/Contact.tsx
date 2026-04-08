@@ -139,7 +139,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Bal Sanskar Sainik School Location - Jeolikot, Nainital"
+              title="Bal Sansar Sainik School Location - Jeolikot, Nainital"
             />
           </motion.div>
         </div>

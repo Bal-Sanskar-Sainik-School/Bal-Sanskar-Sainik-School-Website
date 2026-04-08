@@ -15,7 +15,6 @@ const quickLinks = [
 const academicLinks = [
   { name: "Primary Classes (1-5)", href: "#" },
   { name: "Middle Classes (6-8)", href: "#" },
-  { name: "Sainik Preparation", href: "#" },
   { name: "Physical Training", href: "#" },
   { name: "Library & Labs", href: "#" },
 ];
@@ -34,7 +33,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold text-white tracking-wide">
-                  Bal Sanskar
+                  Bal Sansar
                 </h3>
                 <p className="font-[family-name:var(--font-body)] text-[10px] uppercase tracking-[0.2em] text-white/70">
                   Sainik School
@@ -161,7 +160,7 @@ export default function Footer() {
       <div className="border-t border-gold/20 bg-navy-dark px-6">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center justify-between gap-3 py-6 text-sm sm:flex-row sm:px-10 lg:px-16">
           <p className="text-center text-white/50 font-[family-name:var(--font-body)] font-medium">
-            &copy; {new Date().getFullYear()} Bal Sanskar Sainik School &middot; Jeolikot, Nainital
+            &copy; {new Date().getFullYear()} Bal Sansar Sainik School &middot; Jeolikot, Nainital
           </p>
         </div>
       </div>

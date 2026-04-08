@@ -35,15 +35,18 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   const isHome = pathname === "/";
-  // Text colors change based on scroll and page
-  const textClass = !scrolled && isHome ? "text-white" : "text-navy-dark";
-  const logoTextClassPrimary = !scrolled && isHome ? "text-white" : "text-navy-dark";
-  const logoTextClassSecondary = !scrolled && isHome ? "text-white/80" : "text-navy-light";
+  
+  // Decide background and text styles 
+  const shouldHaveWhiteBg = scrolled || !isHome;
+  
+  const textClass = !shouldHaveWhiteBg && isHome ? "text-white" : "text-navy-dark";
+  const logoTextClassPrimary = !shouldHaveWhiteBg && isHome ? "text-white" : "text-navy-dark";
+  const logoTextClassSecondary = !shouldHaveWhiteBg && isHome ? "text-white/80" : "text-navy-light";
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
-        scrolled 
+        shouldHaveWhiteBg 
           ? "bg-white/95 backdrop-blur-md shadow-sm border-gray-100 py-3" 
           : "bg-transparent border-transparent py-5"
       }`}
@@ -57,7 +60,7 @@ export default function Navbar() {
           </div>
           <div className="hidden sm:flex flex-col justify-center translate-y-0.5">
             <h1 className={`font-[family-name:var(--font-heading)] text-lg sm:text-[22px] font-black leading-none tracking-wide transition-colors ${logoTextClassPrimary}`}>
-              Bal Sanskar
+              Bal Sansar
             </h1>
             <p className={`font-[family-name:var(--font-body)] text-[10px] sm:text-[11px] uppercase tracking-[0.12em] font-medium transition-colors mt-1 ${logoTextClassSecondary}`}>
               Sainik School

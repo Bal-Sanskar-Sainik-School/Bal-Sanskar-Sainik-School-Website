@@ -43,7 +43,7 @@ export default function Hero() {
           >
             <span className="w-12 h-[1px] bg-gold" />
             <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.15em] uppercase text-xs sm:text-[13px]">
-              EST. 2024 · JEOLIKOT, NAINITAL
+              EST. 2003 · JEOLIKOT, NAINITAL
             </span>
           </motion.div>
 
@@ -92,28 +92,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating Stats Row */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-navy/80 backdrop-blur-md hidden md:block"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between py-6">
-          <div className="flex w-full justify-between items-center">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col text-left">
-                <span className="font-[family-name:var(--font-heading)] text-3xl text-gold font-bold mb-1">
-                  {stat.value}
-                </span>
-                <span className="font-[family-name:var(--font-body)] text-white/70 text-xs tracking-wider uppercase font-semibold">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
+
 
       {/* Scroll Down Indicator */}
       <motion.div

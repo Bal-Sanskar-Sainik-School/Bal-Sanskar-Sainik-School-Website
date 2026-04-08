@@ -39,7 +39,7 @@ export default function Gallery() {
             <span className="w-8 h-[2px] bg-gold" />
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
-            Life at Bal Sanskar
+            Life at Bal Sansar
           </h2>
         </ScrollReveal>
 
