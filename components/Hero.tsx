@@ -179,14 +179,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center w-full"
         >
           <Link
-            href="#about"
+            href="/about"
             className="group relative overflow-hidden font-[family-name:var(--font-heading)] bg-gradient-to-r from-gold-dark via-gold to-gold-light text-navy-dark font-bold text-sm sm:text-base px-10 py-4 rounded-lg tracking-wider w-full sm:w-auto text-center shadow-[0_0_20px_rgba(201,168,76,0.3)] hover:shadow-[0_0_30px_rgba(201,168,76,0.6)] transition-all duration-300"
           >
             <div className="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-500 skew-x-[-20deg]" />
             <span className="relative z-10">EXPLORE SCHOOL</span>
           </Link>
           <Link
-            href="#admissions"
+            href="/admissions"
             className="group font-[family-name:var(--font-heading)] bg-transparent border-2 border-gold/70 text-gold hover:bg-gold/10 font-bold text-sm sm:text-base px-10 py-4 rounded-lg tracking-wider w-full sm:w-auto text-center transition-all duration-300 backdrop-blur-sm"
           >
             ADMISSIONS 2026–27

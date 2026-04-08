@@ -67,7 +67,7 @@ export default function JoinOurRanks() {
           className="flex flex-col sm:flex-row items-center justify-center gap-5"
         >
           <Link
-            href="#admissions"
+            href="/admissions"
             className="group relative flex items-center gap-3 overflow-hidden font-[family-name:var(--font-heading)] bg-gradient-to-r from-gold-dark to-gold-light text-navy-dark font-black text-sm sm:text-base px-10 py-5 rounded-xl tracking-widest w-full sm:w-auto text-center shadow-[0_0_20px_rgba(201,168,76,0.4)] hover:shadow-[0_0_40px_rgba(201,168,76,0.8)] transition-all duration-300"
           >
             <div className="absolute inset-0 bg-white/30 -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-[-20deg]" />
@@ -76,7 +76,7 @@ export default function JoinOurRanks() {
           </Link>
           
           <Link
-            href="#contact"
+            href="/contact"
             className="font-[family-name:var(--font-heading)] text-white hover:text-gold border border-white/20 hover:border-gold/50 bg-white/5 backdrop-blur-md px-10 py-5 rounded-xl font-bold tracking-widest transition-all duration-300 w-full sm:w-auto text-center"
           >
             CONTACT DETAILS

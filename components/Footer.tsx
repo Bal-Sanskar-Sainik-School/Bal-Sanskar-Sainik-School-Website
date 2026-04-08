@@ -5,12 +5,12 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const quickLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Academics", href: "#academics" },
-  { name: "Fee Structure", href: "#fees" },
-  { name: "Admissions", href: "#admissions" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Academics", href: "/academics" },
+  { name: "Fee Structure", href: "/fee-structure" },
+  { name: "Admissions", href: "/admissions" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {

@@ -26,7 +26,7 @@ export default function PrincipalDesk() {
             Message From Our Leadership
           </p>
           <h2 className="font-[family-name:var(--font-heading)] text-navy-dark text-3xl sm:text-4xl md:text-5xl font-black gold-underline flex flex-col sm:inline-block items-center">
-            From the Principal&apos;s Desk
+            From the Manager&apos;s Desk
           </h2>
           <div className="star-divider mt-8">
             <Star className="w-5 h-5 text-gold fill-gold" />
@@ -44,13 +44,13 @@ export default function PrincipalDesk() {
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <img
                 src="/images/School_Principle_Image/School_Principle.jpeg"
-                alt="School Principal"
+                alt="School Manager"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/20 to-transparent opacity-90" />
               <div className="absolute bottom-0 left-0 w-full p-6 text-center">
                 <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold mb-1 shadow-black drop-shadow-lg">
-                  The Principal
+                  The Manager
                 </h3>
                 <p className="font-[family-name:var(--font-body)] text-gold text-sm tracking-[0.1em] uppercase font-semibold">
                   Bal Sanskar Sainik School
@@ -77,7 +77,7 @@ export default function PrincipalDesk() {
               
               <div className="space-y-4 text-navy/80 text-base sm:text-lg leading-relaxed font-[family-name:var(--font-body)]">
                 <p>
-                  Welcome to Bal Sanskar Sainik School. As the Principal, it is my absolute honour to lead an institution where education goes beyond the pages of a textbook. Our mission is deeply rooted in the belief that true excellence requires a foundation of strong moral values, uncompromising discipline, and an active pursuit of knowledge.
+                  Welcome to Bal Sanskar Sainik School. As the Manager, it is my absolute honour to lead an institution where education goes beyond the pages of a textbook. Our mission is deeply rooted in the belief that true excellence requires a foundation of strong moral values, uncompromising discipline, and an active pursuit of knowledge.
                 </p>
                 <p>
                   We are situated in the lap of the Himalayas, which provides our students not only with a serene and focused learning environment but also teaches them to be as resolute and steadfast as the mountains surrounding us. 
@@ -91,7 +91,7 @@ export default function PrincipalDesk() {
               </div>
               
               <div className="pt-6 border-t border-gold/20 mt-8">
-                <h4 className="font-[family-name:var(--font-heading)] text-navy-dark text-xl font-bold">Principal</h4>
+                <h4 className="font-[family-name:var(--font-heading)] text-navy-dark text-xl font-bold">Manager</h4>
                 <p className="font-[family-name:var(--font-body)] text-gold-dark text-sm tracking-widest uppercase mt-1">Bal Sanskar Sainik School</p>
               </div>
             </div>
