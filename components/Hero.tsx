@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 
 const bgImages = [
   "/images/Assembly_Image/Assembly_Image_1.jpeg",
@@ -24,102 +25,100 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-navy-dark"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Dynamic Background Carousel */}
       <AnimatePresence mode="popLayout">
         <motion.div
           key={currentBg}
-          initial={{ opacity: 0, scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2.5, ease: "easeInOut" }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
-          style={{
-            backgroundImage: `url('${bgImages[currentBg]}')`,
-          }}
-        />
+          className="absolute inset-0 will-change-transform"
+        >
+          <Image
+            src={bgImages[currentBg]}
+            alt="School background"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority={currentBg === 0}
+            loading={currentBg === 0 ? "eager" : "lazy"}
+          />
+        </motion.div>
       </AnimatePresence>
 
-      {/* Layered overlays for depth and readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/60 to-navy-dark/95 border-b border-gold/10 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/80 via-transparent to-navy-dark/80 mix-blend-multiply z-[1]" />
+      {/* Unified dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/80 via-navy-dark/60 to-navy-dark/90 z-[1]" />
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-10 flex flex-col md:flex-row items-center gap-12">
-        
-        {/* Left Content */}
-        <div className="w-full md:w-1/2">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="font-[family-name:var(--font-body)] text-olive font-bold tracking-widest uppercase text-xs sm:text-sm">
-                Discover Your True Potential
-              </span>
-            </div>
+      {/* Subtle gold accent line at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent z-[2]" />
 
-            <h1 className="font-[family-name:var(--font-heading)] text-5xl sm:text-6xl md:text-7xl font-bold text-navy-dark leading-[1.1] mb-6">
-              Learn new <br className="hidden sm:block" />
-              skills. <span className="text-navy">Easily</span>
-            </h1>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Badge */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="w-10 h-[2px] bg-gold" />
+            <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.3em] uppercase text-xs sm:text-sm">
+              Jeolikot, Nainital
+            </span>
+            <span className="w-10 h-[2px] bg-gold" />
+          </div>
 
-            <p className="font-[family-name:var(--font-body)] text-navy-light text-base md:text-lg font-light leading-relaxed mb-8 max-w-md">
-              Bring your children to Bal Sanskar Sainik School to find out how much they enjoy holistic learning, unparalleled discipline, and immense character building.
-            </p>
+          {/* Main Heading */}
+          <h1 className="font-[family-name:var(--font-heading)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
+            Bal Sanskar <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold">
+              Sainik School
+            </span>
+          </h1>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <Link 
-                href="/academics"
-                className="bg-gold hover:bg-gold-light text-white font-[family-name:var(--font-body)] font-medium px-8 py-3 rounded-full transition-all shadow-md hover:shadow-lg"
-              >
-                Choose Class
-              </Link>
-              <Link 
-                href="/admissions"
-                className="bg-olive hover:bg-olive-light text-white font-[family-name:var(--font-body)] font-medium px-8 py-3 rounded-full transition-all shadow-md hover:shadow-lg"
-              >
-                Get Started
-              </Link>
-            </div>
-          </motion.div>
+          {/* Subtitle */}
+          <p className="font-[family-name:var(--font-body)] text-white/80 text-base sm:text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+            Nurturing disciplined leaders of tomorrow through academic excellence,
+            character building, and the timeless values of courage and integrity —
+            in the heart of the Himalayas.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/admissions"
+              className="group flex items-center gap-2 bg-gold hover:bg-gold-light text-white font-[family-name:var(--font-body)] font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            >
+              Apply for Admission
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/academics"
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/20 hover:border-white/40 font-[family-name:var(--font-body)] font-semibold px-8 py-3.5 rounded-full transition-all duration-300"
+            >
+              Explore Academics
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center gap-3 mt-14">
+          {bgImages.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentBg(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === currentBg
+                  ? "bg-gold w-10"
+                  : "bg-white/30 w-4 hover:bg-white/50"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
-
-        {/* Right Content / Images side-by-side overlap like in reference */}
-        <div className="w-full md:w-1/2 flex justify-end relative h-[500px]">
-           <motion.div 
-             initial={{ opacity: 0, x: 20 }}
-             animate={{ opacity: 1, x: 0 }}
-             transition={{ duration: 0.8, delay: 0.2 }}
-             className="absolute right-0 top-10 w-[70%] h-[400px] z-10"
-           >
-             <Image 
-                src={bgImages[0]} 
-                alt="Student Main"
-                fill
-                className="object-cover rounded-sm shadow-xl"
-             />
-           </motion.div>
-           
-           <motion.div 
-             initial={{ opacity: 0, y: 30 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.8, delay: 0.4 }}
-             className="absolute left-10 bottom-0 w-[50%] h-[300px] z-20 border-8 border-ivory-dark"
-           >
-             <Image 
-                src={bgImages[1]} 
-                alt="Student Second"
-                fill
-                className="object-cover rounded-sm shadow-md"
-             />
-             {/* Mustard Dot grid accent from reference */}
-             <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-[radial-gradient(circle,_#f0a028_4px,_transparent_4px)]" style={{ backgroundSize: '16px 16px' }} />
-           </motion.div>
-        </div>
-
       </div>
     </section>
   );

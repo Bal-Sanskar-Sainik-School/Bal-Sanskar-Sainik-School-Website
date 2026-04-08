@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Shield,
   BookOpen,
@@ -9,6 +8,7 @@ import {
   Bus,
   Library,
 } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const facilities = [
   {
@@ -47,53 +47,41 @@ export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-ivory-dark">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        
-        {/* Header Section */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <span className="w-8 h-1 bg-gold rounded-full" />
-              <span className="text-navy font-bold tracking-widest uppercase text-sm font-[family-name:var(--font-body)]">
-                Our Infrastructure
-              </span>
-              <span className="w-8 h-1 bg-gold rounded-full" />
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
-              World-Class Facilities
-            </h2>
-            <p className="text-navy-light text-lg font-[family-name:var(--font-body)]">
-              We provide a nurturing environment equipped with premium modern amenities 
-              that support both the academic and extracurricular development of your child.
-            </p>
-          </motion.div>
-        </div>
+
+        {/* Header */}
+        <ScrollReveal direction="up" className="text-center mb-16 max-w-3xl mx-auto">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span className="w-8 h-1 bg-gold rounded-full" />
+            <span className="text-navy font-bold tracking-widest uppercase text-sm font-[family-name:var(--font-body)]">
+              Our Infrastructure
+            </span>
+            <span className="w-8 h-1 bg-gold rounded-full" />
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
+            World-Class Facilities
+          </h2>
+          <p className="text-navy-light text-lg font-[family-name:var(--font-body)]">
+            We provide a nurturing environment equipped with premium modern amenities
+            that support both the academic and extracurricular development of your child.
+          </p>
+        </ScrollReveal>
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {facilities.map((feature, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white border border-navy/10 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group"
-            >
-              <div className="w-16 h-16 bg-ivory-dark rounded-full flex items-center justify-center text-navy group-hover:text-gold group-hover:bg-navy transition-colors duration-300 mb-6">
-                {feature.icon}
+            <ScrollReveal key={idx} direction="up" delay={idx * 0.08}>
+              <div className="bg-white border border-navy/10 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group h-full">
+                <div className="w-16 h-16 bg-ivory-dark rounded-full flex items-center justify-center text-navy group-hover:text-gold group-hover:bg-navy transition-colors duration-300 mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-navy-dark font-[family-name:var(--font-heading)] mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-navy-light font-[family-name:var(--font-body)] leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-navy-dark font-[family-name:var(--font-heading)] mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-navy-light font-[family-name:var(--font-body)] leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
