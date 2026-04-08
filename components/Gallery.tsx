@@ -6,18 +6,18 @@ import { Star } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 
 const galleryItems = [
-  { label: "Morning Assembly & Flag Parade", height: "h-64" },
-  { label: "Classroom Learning", height: "h-48" },
-  { label: "Physical Training", height: "h-72" },
-  { label: "Science Laboratory", height: "h-56" },
-  { label: "Himalayan Campus View", height: "h-64" },
-  { label: "Annual Sports Day", height: "h-48" },
-  { label: "Art & Cultural Activities", height: "h-72" },
-  { label: "Library & Reading Hour", height: "h-52" },
-  { label: "Yoga & Meditation", height: "h-60" },
-  { label: "Adventure Activities", height: "h-48" },
-  { label: "Prize Distribution Ceremony", height: "h-64" },
-  { label: "Playground & Sports Facilities", height: "h-56" },
+  { label: "Morning Assembly", height: "h-64", src: "/images/Assembly_Image/Assembly_Image_1.jpeg" },
+  { label: "Classroom Learning", height: "h-48", src: "/images/Students_Studying/Students_Studying_1.jpeg" },
+  { label: "Physical Training", height: "h-72", src: "/images/Students_Playing/Students_Playing.jpeg" },
+  { label: "Computer Laboratory", height: "h-56", src: "/images/Students_In_Computer_Lab/Students_In_Computer_Lab.jpeg" },
+  { label: "School Transport", height: "h-64", src: "/images/School_Bus_Images/Students_In_School_Bus_1.jpeg" },
+  { label: "Annual Sports Day", height: "h-48", src: "/images/Students_Playing/Students_Playing_2.jpeg" },
+  { label: "Music & Performing Arts", height: "h-72", src: "/images/Music_Classes/Music_Classes.jpeg" },
+  { label: "Library Hour", height: "h-52", src: "/images/Students_Studying/Students_Studying_2.jpeg" },
+  { label: "Sports Events", height: "h-60", src: "/images/Students_Playing/Students_Playing_3.jpeg" },
+  { label: "Recreation", height: "h-48", src: "/images/Students_Playing/Students_Playing_4.jpeg" },
+  { label: "Flag Parade", height: "h-64", src: "/images/Assembly_Image/Assembly_Image_2.jpeg" },
+  { label: "Interactive Learning", height: "h-56", src: "/images/Teachers_Teaching_Students/Teachers_Teaching_Students_1.jpeg" },
 ];
 
 // Background colors for placeholder cards
@@ -70,30 +70,25 @@ export default function Gallery() {
                   bgGradients[i % bgGradients.length]
                 } rounded-xl overflow-hidden group cursor-pointer`}
               >
+                {/* Image */}
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
                 {/* Decorative pattern */}
-                <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 opacity-10 pointer-events-none">
                   <div className="absolute top-4 left-4 w-8 h-8 border border-ivory/30 rotate-45" />
                   <div className="absolute bottom-4 right-4 w-6 h-6 border border-ivory/20 rotate-45" />
                 </div>
 
-                {/* Center icon placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full border border-ivory/20 flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-heading)] text-navy-dark/30 text-xl font-bold">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                </div>
-
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/80 transition-all duration-500 flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100">
-                  <p className="font-[family-name:var(--font-heading)] text-navy text-sm sm:text-base font-bold text-center px-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-400">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent transition-all duration-500 flex items-end justify-center pb-6 opacity-0 group-hover:opacity-100">
+                  <p className="font-[family-name:var(--font-heading)] text-gold text-sm sm:text-base font-bold text-center px-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-400">
                     {item.label}
                   </p>
                 </div>
-
-                {/* Zoom effect */}
-                <div className="absolute inset-0 group-hover:scale-110 transition-transform duration-700" />
               </div>
             </motion.div>
           ))}

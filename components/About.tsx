@@ -104,23 +104,23 @@ export default function About() {
               <div className="absolute -inset-2 border border-gold/20 rounded-lg" />
               
               {/* Image container */}
-              <div className="relative aspect-[4/5] bg-gradient-to-br from-navy via-navy-light to-navy rounded-lg overflow-hidden">
-                {/* Placeholder image content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                  <div className="w-24 h-24 rounded-full border-2 border-gold/40 bg-gold/10 flex items-center justify-center mb-6">
-                    <span className="font-[family-name:var(--font-heading)] text-gold text-3xl font-bold">
-                      BS
-                    </span>
-                  </div>
-                  <h3 className="font-[family-name:var(--font-heading)] text-gold text-2xl font-bold mb-2">
+              <div className="relative aspect-[4/5] rounded-lg overflow-hidden flex items-center justify-center">
+                <img 
+                  src="/images/Students_Studying/Students_Studying_2.jpeg" 
+                  alt="Students studying" 
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-navy/20 to-transparent" />
+
+                {/* Text on Image */}
+                <div className="absolute bottom-6 left-6 right-6 text-center">
+                  <h3 className="font-[family-name:var(--font-heading)] text-gold text-2xl font-bold mb-1 shadow-black drop-shadow-md">
                     Bal Sanskar
                   </h3>
-                  <p className="font-[family-name:var(--font-heading)] text-navy-dark/60 text-sm tracking-[0.3em] uppercase mb-6">
+                  <p className="font-[family-name:var(--font-heading)] text-white/90 text-sm tracking-[0.3em] uppercase drop-shadow-md">
                     Sainik School
-                  </p>
-                  <div className="h-px w-20 bg-gold/40 mb-6" />
-                  <p className="font-[family-name:var(--font-body)] text-navy-dark/50 text-lg italic">
-                    &ldquo;Where discipline meets excellence in the lap of the Himalayas&rdquo;
                   </p>
                 </div>
 
