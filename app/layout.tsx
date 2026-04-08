@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Jeolikot",
     "Nainital",
     "Military School",
-    "CBSE School",
+    "U.K Board School",
     "Bal Sansar",
     "Uttarakhand School",
     "Best School Nainital",

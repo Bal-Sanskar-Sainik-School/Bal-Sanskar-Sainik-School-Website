@@ -59,7 +59,7 @@ export default function FeeStructure() {
           {/* Table Header */}
           <div className="flex items-center justify-between px-8 py-5 border-b border-navy/10 bg-white">
             <h3 className="font-[family-name:var(--font-heading)] font-bold text-xl text-navy-dark tracking-wide">
-              Academic Year 2025–26
+              Academic Year 2026–27
             </h3>
           </div>
 

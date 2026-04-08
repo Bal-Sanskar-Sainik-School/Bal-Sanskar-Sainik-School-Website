@@ -77,14 +77,14 @@ export default function Hero() {
           >
             <Link
               href="/admissions"
-              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-sm transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5"
+              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-full transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5"
             >
               Apply for Admission
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/academics"
-              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-sm transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
             >
               Explore Academics
             </Link>

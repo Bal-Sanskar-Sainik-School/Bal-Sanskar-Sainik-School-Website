@@ -50,7 +50,7 @@ export default function About() {
               nurturing environment that allows every child to flourish.
             </p>
             <p className="font-[family-name:var(--font-body)] text-white/80 text-lg sm:text-xl leading-relaxed">
-              We believe that true education goes beyond textbooks. Our CBSE-aligned curriculum 
+              We believe that true education goes beyond textbooks. Our U.K Board-aligned curriculum 
               for Classes 1 through 8 is enriched with strong discipline, physical fitness, 
               moral education, and leadership training — preparing students not just for exams, 
               but for life.
