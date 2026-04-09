@@ -43,7 +43,7 @@ export default function Hero() {
           >
             <span className="w-12 h-[1px] bg-gold" />
             <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.15em] uppercase text-xs sm:text-[13px]">
-              EST. 2003 · JEOLIKOT, NAINITAL
+              EST. 2008 · JEOLIKOT, NAINITAL
             </span>
           </motion.div>
 

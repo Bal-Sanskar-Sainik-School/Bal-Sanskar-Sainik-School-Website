@@ -141,8 +141,8 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="absolute -bottom-6 -left-6 bg-gold text-navy px-5 py-3 rounded-lg shadow-xl"
             >
-              <p className="font-[family-name:var(--font-heading)] text-sm font-bold">Est. Jeolikot</p>
-              <p className="font-[family-name:var(--font-body)] text-xs font-semibold">Nainital, Uttarakhand</p>
+              <p className="font-[family-name:var(--font-heading)] text-sm font-bold">Est. July 2008</p>
+              <p className="font-[family-name:var(--font-body)] text-xs font-semibold">Jeolikot, Nainital</p>
             </motion.div>
           </motion.div>
         </div>
