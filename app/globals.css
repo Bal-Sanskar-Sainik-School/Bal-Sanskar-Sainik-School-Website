@@ -322,12 +322,6 @@ html {
     padding-bottom: 80px;
   }
   
-  main {
-    padding-top: 0 !important;
-    overflow-x: hidden;
-  }
-  
-  /* Ensure all sections don't overflow */
   section {
     overflow-x: hidden;
   }
@@ -336,7 +330,14 @@ html {
 /* Add top padding only on tablet and desktop */
 @media (min-width: 769px) {
   main {
-    padding-top: 6rem;
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile: no extra top padding, hero handles it */
+@media (max-width: 768px) {
+  main {
+    padding-top: 0 !important;
   }
 }
 

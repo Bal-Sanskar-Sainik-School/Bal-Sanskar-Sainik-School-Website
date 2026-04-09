@@ -59,7 +59,7 @@ export default function RootLayout({
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
       <body className="antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-0">{children}</main>
         <Footer />
         <MobileBottomNav />
       </body>
