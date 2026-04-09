@@ -30,7 +30,7 @@ const missionPoints = [
 
 export default function MissionSection() {
   return (
-    <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-navy via-navy-dark to-navy overflow-hidden relative pt-24 md:pt-32">
+    <section className="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-navy via-navy-dark to-navy overflow-hidden relative pt-20 md:pt-28">
       {/* Background Decorations */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-[120px]" />

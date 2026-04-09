@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-navy-dark/40 mix-blend-multiply z-[1]" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16 flex flex-col justify-center h-full pt-[72px] md:pt-[88px]">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16 flex flex-col justify-center h-full pt-20 md:pt-24">
         <div className="max-w-4xl text-left">
           {/* Badge */}
           <motion.div

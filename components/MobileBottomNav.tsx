@@ -56,7 +56,7 @@ export default function MobileBottomNav() {
       </nav>
 
       {/* Spacer to prevent content from being hidden behind bottom nav on mobile */}
-      <div className="md:hidden h-20" />
+      <div className="md:hidden h-24" />
     </>
   );
 }
