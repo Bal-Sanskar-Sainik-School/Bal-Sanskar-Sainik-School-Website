@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Shield, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -32,8 +33,14 @@ export default function Navbar() {
         <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-navy-dark/95 to-navy-dark/85 backdrop-blur-xl border-b border-gold/30 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
           <div className="max-w-[1400px] mx-auto px-4 py-3 flex items-center justify-center">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 flex items-center justify-center transition-all duration-500 group-hover:scale-110 bg-gold/15 rounded-full p-1.5 shadow-[0_0_15px_rgba(201,150,43,0.3)]">
-                <Shield className="w-full h-full text-gold drop-shadow-[0_0_10px_rgba(201,150,43,0.8)]" />
+              <div className="relative w-9 h-9 flex items-center justify-center transition-all duration-500 group-hover:scale-110 bg-white/10 rounded-full p-1 border border-gold/30">
+                <Image
+                  src="/images/logo/logo.jpeg"
+                  alt="School Logo"
+                  fill
+                  className="object-contain rounded-full"
+                  priority
+                />
               </div>
               <div className="flex flex-col justify-center">
                 <h1 className="font-[family-name:var(--font-heading)] text-base font-black leading-none tracking-wide text-white drop-shadow-lg">
@@ -58,8 +65,14 @@ export default function Navbar() {
           
           {/* Brand Logo - Desktop */}
           <Link href="/" className="flex items-center gap-3 group relative z-50">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-              <Shield className="w-8 h-8 sm:w-10 sm:h-10 text-navy-dark" />
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-105 bg-white/5 rounded-full p-1 border border-gold/20">
+              <Image
+                src="/images/logo/logo.jpeg"
+                alt="School Logo"
+                fill
+                className="object-contain rounded-full"
+                priority
+              />
             </div>
             <div className="flex flex-col justify-center translate-y-0.5">
               <h1 className="font-[family-name:var(--font-heading)] text-lg sm:text-[22px] font-black leading-none tracking-wide text-navy-dark">

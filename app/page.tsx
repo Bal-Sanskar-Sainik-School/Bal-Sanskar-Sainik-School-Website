@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
+import MissionSection from "@/components/MissionSection";
 
 // Lazy load all below-the-fold sections (code-split, no ssr:false needed in App Router)
 const AboutPreview  = dynamic(() => import("@/components/AboutPreview"));
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <MissionSection />
       <StatsBar />
       <AboutPreview />
       <AcademicsPreview />
