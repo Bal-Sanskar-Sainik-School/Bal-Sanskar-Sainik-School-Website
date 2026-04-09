@@ -3,7 +3,7 @@ import PrincipalDesk from "@/components/PrincipalDesk";
 
 export default function AboutPage() {
   return (
-    <main className="pt-24 bg-navy min-h-screen">
+    <main className="md:pt-24 bg-navy min-h-screen pt-0">
       <About />
       <PrincipalDesk />
     </main>

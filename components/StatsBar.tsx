@@ -54,23 +54,23 @@ export default function StatsBar() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="stats" ref={ref} className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-navy border-y border-gold/10">
+    <section id="stats" ref={ref} className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-navy border-y border-gold/10">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 relative z-10 text-center">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 relative z-10 text-center">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} direction="up" delay={i * 0.12}>
-              <div className="flex flex-col items-center group">
-                <div className="mb-4 text-gold group-hover:-translate-y-1 transition-transform duration-500 will-change-transform">
+              <div className="flex flex-col items-center group p-3 sm:p-4 rounded-xl hover:bg-white/5 transition-all duration-300 active:scale-95">
+                <div className="mb-2 sm:mb-4 text-gold group-hover:-translate-y-1 transition-transform duration-500 will-change-transform scale-75 sm:scale-100">
                   {stat.icon}
                 </div>
-                <h4 className="font-[family-name:var(--font-heading)] text-white text-4xl sm:text-5xl font-bold mb-2 tracking-tight">
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-2xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2 tracking-tight">
                   {stat.staticValue ? (
-                    <span className="text-2xl sm:text-3xl">{stat.staticValue}</span>
+                    <span className="text-base sm:text-2xl md:text-3xl">{stat.staticValue}</span>
                   ) : (
                     <CountUpNumber target={stat.numValue!} suffix={stat.suffix!} inView={inView} />
                   )}
                 </h4>
-                <p className="font-[family-name:var(--font-body)] text-white/70 text-xs sm:text-[13px] tracking-[0.15em] uppercase font-semibold">
+                <p className="font-[family-name:var(--font-body)] text-white/70 text-[10px] sm:text-xs md:text-[13px] tracking-[0.15em] uppercase font-semibold">
                   {stat.label}
                 </p>
               </div>

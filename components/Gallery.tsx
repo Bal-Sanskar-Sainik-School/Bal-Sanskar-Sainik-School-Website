@@ -26,11 +26,11 @@ export default function Gallery() {
   }
 
   return (
-    <section className="py-24 bg-ivory-dark overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="py-16 sm:py-24 bg-ivory-dark overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16">
         
         {/* Header */}
-        <ScrollReveal direction="up" className="text-center mb-16 max-w-3xl mx-auto">
+        <ScrollReveal direction="up" className="text-center mb-10 sm:mb-16 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-4">
             <span className="w-8 h-[2px] bg-gold" />
             <span className="text-gold font-bold tracking-[0.2em] uppercase text-[11px] font-[family-name:var(--font-body)]">
@@ -38,17 +38,17 @@ export default function Gallery() {
             </span>
             <span className="w-8 h-[2px] bg-gold" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-4 sm:mb-6">
             Life at Bal Sansar
           </h2>
         </ScrollReveal>
 
         {/* Gallery Container: 2-col on mobile, 3-col on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
           {galleryItems.map((item, i) => (
             <ScrollReveal key={item.label} direction="up" delay={i * 0.1}>
               <div 
-                className="group relative h-[200px] sm:h-[300px] md:h-[400px] overflow-hidden cursor-pointer"
+                className="group relative h-[180px] sm:h-[300px] md:h-[400px] overflow-hidden cursor-pointer rounded-lg sm:rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 active:scale-95"
                 onClick={() => setSelectedImage(item.src)}
               >
                 {/* Image with subtle parallax via large scale down on hover */}
@@ -56,13 +56,13 @@ export default function Gallery() {
                   src={item.src}
                   alt={item.label}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover transform scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-out"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-navy-dark/0 group-hover:bg-navy-dark/40 transition-colors duration-500 flex items-center justify-center">
-                  <span className="text-white font-[family-name:var(--font-heading)] text-2xl font-bold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                    View Image
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-navy-dark/20 to-transparent md:bg-navy-dark/0 md:group-hover:bg-navy-dark/40 transition-colors duration-500 flex items-end md:items-center justify-center p-3 sm:p-0">
+                  <span className="text-white font-[family-name:var(--font-heading)] text-sm sm:text-2xl font-bold md:opacity-0 md:group-hover:opacity-100 transform md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-500">
+                    {item.label}
                   </span>
                 </div>
               </div>

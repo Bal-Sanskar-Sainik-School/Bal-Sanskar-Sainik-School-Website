@@ -267,6 +267,85 @@ body {
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Mobile-first smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Touch feedback for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .active\:scale-95:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Smooth scroll for mobile */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-bottom: 80px; /* Account for bottom nav */
+}
+
+/* Better tap targets for mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+    padding-bottom: 80px;
+  }
+  
+  main {
+    padding-top: 0 !important;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all sections don't overflow */
+  section {
+    overflow-x: hidden;
+  }
+}
+
+/* Add top padding only on tablet and desktop */
+@media (min-width: 769px) {
+  main {
+    padding-top: 6rem;
+  }
+}
+
+/* Hide scrollbar on mobile for cleaner look */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

@@ -56,7 +56,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 bg-navy-dark relative overflow-hidden">
+    <section className="py-16 sm:py-32 bg-navy-dark relative overflow-hidden">
       {/* Background Decorative */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-radial from-gold/10 via-transparent to-transparent opacity-30 rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-olive/10 via-transparent to-transparent opacity-30 rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none" />
@@ -68,7 +68,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-24"
+          className="text-center mb-12 sm:mb-24"
         >
           <div className="flex justify-center items-center gap-4 mb-6">
             <span className="w-12 h-[2px] bg-gold" />
@@ -77,7 +77,7 @@ export default function Testimonials() {
             </span>
             <span className="w-12 h-[2px] bg-gold" />
           </div>
-          <h2 className="text-5xl sm:text-6xl font-black text-white font-[family-name:var(--font-heading)]">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white font-[family-name:var(--font-heading)]">
             Parent <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-white">Voices</span>
           </h2>
         </motion.div>
@@ -109,41 +109,41 @@ export default function Testimonials() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 1.05, y: -20 }}
                 transition={{ duration: 0.5, type: "spring", stiffness: 100, damping: 20 }}
-                className="bg-navy rounded-[3rem] p-8 sm:p-16 border border-white/10 relative overflow-hidden shadow-2xl"
+                className="bg-navy rounded-2xl sm:rounded-[3rem] p-6 sm:p-16 border border-white/10 relative overflow-hidden shadow-2xl"
               >
                 {/* Huge Watermark Quote */}
                 <Quote className="absolute -top-10 -left-10 w-64 h-64 text-white/5 rotate-12 pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
                   {/* Rating */}
-                  <div className="flex gap-2 mb-10">
+                  <div className="flex gap-1.5 sm:gap-2 mb-6 sm:mb-10">
                     {Array.from({ length: testimonials[current].rating }).map((_, i) => (
                       <Star
                         key={i}
-                        className="w-8 h-8 text-gold fill-gold drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+                        className="w-5 h-5 sm:w-8 sm:h-8 text-gold fill-gold drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]"
                       />
                     ))}
                   </div>
 
                   {/* Quote Text */}
-                  <p className="font-[family-name:var(--font-heading)] text-white text-2xl sm:text-3xl md:text-4xl text-center leading-tight sm:leading-snug mb-12 italic font-light tracking-wide max-w-4xl">
+                  <p className="font-[family-name:var(--font-heading)] text-white text-base sm:text-2xl md:text-3xl lg:text-4xl text-center leading-snug sm:leading-tight md:leading-snug mb-8 sm:mb-12 italic font-light tracking-wide max-w-4xl">
                     "{testimonials[current].quote}"
                   </p>
 
-                  <div className="w-24 h-[1px] bg-gold/30 mb-10" />
+                  <div className="w-16 sm:w-24 h-[1px] bg-gold/30 mb-6 sm:mb-10" />
 
                   {/* Author */}
-                  <div className="flex items-center gap-6">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 border-2 border-gold flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)]">
-                      <span className="font-[family-name:var(--font-heading)] text-gold text-2xl font-black tracking-widest">
+                  <div className="flex items-center gap-3 sm:gap-6">
+                    <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 border-2 border-gold flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+                      <span className="font-[family-name:var(--font-heading)] text-gold text-lg sm:text-2xl font-black tracking-widest">
                         {testimonials[current].initials}
                       </span>
                     </div>
                     <div className="text-left">
-                      <p className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold tracking-wide">
+                      <p className="font-[family-name:var(--font-heading)] text-white text-base sm:text-2xl font-bold tracking-wide">
                         {testimonials[current].name}
                       </p>
-                      <p className="font-[family-name:var(--font-body)] text-gold text-sm tracking-widest uppercase mt-1">
+                      <p className="font-[family-name:var(--font-body)] text-gold text-xs sm:text-sm tracking-widest uppercase mt-1">
                         Parent — {testimonials[current].childClass}
                       </p>
                     </div>
@@ -154,15 +154,15 @@ export default function Testimonials() {
           </div>
 
           {/* Dots Indicator (Mobile friendly) */}
-          <div className="flex justify-center gap-4 mt-12">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-8 sm:mt-12">
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => goTo(i)}
-                className={`w-3 h-3 rounded-full transition-all duration-500 ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-500 ${
                   i === current
-                    ? "bg-gold scale-150 w-8"
-                    : "bg-white/20 hover:bg-white/40"
+                    ? "bg-gold scale-150 w-6 sm:w-8"
+                    : "bg-white/20 hover:bg-white/40 active:scale-90"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />

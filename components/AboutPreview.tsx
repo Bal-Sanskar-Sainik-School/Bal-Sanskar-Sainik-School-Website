@@ -7,8 +7,8 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function AboutPreview() {
   return (
-    <section className="w-full py-24 sm:py-32 bg-ivory">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="w-full py-16 sm:py-24 md:py-32 bg-ivory overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Image */}
@@ -38,13 +38,13 @@ export default function AboutPreview() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <h2 className="text-4xl sm:text-5xl lg:text-[56px] font-bold font-[family-name:var(--font-heading)] text-navy leading-[1.1] mb-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold font-[family-name:var(--font-heading)] text-navy leading-[1.1] mb-6 sm:mb-8">
                 Shaping Leaders for Tomorrow&apos;s India
               </h2>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.3}>
-              <p className="text-navy-light text-[17px] leading-[1.7] mb-12 font-[family-name:var(--font-body)]">
+              <p className="text-navy-light text-base sm:text-[17px] leading-[1.7] mb-8 sm:mb-12 font-[family-name:var(--font-body)]">
                 Nestled in the serene surroundings of Jeolikot, Nainital, Bal Sansar Sainik School
                 blends an exceptional academic curriculum with structural discipline, creating an
                 environment where potential meets preparation. We believe in nurturing minds that are ready for future challenges.
@@ -52,16 +52,16 @@ export default function AboutPreview() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.35}>
-              <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-12">
-                <div className="flex flex-col gap-2 sm:gap-4 p-4 sm:p-8 bg-ivory-dark border border-navy/5 hover:border-gold/30 transition-colors">
-                  <Target className="w-6 h-6 sm:w-8 sm:h-8 text-gold" />
-                  <h4 className="font-bold text-navy font-[family-name:var(--font-heading)] text-base sm:text-2xl">Our Mission</h4>
-                  <p className="text-navy-light text-xs sm:text-[15px] leading-relaxed">To empower young minds with profound knowledge and unshakable character.</p>
+              <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-12">
+                <div className="flex flex-col gap-2 sm:gap-4 p-3 sm:p-8 bg-ivory-dark border border-navy/5 hover:border-gold/30 transition-all duration-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md active:scale-95">
+                  <Target className="w-5 h-5 sm:w-8 sm:h-8 text-gold" />
+                  <h4 className="font-bold text-navy font-[family-name:var(--font-heading)] text-sm sm:text-2xl leading-tight">Our Mission</h4>
+                  <p className="text-navy-light text-[11px] sm:text-[15px] leading-relaxed">To empower young minds with profound knowledge and unshakable character.</p>
                 </div>
-                <div className="flex flex-col gap-2 sm:gap-4 p-4 sm:p-8 bg-ivory-dark border border-navy/5 hover:border-gold/30 transition-colors">
-                  <Compass className="w-6 h-6 sm:w-8 sm:h-8 text-gold" />
-                  <h4 className="font-bold text-navy font-[family-name:var(--font-heading)] text-base sm:text-2xl">Our Vision</h4>
-                  <p className="text-navy-light text-xs sm:text-[15px] leading-relaxed">To be the foundation and nursery of the nation&apos;s finest and most disciplined youth.</p>
+                <div className="flex flex-col gap-2 sm:gap-4 p-3 sm:p-8 bg-ivory-dark border border-navy/5 hover:border-gold/30 transition-all duration-300 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md active:scale-95">
+                  <Compass className="w-5 h-5 sm:w-8 sm:h-8 text-gold" />
+                  <h4 className="font-bold text-navy font-[family-name:var(--font-heading)] text-sm sm:text-2xl leading-tight">Our Vision</h4>
+                  <p className="text-navy-light text-[11px] sm:text-[15px] leading-relaxed">To be the foundation and nursery of the nation&apos;s finest and most disciplined youth.</p>
                 </div>
               </div>
             </ScrollReveal>

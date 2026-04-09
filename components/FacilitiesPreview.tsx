@@ -14,8 +14,8 @@ const facilities = [
 
 export default function FacilitiesPreview() {
   return (
-    <section className="py-24 bg-ivory">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+    <section className="py-16 sm:py-24 bg-ivory overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16">
         {/* Header */}
         <ScrollReveal direction="up" className="text-center mb-16 max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -25,16 +25,16 @@ export default function FacilitiesPreview() {
             </span>
             <span className="w-8 h-[2px] bg-gold" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-dark font-[family-name:var(--font-heading)] leading-tight mb-4 sm:mb-6">
             World-Class Facilities
           </h2>
         </ScrollReveal>
 
         {/* Bento Grid - 2 columns on mobile, 3 on tablet, 4 on desktop */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] sm:auto-rows-[250px] gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 auto-rows-[160px] sm:auto-rows-[250px] gap-2 sm:gap-4">
           {facilities.map((item, i) => (
             <ScrollReveal key={item.label} direction="up" delay={i * 0.1} className={item.gridClass}>
-              <div className="group relative w-full h-full overflow-hidden bg-navy">
+              <div className="group relative w-full h-full overflow-hidden bg-navy rounded-lg sm:rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 active:scale-95">
                 <Image
                   src={item.src}
                   alt={item.label}
@@ -44,14 +44,14 @@ export default function FacilitiesPreview() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-navy-dark/0 group-hover:bg-navy-dark/60 transition-colors duration-500 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/40 to-transparent md:bg-navy-dark/0 md:group-hover:bg-navy-dark/60 transition-colors duration-500 flex flex-col justify-end p-3 sm:p-6">
                   {/* Hover Title */}
-                  <h3 className="text-white font-[family-name:var(--font-heading)] text-base sm:text-2xl font-bold translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 mb-2 sm:mb-4">
+                  <h3 className="text-white font-[family-name:var(--font-heading)] text-xs sm:text-base md:text-2xl font-bold md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 mb-1.5 sm:mb-2 md:mb-4 leading-tight">
                     {item.label}
                   </h3>
                   
                   {/* Static Category Pill */}
-                  <div className="inline-flex w-fit items-center bg-gold text-navy-dark text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-2 sm:px-3 py-1 sm:py-1.5 rounded-full z-10 transition-transform duration-500 group-hover:-translate-y-2">
+                  <div className="inline-flex w-fit items-center bg-gold text-navy-dark text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-wider px-2 sm:px-3 py-0.5 sm:py-1 md:py-1.5 rounded-full z-10 transition-transform duration-500 md:group-hover:-translate-y-2">
                     {item.category}
                   </div>
                 </div>

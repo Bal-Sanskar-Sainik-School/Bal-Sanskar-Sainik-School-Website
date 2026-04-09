@@ -32,17 +32,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-navy-dark/40 mix-blend-multiply z-[1]" />
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 flex flex-col justify-center h-full pt-16">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16 flex flex-col justify-center h-full pt-20 md:pt-16">
         <div className="max-w-4xl text-left">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center gap-3 mb-6"
+            className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6"
           >
-            <span className="w-12 h-[1px] bg-gold" />
-            <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.15em] uppercase text-xs sm:text-[13px]">
+            <span className="w-8 sm:w-12 h-[1px] bg-gold" />
+            <span className="font-[family-name:var(--font-body)] text-gold font-bold tracking-[0.15em] uppercase text-[10px] sm:text-xs md:text-[13px]">
               EST. 2008 · JEOLIKOT, NAINITAL
             </span>
           </motion.div>
@@ -52,10 +52,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-[family-name:var(--font-heading)] text-5xl sm:text-6xl lg:text-[80px] font-bold text-white leading-[1.1] mb-8"
+            className="font-[family-name:var(--font-heading)] text-[2rem] sm:text-5xl md:text-6xl lg:text-[80px] font-bold text-white leading-[1.15] mb-4 sm:mb-6 md:mb-8"
           >
             Nurturing India's <br />
-            <span className="text-gold">Future Leaders</span>
+            <span className="text-gold inline-block animate-[shimmer_3s_ease-in-out_infinite] bg-gradient-to-r from-gold via-yellow-300 to-gold bg-[length:200%_100%] bg-clip-text text-transparent">Future Leaders</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -63,7 +63,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="font-[family-name:var(--font-body)] text-white/90 text-lg sm:text-xl font-light leading-[1.7] mb-12 max-w-2xl"
+            className="font-[family-name:var(--font-body)] text-white/90 text-sm sm:text-base md:text-xl font-light leading-[1.7] mb-6 sm:mb-8 md:mb-12 max-w-2xl"
           >
             A premier Sainik school in the heart of the Himalayas — where discipline meets excellence.
           </motion.p>
@@ -73,18 +73,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-5"
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5"
           >
             <Link
               href="/admissions"
-              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-full transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5"
+              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-6 sm:px-9 py-3.5 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5 text-sm sm:text-base active:scale-95"
             >
               Apply for Admission
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/academics"
-              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-9 py-4 rounded-full transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-6 sm:px-9 py-3.5 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto text-sm sm:text-base active:scale-95"
             >
               Explore Academics
             </Link>
