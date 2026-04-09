@@ -50,10 +50,10 @@ export default function PrincipalDesk() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/20 to-transparent opacity-90" />
               <div className="absolute bottom-0 left-0 w-full p-6 text-center">
                 <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold mb-1 shadow-black drop-shadow-lg">
-                  The Manager
+                  Savita Arya
                 </h3>
                 <p className="font-[family-name:var(--font-body)] text-gold text-sm tracking-[0.1em] uppercase font-semibold">
-                  Bal Sansar Sainik School
+                  Manager
                 </p>
               </div>
             </div>
@@ -91,8 +91,8 @@ export default function PrincipalDesk() {
               </div>
               
               <div className="pt-6 border-t border-white/10 mt-8 relative z-10">
-                <h4 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold">Manager</h4>
-                <p className="font-[family-name:var(--font-body)] text-gold tracking-widest uppercase mt-1 text-[13px] font-bold">Bal Sansar Sainik School</p>
+                <h4 className="font-[family-name:var(--font-heading)] text-white text-xl font-bold">Savita Arya</h4>
+                <p className="font-[family-name:var(--font-body)] text-gold tracking-widest uppercase mt-1 text-[13px] font-bold">Manager, Bal Sansar Sainik School</p>
               </div>
             </div>
           </motion.div>

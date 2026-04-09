@@ -55,11 +55,11 @@ export default function EventsPreview() {
           </ScrollReveal>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {events.map((event, idx) => (
             <ScrollReveal key={idx} direction="up" delay={idx * 0.1}>
-              <div className="bg-ivory-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-navy/5 group h-full">
-                <div className="relative h-60 w-full overflow-hidden">
+              <div className="bg-ivory-dark rounded-lg sm:rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-navy/5 group h-full">
+                <div className="relative h-40 sm:h-60 w-full overflow-hidden">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -67,16 +67,16 @@ export default function EventsPreview() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1.5 rounded text-sm font-bold text-navy-dark flex items-center gap-2 shadow-sm">
-                    <Calendar className="w-4 h-4 text-gold" />
+                  <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-white/90 backdrop-blur px-2 sm:px-3 py-1 sm:py-1.5 rounded text-xs sm:text-sm font-bold text-navy-dark flex items-center gap-1 sm:gap-2 shadow-sm">
+                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-gold" />
                     {event.date}
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-dark font-[family-name:var(--font-heading)] mb-3">
+                <div className="p-3 sm:p-6">
+                  <h3 className="text-base sm:text-xl font-bold text-navy-dark font-[family-name:var(--font-heading)] mb-2 sm:mb-3">
                     {event.title}
                   </h3>
-                  <p className="text-navy-light font-[family-name:var(--font-body)] leading-relaxed text-sm">
+                  <p className="text-navy-light font-[family-name:var(--font-body)] leading-relaxed text-xs sm:text-sm">
                     {event.description}
                   </p>
                 </div>

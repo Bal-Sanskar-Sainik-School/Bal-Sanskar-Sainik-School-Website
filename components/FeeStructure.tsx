@@ -135,17 +135,17 @@ export default function FeeStructure() {
                       transition={{ duration: 0.35, delay: 0.3 + gi * 0.12 + ri * 0.06 }}
                       className="flex items-center justify-between px-3 py-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group/row cursor-default"
                     >
-                      <span className="font-[family-name:var(--font-heading)] font-bold text-white/90 text-[15px] group-hover/row:text-white transition-colors">
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-white/90 text-sm sm:text-[15px] group-hover/row:text-white transition-colors">
                         {row.class}
                       </span>
-                      <div className="flex items-center gap-3">
-                        <div className="text-right hidden sm:block">
-                          <p className="text-white/30 text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)]">Annual</p>
-                          <p className="text-white/50 text-xs font-semibold font-[family-name:var(--font-body)]">{row.annual}</p>
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className="text-right">
+                          <p className="text-white/30 text-[8px] sm:text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)]">Annual</p>
+                          <p className="text-white/50 text-[11px] sm:text-xs font-semibold font-[family-name:var(--font-body)]">{row.annual}</p>
                         </div>
-                        <div className={`px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover/row:border-white/20 transition-colors`}>
-                          <p className="text-white/30 text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)] text-center">/ mo</p>
-                          <p className={`font-bold text-sm font-[family-name:var(--font-body)] ${group.iconColor}`}>{row.monthly}</p>
+                        <div className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover/row:border-white/20 transition-colors`}>
+                          <p className="text-white/30 text-[8px] sm:text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)] text-center">/ mo</p>
+                          <p className={`font-bold text-xs sm:text-sm font-[family-name:var(--font-body)] ${group.iconColor}`}>{row.monthly}</p>
                         </div>
                       </div>
                     </motion.div>

@@ -60,15 +60,15 @@ export default function BeyondAcademics() {
           </div>
         </motion.div>
 
-        {/* Feature Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Feature Grid - 2 columns on mobile, 2 on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
-              className="group relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-xl"
+              className="group relative h-64 sm:h-80 md:h-96 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl"
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -83,19 +83,19 @@ export default function BeyondAcademics() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/60 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Content Box */}
-              <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-left z-10 transition-transform duration-500 hover:translate-y-[-10px]">
+              <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end text-left z-10 transition-transform duration-500 hover:translate-y-[-10px]">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold mb-6 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-300 shadow-[0_0_15px_rgba(201,168,76,0.3)]">
-                  {pillar.icon}
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-300 shadow-[0_0_15px_rgba(201,168,76,0.3)]">
+                  <div className="scale-75 sm:scale-100">{pillar.icon}</div>
                 </div>
 
-                <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl sm:text-3xl font-bold mb-3 drop-shadow-md">
+                <h3 className="font-[family-name:var(--font-heading)] text-white text-lg sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 drop-shadow-md">
                   {pillar.title}
                 </h3>
                 
                 {/* Hidden description that fades in/slides up on hover for larger screens, visible on mobile */}
                 <div className="overflow-hidden">
-                  <p className="font-[family-name:var(--font-body)] text-white/80 text-sm sm:text-base leading-relaxed sm:opacity-0 sm:translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                  <p className="font-[family-name:var(--font-body)] text-white/80 text-xs sm:text-sm md:text-base leading-relaxed sm:opacity-0 sm:translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-75">
                     {pillar.desc}
                   </p>
                 </div>

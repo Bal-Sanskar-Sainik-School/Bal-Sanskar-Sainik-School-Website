@@ -43,12 +43,12 @@ export default function Gallery() {
           </h2>
         </ScrollReveal>
 
-        {/* Gallery Container: Horizontal scroll on mobile, 3-col on desktop */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
+        {/* Gallery Container: 2-col on mobile, 3-col on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {galleryItems.map((item, i) => (
-            <ScrollReveal key={item.label} direction="up" delay={i * 0.1} className="shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center">
+            <ScrollReveal key={item.label} direction="up" delay={i * 0.1}>
               <div 
-                className="group relative h-[350px] sm:h-[400px] overflow-hidden cursor-pointer"
+                className="group relative h-[200px] sm:h-[300px] md:h-[400px] overflow-hidden cursor-pointer"
                 onClick={() => setSelectedImage(item.src)}
               >
                 {/* Image with subtle parallax via large scale down on hover */}
