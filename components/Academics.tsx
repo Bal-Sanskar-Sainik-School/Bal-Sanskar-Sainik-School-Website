@@ -18,19 +18,19 @@ const tabs = [
       "Moral Science & Value Education",
     ],
     schedule: [
-      "Morning Exercise & Assembly — 6:30 AM",
-      "Academic Classes — 8:00 AM to 2:30 PM",
-      "Lunch & Rest — 2:30 PM to 3:15 PM",
-      "Activity / Lab Period — 3:15 PM to 4:30 PM",
-      "Sports & Physical Activities — 4:30 PM to 6:00 PM",
+      "Morning Yoga & Assembly — 9:00 AM",
+      "Regular Classes — 9:30 AM to 12:30 PM",
+      "Lunch Break — 12:30 PM to 1:00 PM",
+      "Music & English Speaking — 1:00 PM to 2:00 PM",
+      "Co-curricular Activities — 2:00 PM to 3:00 PM",
     ],
     activities: [
       "Art & Craft",
-      "Music & Dance",
+      "Music Classes",
+      "English Speaking Practice",
       "Yoga & Meditation",
       "Storytelling & Drama",
-      "Nature Walks",
-      "Basic Sports Training",
+      "Saturday Activity Day",
     ],
   },
   {
@@ -47,19 +47,19 @@ const tabs = [
       "Moral Science & Value Education",
     ],
     schedule: [
-      "Morning Exercise & Assembly — 6:30 AM",
-      "Academic Classes — 8:00 AM to 2:30 PM",
-      "Lunch & Rest — 2:30 PM to 3:15 PM",
-      "Activity / Lab Period — 3:15 PM to 4:30 PM",
-      "Sports & Physical Activities — 4:30 PM to 6:00 PM",
+      "Morning Yoga & Assembly — 9:00 AM",
+      "Regular Classes — 9:30 AM to 12:30 PM",
+      "Lunch Break — 12:30 PM to 1:00 PM",
+      "Music & English Speaking — 1:00 PM to 2:00 PM",
+      "Co-curricular Activities — 2:00 PM to 3:00 PM",
     ],
     activities: [
-      "Science Experiments & Lab Work",
-      "Debate & Public Speaking",
-      "Adventure Activities",
-      "Inter-house Competitions",
-      "Leadership Training",
-      "Community Service",
+      "Science Lab Experiments",
+      "Music & English Speaking",
+      "House Debates & Competitions",
+      "Sports & Physical Training",
+      "Leadership Development",
+      "Saturday Activity Day",
     ],
   },
 ];
@@ -176,6 +176,11 @@ export default function Academics() {
                   );
                 })}
               </ul>
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <p className="text-white/60 text-sm font-[family-name:var(--font-body)] leading-relaxed">
+                  <span className="text-gold font-bold">Saturday Special:</span> Activity day featuring house debates, competitions, sports, and engaging co-curricular programs.
+                </p>
+              </div>
             </div>
 
             {/* Activities */}
