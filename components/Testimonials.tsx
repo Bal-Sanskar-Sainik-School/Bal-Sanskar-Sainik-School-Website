@@ -6,36 +6,52 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rajesh Kumar Sharma",
-    initials: "RS",
-    childClass: "Class 3",
+    name: "Deeksha Bharti",
+    initials: "DB",
+    childClass: "Google Review",
     rating: 5,
     quote:
-      "Bal Sansar Sainik School has transformed my son. The discipline, values, and academic focus here are exceptional. The Himalayan campus is absolutely breathtaking and truly a blessing for developing young minds.",
+      "Very good school, faculty and management is encouraged the all students, education is very high.",
   },
   {
     name: "Priya Negi",
     initials: "PN",
-    childClass: "Class 6",
+    childClass: "Parent — Class 6",
     rating: 5,
     quote:
-      "We chose this school for its renowned discipline and we are completely amazed. My daughter has become exceptionally confident and focused. The environment they build matches that of India's top-tier institutions.",
+      "We chose this school for its renowned discipline and we are completely amazed. My daughter has become exceptionally confident and focused. The environment they build is truly outstanding.",
   },
   {
-    name: "Amit Bisht",
-    initials: "AB",
-    childClass: "Class 5",
+    name: "Udit Zina",
+    initials: "UZ",
+    childClass: "Google Review",
     rating: 5,
     quote:
-      "The holistic development approach is unparalleled. My child excels in academics, sports, and arts, all while developing a strong moral compass. The faculty interaction feels deeply personalized.",
+      "Amazing school with great values and dedicated teachers. Highly recommended for every parent who wants the best for their child. ❤️❤️",
   },
   {
-    name: "Sunita Rawat",
-    initials: "SR",
-    childClass: "Class 2",
+    name: "Mayank Kumar",
+    initials: "MK",
+    childClass: "Google Review",
     rating: 5,
     quote:
-      "Uncompromising safety combined with military-style nurturing. The morning assemblies and daily physical training have instilled incredible discipline in my child. A world-class educational experience.",
+      "A wonderful school with a great learning environment. The teachers are very supportive and the campus is beautiful in the heart of the Himalayas.",
+  },
+  {
+    name: "Neelam Arya",
+    initials: "NA",
+    childClass: "Google Review",
+    rating: 5,
+    quote:
+      "Excellent school with strong values and a caring environment. My child has grown so much since joining. The management truly cares about each student.",
+  },
+  {
+    name: "Shobha Negi",
+    initials: "SN",
+    childClass: "Google Review",
+    rating: 5,
+    quote:
+      "One of the best schools in Jeolikot. Great discipline, dedicated teachers, and a peaceful campus surrounded by nature. Very happy with our decision.",
   },
 ];
 

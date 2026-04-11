@@ -9,7 +9,6 @@ const AcademicsPreview = dynamic(() => import("@/components/WhyChooseUs"));
 const FacilitiesPreview = dynamic(() => import("@/components/FacilitiesPreview"));
 const Gallery       = dynamic(() => import("@/components/Gallery"));
 const Testimonials  = dynamic(() => import("@/components/Testimonials"));
-const EventsSection = dynamic(() => import("@/components/EventsSection"));
 const JoinOurRanks  = dynamic(() => import("@/components/JoinOurRanks"));
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
       <FacilitiesPreview />
       <Gallery />
       <Testimonials />
-      <EventsSection />
       <JoinOurRanks />
     </main>
   );
