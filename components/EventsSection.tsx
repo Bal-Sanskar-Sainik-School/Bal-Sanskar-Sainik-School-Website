@@ -121,8 +121,7 @@ export default function EventsSection() {
             <span className="text-gold-gradient">Events & Activities</span>
           </h2>
           <p className="text-white/50 text-sm sm:text-base font-[family-name:var(--font-body)] max-w-2xl mx-auto leading-relaxed">
-            From festivals to prize ceremonies, every event at Bal Sansar Sainik
-            School is a celebration of growth, talent, and togetherness.
+            Our school hosts the best events, creating memorable experiences for every student.
           </p>
           <div className="star-divider mt-8">
             <Star className="w-4 h-4 text-gold fill-gold" />

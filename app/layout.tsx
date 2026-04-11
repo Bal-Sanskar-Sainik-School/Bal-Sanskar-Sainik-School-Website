@@ -56,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} overflow-x-hidden`}>
+      <body className="antialiased overflow-x-hidden w-full relative">
         <Navbar />
         <main className="pt-0">{children}</main>
         <Footer />

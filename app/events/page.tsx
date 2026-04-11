@@ -10,6 +10,7 @@ const events = [
     id: 1,
     title: "Annual Function",
     tag: "Cultural",
+    description: "A grand celebration of talent featuring spectacular dance, drama, and musical performances by our talented students.",
     photos: [
       "/images/events/anual function/anual-function (1).webp",
       "/images/events/anual function/anual-function (2).webp",
@@ -36,6 +37,7 @@ const events = [
     id: 2,
     title: "Independence Day",
     tag: "National Day",
+    description: "Honoring our nation's freedom with patriotic fervour, flag hoisting, and spirited march pasts.",
     photos: [
       "/images/events/Independance Day/inde day (1).webp",
       "/images/events/Independance Day/inde day (2).webp",
@@ -48,6 +50,7 @@ const events = [
     id: 3,
     title: "Holi Celebration",
     tag: "Festival",
+    description: "A vibrant festival of colors bringing joy, unity, and a sense of belonging among students and staff.",
     photos: [
       "/images/events/Holi/holi (1).jpeg",
       "/images/events/Holi/holi (2).jpeg",
@@ -59,6 +62,7 @@ const events = [
     id: 4,
     title: "Aipan Competition",
     tag: "Cultural",
+    description: "Preserving local heritage by encouraging students to showcase the traditional Kumaoni art form of Aipan.",
     photos: [
       "/images/events/Aipan compation/apir (1).webp",
       "/images/events/Aipan compation/apir (2).webp",
@@ -71,6 +75,7 @@ const events = [
     id: 5,
     title: "Prize Distribution",
     tag: "Awards",
+    description: "Recognizing academic brilliance and extracurricular achievements to motivate our future leaders.",
     photos: [
       "/images/events/Prize/prize (1).jpeg",
       "/images/events/Prize/prize (2).jpeg",
@@ -85,6 +90,7 @@ const events = [
     id: 6,
     title: "Aris Tour",
     tag: "Tour",
+    description: "Educational excursions designed to broaden horizons and provide hands-on learning outside the classroom.",
     photos: [
       "/images/events/Aris tour/Aris (1).webp",
       "/images/events/Aris tour/Aris (2).webp",
@@ -100,6 +106,7 @@ const events = [
     id: 7,
     title: "Campus Cleaning Drive",
     tag: "Campus Life",
+    description: "Instilling values of cleanliness and environmental responsibility through active student participation.",
     photos: [
       "/images/events/Campus Cleaning/campus (1).jpg",
       "/images/events/Campus Cleaning/campus (2).jpg",
@@ -113,6 +120,7 @@ const events = [
     id: 8,
     title: "School Assembly",
     tag: "Assembly",
+    description: "Starting the day with discipline, moral reflections, and a shared sense of purpose.",
     photos: [
       "/images/events/Assembliy/assembly (1).jpeg",
       "/images/events/Assembliy/assembly (2).jpeg",
@@ -124,6 +132,7 @@ const events = [
     id: 9,
     title: "Education Tour",
     tag: "Tour",
+    description: "Connecting classroom knowledge with real-world experiences through guided educational trips.",
     photos: [
       "/images/events/education_tour/education tour (1).jpeg",
       "/images/events/education_tour/education tour (2).jpeg",
@@ -133,6 +142,7 @@ const events = [
     id: 10,
     title: "Sports & Outdoor Activities",
     tag: "Sports",
+    description: "Fostering physical fitness, teamwork, and a healthy competitive spirit on the playground.",
     photos: [
       "/images/Students_Playing/Students_Playing.jpeg",
       "/images/Students_Playing/Students_Playing_2.jpeg",
@@ -152,6 +162,7 @@ const events = [
     id: 11,
     title: "Classroom & Studies",
     tag: "Academics",
+    description: "Engaging and interactive academic sessions aimed at deep conceptual understanding.",
     photos: [
       "/images/Students_Studying/Students_Studying_1.jpeg",
       "/images/Students_Studying/Students_Studying_2.jpeg",
@@ -164,6 +175,7 @@ const events = [
     id: 12,
     title: "Computer Lab & Digital Learning",
     tag: "Academics",
+    description: "Equipping students with essential digital literacy and modern technological skills.",
     photos: [
       "/images/Students_In_Computer_Lab/Students_In_Computer_Lab.jpeg",
       "/images/Students_In_Computer_Lab/Computer_Classes.jpeg",
@@ -174,6 +186,7 @@ const events = [
     id: 13,
     title: "Music & Arts Classes",
     tag: "Arts",
+    description: "Nurturing creativity and self-expression through dedicated music and artistic training.",
     photos: [
       "/images/Music_Classes/Music_Classes.jpeg",
     ],
@@ -182,6 +195,7 @@ const events = [
     id: 14,
     title: "School Transport",
     tag: "Campus Life",
+    description: "Ensuring safe, reliable, and comfortable commuting for our high-spirited students.",
     photos: [
       "/images/School_Bus_Images/Students_In_School_Bus_1.jpeg",
       "/images/School_Bus_Images/Students_In_School_Bus_2.jpeg",
@@ -191,6 +205,7 @@ const events = [
     id: 15,
     title: "Teachers & Classroom Sessions",
     tag: "Academics",
+    description: "Dedicated faculty members providing personalized attention and mentorship to every child.",
     photos: [
       "/images/Teachers_Teaching_Students/Teachers_Teaching_Students_1.jpeg",
       "/images/Teachers_Teaching_Students/Teachers_Teaching_Students_2.jpeg",
@@ -259,8 +274,7 @@ export default function EventsPage() {
               <span className="text-gold-gradient">Activities</span>
             </h1>
             <p className="text-white/50 text-sm sm:text-lg font-[family-name:var(--font-body)] max-w-2xl mx-auto leading-relaxed">
-              Every celebration, competition, and gathering is a stepping stone
-              in our students&apos; journey of growth and discovery.
+              Our school hosts the best events, creating memorable experiences for every student.
             </p>
             <div className="star-divider mt-8">
               <Star className="w-4 h-4 text-gold fill-gold" />
@@ -305,7 +319,7 @@ export default function EventsPage() {
                 transition={{ duration: 0.5, delay: 0.1 * gi }}
               >
                 {/* Event Title */}
-                <div className="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-8">
+                <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
                   <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider border ${
                       tagColors[event.tag] || "bg-white/10 text-white/70 border-white/20"
@@ -316,10 +330,10 @@ export default function EventsPage() {
                   <h3 className="font-[family-name:var(--font-heading)] text-white text-lg sm:text-2xl font-bold">
                     {event.title}
                   </h3>
-                  <span className="text-white/20 text-xs sm:text-sm font-[family-name:var(--font-body)]">
-                    — {event.photos.length} photos
-                  </span>
                 </div>
+                <p className="text-white/60 text-xs sm:text-sm font-[family-name:var(--font-body)] mb-5 sm:mb-8 leading-relaxed max-w-3xl">
+                  {event.description}
+                </p>
 
                 {/* Photo Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
