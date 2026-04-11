@@ -108,8 +108,8 @@ export default function About() {
               {/* Image container */}
               <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden flex items-center justify-center">
                 <img 
-                  src="/images/Students_Studying/Students_Studying_2.jpeg" 
-                  alt="Students studying" 
+                  src="/images/school-view/school-view.jpg" 
+                  alt="School View" 
                   className="w-full h-full object-cover"
                 />
                 
