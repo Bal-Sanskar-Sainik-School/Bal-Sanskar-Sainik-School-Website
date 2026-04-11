@@ -72,19 +72,19 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5"
+            transition={{ duration: 0.8, delay: 1 }}
+            className="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-6 mt-8 sm:mt-12"
           >
             <Link
               href="/admissions"
-              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-6 sm:px-9 py-3.5 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5 text-sm sm:text-base active:scale-95"
+              className="group flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-8 sm:px-9 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto shadow-lg hover:-translate-y-0.5 text-xs sm:text-base active:scale-95"
             >
               Apply for Admission
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               href="/academics"
-              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-6 sm:px-9 py-3.5 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto text-sm sm:text-base active:scale-95"
+              className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-gold font-[family-name:var(--font-body)] font-bold uppercase tracking-[0.1em] px-8 sm:px-9 py-3 sm:py-4 rounded-full transition-all duration-300 w-full sm:w-auto text-xs sm:text-base active:scale-95"
             >
               Explore Academics
             </Link>

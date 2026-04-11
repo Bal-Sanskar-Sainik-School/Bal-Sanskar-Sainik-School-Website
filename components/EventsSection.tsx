@@ -139,7 +139,7 @@ export default function EventsSection() {
               className="group relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/[0.06] bg-white/[0.02] hover:border-gold/20 hover:bg-white/[0.04] transition-all duration-500"
             >
               {/* Image */}
-              <div className="relative h-32 sm:h-52 lg:h-56 overflow-hidden">
+              <div className="relative aspect-[4/3] sm:h-52 lg:h-56 overflow-hidden bg-navy">
                 <Image
                   src={event.image}
                   alt={event.title}

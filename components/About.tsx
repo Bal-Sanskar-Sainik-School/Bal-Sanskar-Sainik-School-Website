@@ -98,7 +98,7 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative mt-12 lg:mt-0 sm:mx-8 lg:mx-0"
+            className="relative mt-12 lg:mt-0 mx-4 sm:mx-8 lg:mx-0"
           >
             <div className="relative">
               {/* Decorative border */}
@@ -106,7 +106,7 @@ export default function About() {
               <div className="absolute inset-0 sm:-inset-2 border border-gold/20 rounded-lg" />
               
               {/* Image container */}
-              <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="relative aspect-[4/3] sm:aspect-video lg:aspect-square md:px-0 mx-2 sm:mx-0 rounded-lg overflow-hidden flex items-center justify-center">
                 <img 
                   src="/images/school-view/school-view.jpg" 
                   alt="School View" 

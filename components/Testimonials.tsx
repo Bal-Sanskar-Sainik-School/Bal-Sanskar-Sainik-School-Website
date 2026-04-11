@@ -132,35 +132,35 @@ export default function Testimonials() {
 
                 <div className="relative z-10 flex flex-col items-center">
                   {/* Rating */}
-                  <div className="flex gap-1.5 sm:gap-2 mb-6 sm:mb-10">
+                  <div className="flex gap-1 mb-4 sm:mb-10">
                     {Array.from({ length: testimonials[current].rating }).map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 sm:w-8 sm:h-8 text-gold fill-gold drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]"
+                        className="w-4 h-4 sm:w-8 sm:h-8 text-gold fill-gold drop-shadow-[0_0_15px_rgba(249,115,22,0.5)]"
                       />
                     ))}
                   </div>
 
                   {/* Quote Text */}
-                  <p className="font-[family-name:var(--font-heading)] text-white text-base sm:text-2xl md:text-3xl lg:text-4xl text-center leading-snug sm:leading-tight md:leading-snug mb-8 sm:mb-12 italic font-light tracking-wide max-w-4xl">
+                  <p className="font-[family-name:var(--font-heading)] text-white text-sm sm:text-2xl md:text-3xl lg:text-4xl text-center leading-relaxed sm:leading-tight md:leading-snug mb-6 sm:mb-12 italic font-light tracking-wide max-w-4xl px-2 sm:px-0">
                     "{testimonials[current].quote}"
                   </p>
 
-                  <div className="w-16 sm:w-24 h-[1px] bg-gold/30 mb-6 sm:mb-10" />
+                  <div className="w-12 sm:w-24 h-[1px] bg-gold/30 mb-5 sm:mb-10" />
 
                   {/* Author */}
                   <div className="flex items-center gap-3 sm:gap-6">
-                    <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 border-2 border-gold flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)]">
-                      <span className="font-[family-name:var(--font-heading)] text-gold text-lg sm:text-2xl font-black tracking-widest">
+                    <div className="w-10 h-10 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 border sm:border-2 border-gold flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+                      <span className="font-[family-name:var(--font-heading)] text-gold text-sm sm:text-2xl font-black tracking-widest">
                         {testimonials[current].initials}
                       </span>
                     </div>
                     <div className="text-left">
-                      <p className="font-[family-name:var(--font-heading)] text-white text-base sm:text-2xl font-bold tracking-wide">
+                      <p className="font-[family-name:var(--font-heading)] text-white text-sm sm:text-2xl font-bold tracking-wide">
                         {testimonials[current].name}
                       </p>
-                      <p className="font-[family-name:var(--font-body)] text-gold text-xs sm:text-sm tracking-widest uppercase mt-1">
-                        Parent — {testimonials[current].childClass}
+                      <p className="font-[family-name:var(--font-body)] text-gold text-[10px] sm:text-sm tracking-widest uppercase mt-0.5 sm:mt-1">
+                        {testimonials[current].childClass}
                       </p>
                     </div>
                   </div>

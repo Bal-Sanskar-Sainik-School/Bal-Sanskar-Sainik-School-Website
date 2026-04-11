@@ -291,16 +291,18 @@ export default function EventsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 sm:gap-3 mb-10 sm:mb-14 overflow-x-auto pb-2 scrollbar-hide"
+            className="flex items-center gap-2 sm:gap-3 mb-8 sm:mb-14 overflow-x-auto pb-4 pt-1 px-1 scrollbar-hide snap-x snap-mandatory w-full"
           >
-            <Filter className="w-4 h-4 text-white/30 flex-shrink-0" />
+            <div className="flex-shrink-0 snap-start pl-1 pt-2">
+               <Filter className="w-4 h-4 sm:w-5 sm:h-5 text-white/30 mr-1" />
+            </div>
             {tags.map((tag) => (
               <button
                 key={tag}
                 onClick={() => setActiveTag(tag)}
-                className={`flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider font-[family-name:var(--font-body)] border transition-all duration-300 ${
+                className={`snap-center flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider font-[family-name:var(--font-body)] border transition-all duration-300 ${
                   activeTag === tag
-                    ? "bg-gold/20 text-gold border-gold/40 shadow-[0_0_15px_rgba(201,150,43,0.2)]"
+                    ? "bg-gold/20 text-gold border-gold/40 shadow-[0_0_15px_rgba(201,150,43,0.3)] scale-105"
                     : "bg-white/[0.03] text-white/50 border-white/10 hover:bg-white/[0.06] hover:text-white/70"
                 }`}
               >

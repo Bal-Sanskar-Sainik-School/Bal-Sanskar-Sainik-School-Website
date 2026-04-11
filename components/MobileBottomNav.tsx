@@ -19,9 +19,8 @@ export default function MobileBottomNav() {
 
   return (
     <>
-      {/* Mobile Bottom Navigation - Only visible on mobile */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-navy-dark via-navy-dark to-navy-dark/95 backdrop-blur-xl border-t border-gold/30 shadow-[0_-8px_32px_rgba(0,0,0,0.4)]">
-        <div className="flex items-center justify-around px-1 py-2.5 pb-safe">
+      <nav className="md:hidden fixed bottom-4 left-3 right-3 z-50 bg-navy-dark/80 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_8px_40px_rgba(0,0,0,0.5)] safe-area-bottom">
+        <div className="flex items-center justify-between px-2 py-1.5">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
@@ -30,23 +29,22 @@ export default function MobileBottomNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative flex flex-col items-center justify-center gap-0.5 px-1.5 py-2 rounded-2xl transition-all duration-300 active:scale-90 min-w-[48px] ${
+                className={`relative flex flex-col items-center justify-center gap-1 p-2 rounded-full transition-all duration-300 active:scale-95 flex-1 ${
                   isActive
-                    ? "bg-gradient-to-br from-gold/30 to-gold/10 text-gold scale-105 shadow-[0_0_20px_rgba(201,150,43,0.3)]"
-                    : "text-white/60 hover:text-white hover:bg-white/5 active:bg-white/10"
+                    ? "bg-white/10"
+                    : "hover:bg-white/5"
                 }`}
               >
-                {isActive && (
-                  <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 w-8 h-1 rounded-full bg-gold shadow-[0_0_10px_rgba(201,150,43,0.8)]" />
-                )}
-                <Icon 
-                  className={`transition-all duration-300 ${
-                    isActive ? "w-6 h-6 drop-shadow-[0_0_8px_rgba(201,150,43,0.6)]" : "w-5 h-5"
-                  }`}
-                  strokeWidth={isActive ? 2.5 : 2}
-                />
-                <span className={`text-[9px] font-bold tracking-wider font-[family-name:var(--font-body)] uppercase ${
-                  isActive ? "text-gold" : ""
+                <div className={`flex items-center justify-center w-9 h-9 rounded-full transition-all duration-300 ${
+                  isActive ? "bg-gold text-navy-dark shadow-[0_0_15px_rgba(201,150,43,0.5)]" : "text-white/60"
+                }`}>
+                  <Icon 
+                    className={`transition-all duration-300 w-4 h-4 sm:w-5 sm:h-5`}
+                    strokeWidth={isActive ? 2.5 : 2}
+                  />
+                </div>
+                <span className={`text-[8px] sm:text-[9px] font-bold tracking-wider font-[family-name:var(--font-body)] uppercase transition-colors duration-300 ${
+                  isActive ? "text-gold" : "text-white/50"
                 }`}>
                   {item.label}
                 </span>
@@ -55,7 +53,6 @@ export default function MobileBottomNav() {
           })}
         </div>
       </nav>
-
     </>
   );
 }

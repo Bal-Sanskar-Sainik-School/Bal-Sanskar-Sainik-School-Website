@@ -39,7 +39,7 @@ export default function PrincipalDesk() {
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative mb-12 sm:mb-16 lg:mb-0 sm:mx-8 lg:mx-0"
+            className="lg:col-span-5 relative mb-12 sm:mb-16 lg:mb-0 mx-4 sm:mx-8 lg:mx-0"
           >
             <div className="relative aspect-[4/5] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <img
