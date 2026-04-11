@@ -7,6 +7,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  { name: "Events", href: "/events" },
   { name: "Admissions", href: "/admissions" },
   { name: "Fee Structure", href: "/fee-structure" },
   { name: "Contact", href: "/contact" },
@@ -22,7 +23,7 @@ const academicLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy border-t-[4px] border-gold text-white relative z-20 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-16 pb-32 md:pb-8">
+      <div className="max-w-[1400px] mx-auto px-4 py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-16 md:pb-8">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           
           {/* Column 1: Logo & Tagline */}
@@ -157,7 +158,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="border-t border-gold/20 bg-navy-dark px-4 sm:px-6 pb-32 md:pb-6">
+      <div className="border-t border-gold/20 bg-navy-dark px-4 sm:px-6 pb-24 md:pb-6">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center justify-between gap-2 sm:gap-3 py-4 sm:py-6 text-xs sm:text-sm sm:flex-row sm:px-10 lg:px-16">
           <p className="text-center text-white/50 font-[family-name:var(--font-body)] font-medium">
             &copy; {new Date().getFullYear()} Bal Sansar Sainik School &middot; Jeolikot, Nainital

@@ -98,15 +98,15 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative mt-12 lg:mt-0 sm:mx-8 lg:mx-0"
           >
             <div className="relative">
               {/* Decorative border */}
-              <div className="absolute -inset-4 border-2 border-gold/30 rounded-lg" />
-              <div className="absolute -inset-2 border border-gold/20 rounded-lg" />
+              <div className="absolute -inset-2 sm:-inset-4 border-2 border-gold/30 rounded-lg" />
+              <div className="absolute inset-0 sm:-inset-2 border border-gold/20 rounded-lg" />
               
               {/* Image container */}
-              <div className="relative aspect-[4/5] rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-lg overflow-hidden flex items-center justify-center">
                 <img 
                   src="/images/Students_Studying/Students_Studying_2.jpeg" 
                   alt="Students studying" 
@@ -127,10 +127,10 @@ export default function About() {
                 </div>
 
                 {/* Decorative corner elements */}
-                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gold/40" />
-                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-gold/40" />
-                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-gold/40" />
-                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-gold/40" />
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-gold/40" />
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-gold/40" />
+                <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-gold/40" />
+                <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-gold/40" />
               </div>
             </div>
 
@@ -139,10 +139,10 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -bottom-6 -left-6 bg-gold text-navy px-5 py-3 rounded-lg shadow-xl"
+              className="absolute -bottom-5 left-4 sm:-bottom-6 sm:-left-6 bg-gold text-navy px-4 py-2 sm:px-5 sm:py-3 rounded-lg shadow-xl z-10"
             >
-              <p className="font-[family-name:var(--font-heading)] text-sm font-bold">Est. July 2008</p>
-              <p className="font-[family-name:var(--font-body)] text-xs font-semibold">Jeolikot, Nainital</p>
+              <p className="font-[family-name:var(--font-heading)] text-xs sm:text-sm font-bold">Est. July 2008</p>
+              <p className="font-[family-name:var(--font-body)] text-[10px] sm:text-xs font-semibold">Jeolikot, Nainital</p>
             </motion.div>
           </motion.div>
         </div>

@@ -39,27 +39,27 @@ export default function PrincipalDesk() {
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative mb-12 sm:mb-16 lg:mb-0 sm:mx-8 lg:mx-0"
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+            <div className="relative aspect-[4/5] sm:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10">
               <img
                 src="/images/School_Principle_Image/School_Principle.jpeg"
                 alt="School Manager"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 via-navy-dark/20 to-transparent opacity-90" />
               <div className="absolute bottom-0 left-0 w-full p-6 text-center">
-                <h3 className="font-[family-name:var(--font-heading)] text-white text-2xl font-bold mb-1 shadow-black drop-shadow-lg">
+                <h3 className="font-[family-name:var(--font-heading)] text-white text-xl sm:text-2xl font-bold mb-1 shadow-black drop-shadow-lg">
                   Savita Arya
                 </h3>
-                <p className="font-[family-name:var(--font-body)] text-gold text-sm tracking-[0.1em] uppercase font-semibold">
+                <p className="font-[family-name:var(--font-body)] text-gold text-xs sm:text-sm tracking-[0.1em] uppercase font-semibold">
                   Manager
                 </p>
               </div>
             </div>
             {/* Decors */}
-            <div className="absolute -z-10 -bottom-6 -left-6 w-full h-full border-2 border-gold/30 rounded-2xl" />
-            <div className="absolute -z-10 -top-6 -right-6 w-3/4 h-3/4 bg-gold/10 rounded-2xl" />
+            <div className="absolute -z-10 -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 w-[95%] sm:w-full h-full border-2 border-gold/30 rounded-2xl" />
+            <div className="absolute -z-10 -top-3 -right-3 sm:-top-6 sm:-right-6 w-2/3 sm:w-3/4 h-2/3 sm:h-3/4 bg-gold/10 rounded-2xl" />
           </motion.div>
 
           {/* Text Content */}

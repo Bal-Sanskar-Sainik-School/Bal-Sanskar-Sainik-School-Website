@@ -318,7 +318,6 @@ body {
   
   body {
     overflow-x: hidden;
-    padding-bottom: 80px;
     width: 100vw;
   }
   
@@ -350,12 +349,7 @@ body {
   }
 }
 
-/* Desktop padding */
-@media (min-width: 769px) {
-  main {
-    padding-top: 6rem;
-  }
-}
+/* Desktop padding handled by Tailwind classes on specific pages */
 
 /* Hide scrollbar */
 .hide-scrollbar {

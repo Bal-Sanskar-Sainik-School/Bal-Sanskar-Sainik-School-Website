@@ -5,19 +5,7 @@ import { Bus, Phone, Sparkles, GraduationCap, BookOpen, School } from "lucide-re
 import { useRef } from "react";
 
 const groups = [
-  {
-    label: "Pre-Primary",
-    icon: Sparkles,
-    color: "from-amber-400/20 to-yellow-300/10",
-    border: "border-amber-400/30",
-    iconBg: "bg-amber-400/20",
-    iconColor: "text-amber-300",
-    rows: [
-      { class: "Play", monthly: "₹1,300", annual: "₹15,600" },
-      { class: "L.K.G", monthly: "₹1,300", annual: "₹15,600" },
-      { class: "U.K.G", monthly: "₹1,300", annual: "₹15,600" },
-    ],
-  },
+
   {
     label: "Primary",
     icon: BookOpen,
@@ -26,11 +14,11 @@ const groups = [
     iconBg: "bg-sky-400/20",
     iconColor: "text-sky-300",
     rows: [
-      { class: "Class 1st", monthly: "₹1,400", annual: "₹16,800" },
-      { class: "Class 2nd", monthly: "₹1,500", annual: "₹18,000" },
-      { class: "Class 3rd", monthly: "₹1,500", annual: "₹18,000" },
-      { class: "Class 4th", monthly: "₹1,550", annual: "₹18,600" },
-      { class: "Class 5th", monthly: "₹1,550", annual: "₹18,600" },
+      { class: "Class 1st", monthly: "₹800", annual: "₹9,600" },
+      { class: "Class 2nd", monthly: "₹800", annual: "₹9,600" },
+      { class: "Class 3rd", monthly: "₹800", annual: "₹9,600" },
+      { class: "Class 4th", monthly: "₹800", annual: "₹9,600" },
+      { class: "Class 5th", monthly: "₹800", annual: "₹9,600" },
     ],
   },
   {
@@ -41,9 +29,9 @@ const groups = [
     iconBg: "bg-emerald-400/20",
     iconColor: "text-emerald-300",
     rows: [
-      { class: "Class 6th", monthly: "₹1,600", annual: "₹19,200" },
-      { class: "Class 7th", monthly: "₹1,600", annual: "₹19,200" },
-      { class: "Class 8th", monthly: "₹1,600", annual: "₹19,200" },
+      { class: "Class 6th", monthly: "₹900", annual: "₹10,800" },
+      { class: "Class 7th", monthly: "₹900", annual: "₹10,800" },
+      { class: "Class 8th", monthly: "₹900", annual: "₹10,800" },
     ],
   },
 ];
@@ -96,7 +84,7 @@ export default function FeeStructure() {
         </motion.div>
 
         {/* Grade Group Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 max-w-4xl mx-auto mb-8">
           {groups.map((group, gi) => {
             const Icon = group.icon;
             return (
@@ -105,47 +93,48 @@ export default function FeeStructure() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.15 + gi * 0.12 }}
-                className={`relative rounded-2xl border ${group.border} bg-gradient-to-br ${group.color} backdrop-blur-sm overflow-hidden group`}
+                className={`relative rounded-2xl border ${group.border} bg-gradient-to-br ${group.color} backdrop-blur-sm overflow-hidden group flex flex-col`}
               >
                 {/* Subtle top glow line */}
                 <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-current to-transparent ${group.iconColor} opacity-60`} />
 
                 {/* Card Header */}
-                <div className="px-6 pt-6 pb-4 flex items-center gap-4 border-b border-white/5">
-                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${group.iconBg} flex-shrink-0`}>
-                    <Icon className={`h-5 w-5 ${group.iconColor}`} />
+                <div className="px-3 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 border-b border-white/5">
+                  <div className={`flex h-8 w-8 sm:h-11 sm:w-11 items-center justify-center rounded-xl ${group.iconBg} flex-shrink-0`}>
+                    <Icon className={`h-4 w-4 sm:h-5 sm:w-5 ${group.iconColor}`} />
                   </div>
                   <div>
-                    <p className="text-white/40 text-[10px] uppercase tracking-widest font-[family-name:var(--font-body)] font-semibold mb-0.5">
+                    <p className="text-white/40 text-[8px] sm:text-[10px] uppercase tracking-widest font-[family-name:var(--font-body)] font-semibold mb-0.5">
                       Grade Group
                     </p>
-                    <h3 className={`font-[family-name:var(--font-heading)] font-bold text-lg text-white`}>
+                    <h3 className={`font-[family-name:var(--font-heading)] font-bold text-[14px] sm:text-lg text-white leading-tight`}>
                       {group.label}
                     </h3>
                   </div>
                 </div>
 
                 {/* Rows */}
-                <div className="px-4 py-3 space-y-1">
+                <div className="px-2 py-2 sm:px-4 sm:py-3 space-y-1 sm:space-y-2 flex-grow">
                   {group.rows.map((row, ri) => (
                     <motion.div
                       key={row.class}
                       initial={{ opacity: 0, x: -15 }}
                       animate={inView ? { opacity: 1, x: 0 } : {}}
                       transition={{ duration: 0.35, delay: 0.3 + gi * 0.12 + ri * 0.06 }}
-                      className="flex items-center justify-between px-3 py-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group/row cursor-default"
+                      className="flex flex-col sm:flex-row sm:items-center justify-between px-2 py-2 sm:px-3 sm:py-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group/row cursor-default gap-1.5 sm:gap-0"
                     >
-                      <span className="font-[family-name:var(--font-heading)] font-bold text-white/90 text-sm sm:text-[15px] group-hover/row:text-white transition-colors">
+                      <span className="font-[family-name:var(--font-heading)] font-bold text-white/90 text-xs sm:text-[15px] group-hover/row:text-white transition-colors">
                         {row.class}
                       </span>
-                      <div className="flex items-center gap-2 sm:gap-3">
-                        <div className="text-right">
+                      <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-3 w-full sm:w-auto">
+                        <div className="text-left sm:text-right">
                           <p className="text-white/30 text-[8px] sm:text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)]">Annual</p>
-                          <p className="text-white/50 text-[11px] sm:text-xs font-semibold font-[family-name:var(--font-body)]">{row.annual}</p>
+                          <p className="text-white/50 text-[10px] sm:text-xs font-semibold font-[family-name:var(--font-body)]">{row.annual}</p>
                         </div>
-                        <div className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover/row:border-white/20 transition-colors`}>
-                          <p className="text-white/30 text-[8px] sm:text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)] text-center">/ mo</p>
-                          <p className={`font-bold text-xs sm:text-sm font-[family-name:var(--font-body)] ${group.iconColor}`}>{row.monthly}</p>
+                        <div className={`px-2 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 group-hover/row:border-white/20 transition-colors flex items-center justify-center gap-1 sm:flex-col sm:gap-0`}>
+                          <p className="hidden sm:block text-white/30 text-[8px] sm:text-[9px] uppercase tracking-widest font-[family-name:var(--font-body)] text-center">/ mo</p>
+                          <p className={`font-bold text-[11px] sm:text-sm font-[family-name:var(--font-body)] ${group.iconColor}`}>{row.monthly}</p>
+                          <p className="sm:hidden text-white/30 text-[8px] uppercase tracking-widest font-[family-name:var(--font-body)]">/mo</p>
                         </div>
                       </div>
                     </motion.div>
@@ -153,14 +142,10 @@ export default function FeeStructure() {
                 </div>
 
                 {/* Card Footer — fee range */}
-                <div className="px-6 py-4 border-t border-white/5 flex items-center justify-between">
-                  <span className="text-white/30 text-xs font-[family-name:var(--font-body)]">{group.rows.length} classes</span>
-                  <span className={`text-xs font-bold font-[family-name:var(--font-body)] ${group.iconColor}`}>
-                    {group.rows[0].monthly}
-                    {group.rows[0].monthly !== group.rows[group.rows.length - 1].monthly
-                      ? ` – ${group.rows[group.rows.length - 1].monthly}`
-                      : ""}{" "}
-                    <span className="font-normal text-white/30">/ mo</span>
+                <div className="px-3 sm:px-6 py-3 sm:py-4 border-t border-white/5 flex items-center justify-between mt-auto">
+                  <span className="text-white/30 text-[10px] sm:text-xs font-[family-name:var(--font-body)] whitespace-nowrap">{group.rows.length} classes</span>
+                  <span className={`text-[11px] sm:text-xs font-bold font-[family-name:var(--font-body)] ${group.iconColor}`}>
+                    {group.rows[0].monthly} / mo
                   </span>
                 </div>
               </motion.div>
@@ -187,13 +172,13 @@ export default function FeeStructure() {
                 Transport Service
               </h3>
               <p className="text-white/50 text-sm font-[family-name:var(--font-body)] leading-snug">
-                Based on distance from campus
+                Based on distance & duration
               </p>
             </div>
             <div className="text-right flex-shrink-0">
               <p className="text-white/30 text-[10px] uppercase tracking-widest font-[family-name:var(--font-body)]">Range</p>
               <p className="text-gold font-black text-lg font-[family-name:var(--font-body)] whitespace-nowrap">
-                ₹500–1,500
+                ₹500–1,200
               </p>
               <p className="text-white/30 text-[10px] font-[family-name:var(--font-body)]">per month</p>
             </div>

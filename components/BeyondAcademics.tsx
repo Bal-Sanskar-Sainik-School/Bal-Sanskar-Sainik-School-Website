@@ -6,8 +6,8 @@ import { Star, Target, Trophy, MonitorPlay, Music } from "lucide-react";
 
 const pillars = [
   {
-    title: "Drill & Discipline",
-    desc: "Rigorous daily routines that instill lifelong punctuality, teamwork, and unparalleled leadership skills.",
+    title: "Character & Leadership",
+    desc: "Nurturing strong moral values, daily punctuality, and teamwork to build confident and responsible citizens.",
     img: "/images/Assembly_Image/Assembly_Image_2.jpeg",
     icon: <Target className="w-8 h-8" />,
     color: "gold"

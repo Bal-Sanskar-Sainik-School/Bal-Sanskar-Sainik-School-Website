@@ -21,7 +21,7 @@ export default function JoinOurRanks() {
 
       <div className="max-w-4xl mx-auto px-6 sm:px-8 relative z-10">
         <ScrollReveal direction="up" delay={0.1}>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white font-[family-name:var(--font-heading)] mb-6 leading-tight drop-shadow-sm">
+          <h2 className="text-[22px] min-[400px]:text-[26px] sm:text-4xl md:text-5xl lg:text-6xl font-black text-white font-[family-name:var(--font-heading)] mb-6 leading-tight drop-shadow-sm whitespace-nowrap tracking-tight">
             Admissions Open for 2026–27
           </h2>
         </ScrollReveal>
