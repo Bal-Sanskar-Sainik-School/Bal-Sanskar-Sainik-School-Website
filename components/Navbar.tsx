@@ -40,6 +40,7 @@ export default function Navbar() {
                   src="/images/logo/logo.jpeg"
                   alt="School Logo"
                   fill
+                  sizes="40px"
                   className="object-contain rounded-full"
                   priority
                 />
@@ -72,6 +73,7 @@ export default function Navbar() {
                 src="/images/logo/logo.jpeg"
                 alt="School Logo"
                 fill
+                sizes="50px"
                 className="object-contain rounded-full"
                 priority
               />

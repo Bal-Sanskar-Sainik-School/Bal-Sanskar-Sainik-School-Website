@@ -48,6 +48,7 @@ export default function MissionSection() {
                   src="/images/logo/logo.jpeg"
                   alt="Bal Sansar Sainik School Logo"
                   fill
+                  sizes="120px"
                   className="object-contain rounded-full"
                   priority
                 />
