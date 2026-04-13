@@ -10,6 +10,8 @@ const quickLinks = [
   { name: "Events", href: "/events" },
   { name: "Admissions", href: "/admissions" },
   { name: "Fee Structure", href: "/fee-structure" },
+  { name: "FAQ", href: "/faq" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -46,7 +48,7 @@ export default function Footer() {
               disciplined leaders of tomorrow.
             </p>
             <p className="font-[family-name:var(--font-heading)] text-xs sm:text-sm italic tracking-[0.1em] text-gold font-medium">
-              &ldquo;Discipline. Excellence. Nation.&rdquo;
+              &ldquo;Nurturing Minds, Inspiring Excellence&rdquo;
             </p>
           </div>
 

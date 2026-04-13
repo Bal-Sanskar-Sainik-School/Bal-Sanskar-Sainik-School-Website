@@ -54,8 +54,8 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.4 }}
             className="font-[family-name:var(--font-heading)] text-[2rem] sm:text-5xl md:text-6xl lg:text-[80px] font-bold text-white leading-[1.15] mb-4 sm:mb-6 md:mb-8"
           >
-            Nurturing India's <br />
-            <span className="text-gold inline-block animate-[shimmer_3s_ease-in-out_infinite] bg-gradient-to-r from-gold via-yellow-300 to-gold bg-[length:200%_100%] bg-clip-text text-transparent">Future Leaders</span>
+            Nurturing Minds, <br />
+            <span className="text-gold inline-block animate-[shimmer_3s_ease-in-out_infinite] bg-gradient-to-r from-gold via-yellow-300 to-gold bg-[length:200%_100%] bg-clip-text text-transparent">Inspiring Excellence</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -65,7 +65,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6 }}
             className="font-[family-name:var(--font-body)] text-white/90 text-sm sm:text-base md:text-xl font-light leading-[1.7] mb-6 sm:mb-8 md:mb-12 max-w-2xl"
           >
-            A premier Sainik school in the heart of the Himalayas — where discipline meets excellence.
+            A Uttarakhand State Board affiliated private school in the heart of the Himalayas — where discipline meets excellence.
           </motion.p>
 
           {/* Buttons */}

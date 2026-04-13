@@ -117,7 +117,7 @@ export default function MissionSection() {
         <ScrollReveal direction="up" delay={0.8}>
           <div className="text-center mt-12 sm:mt-16">
             <p className="font-[family-name:var(--font-heading)] text-xl sm:text-2xl md:text-3xl italic text-gold font-medium">
-              "Discipline. Excellence. Nation."
+              "Nurturing Minds, Inspiring Excellence"
             </p>
           </div>
         </ScrollReveal>
