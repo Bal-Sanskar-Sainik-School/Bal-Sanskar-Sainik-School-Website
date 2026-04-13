@@ -20,6 +20,7 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://balsansarsainikschool.com"),
   title: "Bal Sansar Sainik School | Jeolikot, Nainital",
   description:
     "Premier Sainik school in Jeolikot, Nainital offering Classes 1–8 with military discipline, academic excellence, and holistic development in the heart of the Himalayas.",
@@ -43,6 +44,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "Bal Sansar Sainik School",
+    images: [
+      {
+        url: "/images/logo/logo.jpeg",
+        width: 800,
+        height: 800,
+        alt: "Bal Sansar Sainik School Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bal Sansar Sainik School | Jeolikot, Nainital",
+    description:
+      "Premier Sainik school in Jeolikot, Nainital offering Classes 1–8 with military discipline, academic excellence, and holistic development.",
+    images: ["/images/logo/logo.jpeg"],
   },
   robots: {
     index: true,
