@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home, Info, CalendarDays, Phone, DollarSign, GraduationCap } from "lucide-react";
+import { Home, Info, CalendarDays, Phone, DollarSign, GraduationCap, FileText } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
@@ -10,6 +10,7 @@ const navItems = [
   { href: "/about", label: "About", icon: Info },
   { href: "/events", label: "Events", icon: CalendarDays },
   { href: "/fee-structure", label: "Fees", icon: DollarSign },
+  { href: "/documents", label: "Docs", icon: FileText },
   { href: "/admissions", label: "Admit", icon: GraduationCap },
   { href: "/contact", label: "Contact", icon: Phone },
 ];

@@ -91,6 +91,22 @@ export default function About() {
                 )
               )}
             </div>
+
+            {/* Official School Info */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
+              {[
+                { label: "Students (2024-25)", value: "104", sub: "60 Boys · 44 Girls" },
+                { label: "Teachers", value: "9", sub: "1 Male · 8 Female" },
+                { label: "School Type", value: "Co-ed", sub: "Classes 1 – 8" },
+                { label: "Management", value: "Private", sub: "Unaided (Recognized)" },
+              ].map((item) => (
+                <div key={item.label} className="bg-white/5 border border-white/10 rounded-xl p-3 text-center">
+                  <p className="font-[family-name:var(--font-heading)] text-gold text-xl font-bold">{item.value}</p>
+                  <p className="font-[family-name:var(--font-body)] text-white/90 text-[11px] font-semibold uppercase tracking-wide mt-0.5">{item.label}</p>
+                  <p className="font-[family-name:var(--font-body)] text-white/50 text-[10px] mt-0.5">{item.sub}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Image Frame */}

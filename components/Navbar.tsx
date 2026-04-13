@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Academics", href: "/academics" },
   { name: "Events", href: "/events" },
   { name: "Fee Structure", href: "/fee-structure" },
+  { name: "Documents", href: "/documents" },
   { name: "Admissions", href: "/admissions" },
   { name: "Contact", href: "/contact" },
 ];
