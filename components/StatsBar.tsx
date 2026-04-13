@@ -14,8 +14,8 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { icon: <Users className="w-8 h-8" />, label: "Total Students", numValue: 104, suffix: "" },
-  { icon: <GraduationCap className="w-8 h-8" />, label: "Total Teachers", numValue: 9, suffix: "" },
+  { icon: <Users className="w-8 h-8" />, label: "Total Students", staticValue: "300+" },
+  { icon: <GraduationCap className="w-8 h-8" />, label: "Total Teachers", staticValue: "15+" },
   { icon: <Trophy className="w-8 h-8" />, label: "Results", numValue: 100, suffix: "%" },
   { icon: <CalendarDays className="w-8 h-8" />, label: "Established", staticValue: "July 2008" },
   { icon: <BookOpen className="w-8 h-8" />, label: "Classes", staticValue: "1 – 8" },
