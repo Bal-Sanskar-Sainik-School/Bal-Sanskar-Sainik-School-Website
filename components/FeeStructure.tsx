@@ -84,7 +84,7 @@ export default function FeeStructure() {
         </motion.div>
 
         {/* Grade Group Cards */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-6 max-w-4xl mx-auto mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6 max-w-4xl mx-auto mb-8">
           {groups.map((group, gi) => {
             const Icon = group.icon;
             return (

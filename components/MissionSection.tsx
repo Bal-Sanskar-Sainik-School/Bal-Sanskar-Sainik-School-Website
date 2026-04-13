@@ -64,10 +64,14 @@ export default function MissionSection() {
               <span className="text-gold text-xs sm:text-sm font-bold tracking-widest">EST. 2008</span>
               <span className="w-16 h-[2px] bg-gold" />
             </div>
-            <div className="inline-flex items-center gap-2 mt-5 bg-gold/10 border border-gold/30 rounded-full px-5 py-2">
-              <span className="font-[family-name:var(--font-body)] text-white/60 text-xs uppercase tracking-[0.2em]">UDISE Code</span>
+            <div 
+              className="inline-flex items-center gap-2 mt-5 bg-gold/10 border border-gold/30 rounded-full px-5 py-2 cursor-pointer transition-all duration-200 hover:bg-gold/20 active:bg-black/50 active:border-gold/60 active:scale-95 group"
+              onClick={() => navigator.clipboard.writeText('05110307811')}
+              title="Click to copy UDISE Code"
+            >
+              <span className="font-[family-name:var(--font-body)] text-white/60 text-xs uppercase tracking-[0.2em] group-active:text-white/80 transition-colors">UDISE Code</span>
               <span className="w-[1px] h-3 bg-gold/40" />
-              <span className="font-[family-name:var(--font-body)] text-gold font-bold text-sm tracking-widest">05110307811</span>
+              <span className="font-[family-name:var(--font-body)] text-gold font-bold text-sm tracking-widest group-active:text-gold-light transition-colors">05110307811</span>
             </div>
           </div>
         </ScrollReveal>

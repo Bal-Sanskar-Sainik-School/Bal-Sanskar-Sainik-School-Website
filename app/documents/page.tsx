@@ -49,46 +49,49 @@ export default function DocumentsPage() {
       </ScrollReveal>
 
       {/* Cards */}
-      <div className="max-w-3xl mx-auto grid gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-6">
         {documents.map((doc, i) => (
           <ScrollReveal key={doc.title} direction="up" delay={i * 0.1}>
-            <div className="group relative flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl border border-gold/20 bg-gradient-to-br from-[#1a2540] to-[#0d1829] hover:border-gold/50 transition-all duration-300 overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_48px_rgba(201,150,43,0.15)]" >
+            <div className="group relative flex flex-col h-full gap-4 p-4 sm:p-8 rounded-2xl border border-gold/20 bg-gradient-to-br from-[#1a2540] to-[#0d1829] hover:border-gold/50 transition-all duration-300 overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:shadow-[0_16px_48px_rgba(201,150,43,0.15)]" >
               {/* Left gold accent */}
               <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-gold/0 via-gold to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-l-2xl" />
 
-              {/* Icon */}
-              <div className="shrink-0 w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center group-hover:bg-gold/20 group-hover:border-gold/40 transition-all duration-300">
-                <FileText className="w-6 h-6 text-gold" strokeWidth={1.8} />
-              </div>
+              {/* Header with Icon and Text */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3 sm:gap-5 flex-1">
+                {/* Icon */}
+                <div className="shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center group-hover:bg-gold/20 group-hover:border-gold/40 transition-all duration-300 flex-shrink-0">
+                  <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-gold" strokeWidth={1.8} />
+                </div>
 
-              {/* Text */}
-              <div className="flex-1 min-w-0">
-                <h2 className="font-[family-name:var(--font-heading)] text-white text-xl font-semibold mb-1 group-hover:text-gold transition-colors duration-300">
-                  {doc.title}
-                </h2>
-                <p className="font-[family-name:var(--font-body)] text-white/45 text-sm leading-relaxed">
-                  {doc.description}
-                </p>
+                {/* Text */}
+                <div className="flex-1 min-w-0 flex flex-col mt-1 sm:mt-0">
+                  <h2 className="font-[family-name:var(--font-heading)] text-white text-[13px] leading-tight sm:text-xl font-semibold mb-1.5 sm:mb-2 group-hover:text-gold transition-colors duration-300 line-clamp-2">
+                    {doc.title}
+                  </h2>
+                  <p className="font-[family-name:var(--font-body)] text-white/45 text-[11px] sm:text-sm leading-snug sm:leading-relaxed line-clamp-3 sm:line-clamp-3">
+                    {doc.description}
+                  </p>
+                </div>
               </div>
 
               {/* Actions */}
-              <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full mt-auto pt-2 sm:pt-0">
                 <a
                   href={doc.file}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-white/15 text-white/70 hover:text-white hover:border-white/30 text-sm font-semibold font-[family-name:var(--font-body)] transition-all duration-300"
+                  className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl border border-white/15 text-white/70 hover:text-white hover:border-white/30 text-xs sm:text-sm font-semibold font-[family-name:var(--font-body)] transition-all duration-300"
                 >
-                  <Eye className="w-4 h-4" />
-                  View
+                  <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>View</span>
                 </a>
                 <a
                   href={doc.file}
                   download={doc.filename}
-                  className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gold text-navy-dark hover:bg-gold-light text-sm font-bold font-[family-name:var(--font-body)] transition-all duration-300 hover:-translate-y-0.5"
+                  className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-gold text-navy-dark hover:bg-gold-light text-xs sm:text-sm font-bold font-[family-name:var(--font-body)] transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <Download className="w-4 h-4" />
-                  Download
+                  <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>Download</span>
                 </a>
               </div>
             </div>
