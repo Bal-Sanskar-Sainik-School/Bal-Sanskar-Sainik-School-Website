@@ -93,32 +93,32 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Contact */}
-          <div className="text-center sm:text-left">
-            <h3 className="font-[family-name:var(--font-heading)] text-base sm:text-[17px] font-bold text-white mb-4 sm:mb-6 tracking-wide">
+          <div className="sm:text-left">
+            <h3 className="font-[family-name:var(--font-heading)] text-base sm:text-[17px] font-bold text-white mb-4 sm:mb-6 tracking-wide text-center sm:text-left">
               Contact Us
             </h3>
-            <div className="mb-6 sm:mb-8 space-y-3 sm:space-y-4 font-[family-name:var(--font-body)]">
-              <div className="flex items-start gap-3 sm:gap-4 justify-center sm:justify-start">
-                <MapPin className="mt-1 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-gold" />
-                <p className="text-sm sm:text-[15px] text-white/70 leading-relaxed">
+            <div className="mb-6 sm:mb-8 space-y-3 sm:space-y-4 font-[family-name:var(--font-body)] flex flex-col items-center sm:items-start">
+              <div className="flex flex-row flex-nowrap items-start gap-3 sm:gap-4">
+                <MapPin className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-gold" style={{ flexShrink: 0 }} />
+                <p className="text-sm sm:text-[15px] text-white/70 leading-relaxed text-left">
                   Jeolikot, Nainital,<br />
                   Uttarakhand, India
                 </p>
               </div>
-              <div className="flex items-center gap-3 sm:gap-4 justify-center sm:justify-start">
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-gold" />
+              <div className="flex flex-row flex-nowrap items-center gap-3 sm:gap-4">
+                <Phone className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-gold" style={{ flexShrink: 0 }} />
                 <a
                   href="tel:+919927289673"
-                  className="text-sm sm:text-[15px] text-white/70 transition-colors hover:text-gold active:scale-95"
+                  className="text-sm sm:text-[15px] text-white/70 transition-colors hover:text-gold active:scale-95 whitespace-nowrap"
                 >
                   +91 99272 89673
                 </a>
               </div>
-              <div className="flex items-center gap-3 sm:gap-4 justify-center sm:justify-start">
-                <Mail className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 text-gold" />
+              <div className="flex flex-row flex-nowrap items-center gap-3 sm:gap-4">
+                <Mail className="h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-gold" style={{ flexShrink: 0 }} />
                 <a
                   href="mailto:balsansars@gmail.com"
-                  className="text-sm sm:text-[15px] text-white/70 transition-colors hover:text-gold active:scale-95"
+                  className="text-xs sm:text-[15px] text-white/70 transition-colors hover:text-gold active:scale-95 whitespace-nowrap"
                 >
                   balsansars@gmail.com
                 </a>
