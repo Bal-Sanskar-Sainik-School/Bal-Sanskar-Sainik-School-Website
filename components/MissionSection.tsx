@@ -64,6 +64,11 @@ export default function MissionSection() {
               <span className="text-gold text-xs sm:text-sm font-bold tracking-widest">EST. 2008</span>
               <span className="w-16 h-[2px] bg-gold" />
             </div>
+            <div className="inline-flex items-center gap-2 mt-5 bg-gold/10 border border-gold/30 rounded-full px-5 py-2">
+              <span className="font-[family-name:var(--font-body)] text-white/60 text-xs uppercase tracking-[0.2em]">UDISE Code</span>
+              <span className="w-[1px] h-3 bg-gold/40" />
+              <span className="font-[family-name:var(--font-body)] text-gold font-bold text-sm tracking-widest">05110307811</span>
+            </div>
           </div>
         </ScrollReveal>
 

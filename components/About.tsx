@@ -95,8 +95,8 @@ export default function About() {
             {/* Official School Info */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4">
               {[
-                { label: "Students (2024-25)", value: "104", sub: "60 Boys · 44 Girls" },
-                { label: "Teachers", value: "9", sub: "1 Male · 8 Female" },
+                { label: "Students (2024-25)", value: "300+", sub: "Growing Every Year" },
+                { label: "Teachers", value: "15+", sub: "Dedicated Educators" },
                 { label: "School Type", value: "Co-ed", sub: "Classes 1 – 8" },
                 { label: "Management", value: "Private", sub: "Unaided (Recognized)" },
               ].map((item) => (

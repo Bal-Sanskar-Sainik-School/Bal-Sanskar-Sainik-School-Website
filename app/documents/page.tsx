@@ -16,6 +16,18 @@ const documents = [
     file: "/documents/Fee_Structure_Final_2026_27_copy (1).pdf",
     filename: "Fee_Structure_2026_27.pdf",
   },
+  {
+    title: "School Calendar 2026–27",
+    description: "Academic calendar with important dates, holidays, exams, and events for the year 2026–27.",
+    file: "/documents/Bal_Sansar_Sainik_School_Calendar_2026_27_Updated.pdf",
+    filename: "School_Calendar_2026_27.pdf",
+  },
+  {
+    title: "Book List",
+    description: "Complete list of required textbooks and stationery for all classes.",
+    file: "/documents/School_Book_List.pdf",
+    filename: "School_Book_List.pdf",
+  },
 ];
 
 export default function DocumentsPage() {
