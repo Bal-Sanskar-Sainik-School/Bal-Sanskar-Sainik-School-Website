@@ -13,7 +13,7 @@ const teachers = [
     experience: "Since 2008",
     dateOfJoining: "01/04/2008",
     post: "Principal",
-    image: "/images/teachers/Sandhya.jpg",
+    image: "/images/Teachers/Sandhya.jpg",
   },
   {
     name: "Sarita Tamta",
@@ -22,7 +22,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "02/02/2019",
     post: "Teacher",
-    image: "/images/teachers/Sarita.jpg",
+    image: "/images/Teachers/Sarita.jpg",
   },
   {
     name: "Kusum Bora",
@@ -31,7 +31,7 @@ const teachers = [
     experience: "Since 2018",
     dateOfJoining: "01/04/2018",
     post: "Teacher",
-    image: "/images/teachers/Kusum.jpg",
+    image: "/images/Teachers/Kusum.jpg",
   },
   {
     name: "Anju",
@@ -40,7 +40,7 @@ const teachers = [
     experience: "Since 2021",
     dateOfJoining: "01/10/2021",
     post: "Teacher",
-    image: "/images/teachers/Anju.jpg",
+    image: "/images/Teachers/Anju.jpg",
   },
   {
     name: "Lalita",
@@ -49,7 +49,7 @@ const teachers = [
     experience: "Since 2017",
     dateOfJoining: "01/04/2017",
     post: "Teacher",
-    image: "/images/teachers/Lalita.jpg",
+    image: "/images/Teachers/Lalita.jpg",
   },
   {
     name: "Renu Arya",
@@ -58,7 +58,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "01/04/2019",
     post: "Teacher",
-    image: "/images/teachers/Renu.jpg",
+    image: "/images/Teachers/Renu.jpg",
   },
   {
     name: "Karishma Chauhan",
@@ -67,7 +67,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "01/04/2019",
     post: "Teacher",
-    image: "/images/teachers/Karishma.jpg",
+    image: "/images/Teachers/Karishma.jpg",
   },
   {
     name: "Ankit Kumar",
@@ -76,7 +76,7 @@ const teachers = [
     experience: "Since 2016",
     dateOfJoining: "01/04/2016",
     post: "Teacher",
-    image: "/images/teachers/Ankit.jpg",
+    image: "/images/Teachers/Ankit.jpg",
   },
 ];
 
@@ -164,6 +164,10 @@ export default function Teachers() {
                             sizes="112px"
                             quality={95}
                             priority={index < 4}
+                            onError={(e) => {
+                              console.log(`Failed to load image: ${teacher.image}`);
+                              e.currentTarget.style.display = 'none';
+                            }}
                           />
                         </div>
                       </div>
@@ -253,6 +257,10 @@ export default function Teachers() {
                             sizes="80px"
                             quality={95}
                             priority={index < 4}
+                            onError={(e) => {
+                              console.log(`Failed to load image: ${teacher.image}`);
+                              e.currentTarget.style.display = 'none';
+                            }}
                           />
                         </div>
                       </div>
