@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Users } from "lucide-react";
+import Image from "next/image";
 
 const teachers = [
   {
@@ -12,6 +13,7 @@ const teachers = [
     experience: "Since 2008",
     dateOfJoining: "01/04/2008",
     post: "Principal",
+    image: "/images/teachers/Sandhya.jpg",
   },
   {
     name: "Sarita Tamta",
@@ -20,6 +22,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "02/02/2019",
     post: "Teacher",
+    image: "/images/teachers/Sarita.jpg",
   },
   {
     name: "Kusum Bora",
@@ -28,6 +31,7 @@ const teachers = [
     experience: "Since 2018",
     dateOfJoining: "01/04/2018",
     post: "Teacher",
+    image: "/images/teachers/Kusum.jpg",
   },
   {
     name: "Anju",
@@ -36,6 +40,7 @@ const teachers = [
     experience: "Since 2021",
     dateOfJoining: "01/10/2021",
     post: "Teacher",
+    image: "/images/teachers/Anju.JPG",
   },
   {
     name: "Lalita",
@@ -44,6 +49,7 @@ const teachers = [
     experience: "Since 2017",
     dateOfJoining: "01/04/2017",
     post: "Teacher",
+    image: "/images/teachers/Lalita.JPG",
   },
   {
     name: "Renu Arya",
@@ -52,6 +58,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "01/04/2019",
     post: "Teacher",
+    image: "/images/teachers/Renu.jpg",
   },
   {
     name: "Karishma Chauhan",
@@ -60,6 +67,7 @@ const teachers = [
     experience: "Since 2019",
     dateOfJoining: "01/04/2019",
     post: "Teacher",
+    image: "/images/teachers/Karishma.jpg",
   },
   {
     name: "Ankit Kumar",
@@ -68,6 +76,7 @@ const teachers = [
     experience: "Since 2016",
     dateOfJoining: "01/04/2016",
     post: "Teacher",
+    image: "/images/teachers/Ankit.jpg",
   },
 ];
 
@@ -143,8 +152,25 @@ export default function Teachers() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-navy font-[family-name:var(--font-body)]">
                     {index + 1}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-navy-dark font-[family-name:var(--font-heading)]">
-                    {teacher.name}
+                  <td className="px-6 py-8">
+                    <div className="flex items-center gap-6">
+                      <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-gold shadow-2xl bg-white p-1">
+                        <div className="w-full h-full rounded-full overflow-hidden">
+                          <Image
+                            src={teacher.image}
+                            alt={teacher.name}
+                            fill
+                            className="object-cover object-center"
+                            sizes="112px"
+                            quality={95}
+                            priority={index < 4}
+                          />
+                        </div>
+                      </div>
+                      <span className="text-sm font-bold text-navy-dark font-[family-name:var(--font-heading)]">
+                        {teacher.name}
+                      </span>
+                    </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-navy-light font-[family-name:var(--font-body)]">
                     {teacher.subject}
@@ -215,8 +241,25 @@ export default function Teachers() {
                   <td className="px-3 py-3 whitespace-nowrap text-xs font-medium text-navy font-[family-name:var(--font-body)]">
                     {index + 1}
                   </td>
-                  <td className="px-3 py-3 whitespace-nowrap text-xs font-bold text-navy-dark font-[family-name:var(--font-heading)]">
-                    {teacher.name}
+                  <td className="px-3 py-5">
+                    <div className="flex items-center gap-4">
+                      <div className="relative w-20 h-20 rounded-full overflow-hidden border-3 border-gold shadow-2xl bg-white p-1">
+                        <div className="w-full h-full rounded-full overflow-hidden">
+                          <Image
+                            src={teacher.image}
+                            alt={teacher.name}
+                            fill
+                            className="object-cover object-center"
+                            sizes="80px"
+                            quality={95}
+                            priority={index < 4}
+                          />
+                        </div>
+                      </div>
+                      <span className="text-xs font-bold text-navy-dark font-[family-name:var(--font-heading)]">
+                        {teacher.name}
+                      </span>
+                    </div>
                   </td>
                   <td className="px-3 py-3 whitespace-nowrap text-xs text-navy-light font-[family-name:var(--font-body)]">
                     {teacher.subject}
