@@ -40,7 +40,7 @@ const teachers = [
     experience: "Since 2021",
     dateOfJoining: "01/10/2021",
     post: "Teacher",
-    image: "/images/teachers/Anju.JPG",
+    image: "/images/teachers/Anju.jpg",
   },
   {
     name: "Lalita",
@@ -49,7 +49,7 @@ const teachers = [
     experience: "Since 2017",
     dateOfJoining: "01/04/2017",
     post: "Teacher",
-    image: "/images/teachers/Lalita.JPG",
+    image: "/images/teachers/Lalita.jpg",
   },
   {
     name: "Renu Arya",
