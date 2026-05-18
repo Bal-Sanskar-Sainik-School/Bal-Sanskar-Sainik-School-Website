@@ -11,7 +11,6 @@ const quickLinks = [
   { name: "Admissions", href: "/admissions" },
   { name: "Fee Structure", href: "/fee-structure" },
   { name: "FAQ", href: "/faq" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
