@@ -13,7 +13,7 @@ const events = [
     location: "School Auditorium",
     description:
       "A grand celebration of talent featuring dance, drama, music performances, and cultural showcases by our students.",
-    image: "/images/events/anual function/anual-function (1).webp",
+    image: "/images/events/anual function/annual-function (1).jpg",
     tag: "Cultural",
   },
   {
@@ -22,8 +22,8 @@ const events = [
     date: "August 15, 2025",
     location: "Main Campus, Jeolikot",
     description:
-      "Flag hoisting, patriotic songs, and march past celebrating the spirit of our nation's freedom.",
-    image: "/images/events/Independance Day/inde day (1).webp",
+      "Every year on 15th August, our students celebrate with flag hoisting, march past, patriotic songs, and cultural performances honouring our nation's heroes.",
+    image: "/images/events/Independance Day/inde day (1).jpg",
     tag: "National Day",
   },
   {
